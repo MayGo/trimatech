@@ -16,36 +16,62 @@ export default function Navlinks({ user }: NavlinksProps) {
   const router = getRedirectMethod() === 'client' ? useRouter() : null;
 
   return (
-    <div className="relative flex flex-row justify-between py-4 align-center md:py-6">
-      <div className="flex items-center flex-1">
-        <Link href="/" className={s.logo} aria-label="Logo">
-          <Logo />
-        </Link>
-        <nav className="ml-6 space-x-2 lg:block">
-          <Link href="/" className={s.link}>
+    <>
+      <div className="flex flex-row items-center justify-center gap-[32px] max-w-full  mq750:w-[461px] mq750:gap-[16px] mq1050:w-[266px]">
+        <div className="flex-1 overflow-hidden flex flex-row items-end  gap-[20px] mq1050:hidden">
+          <Link
+            href="/pricing"
+            className="btn btn-ghost font-semibold text-base font-semibold"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/pricing"
+            className="btn btn-ghost font-semibold text-base font-semibold"
+          >
+            Services
+          </Link>
+          <Link
+            href="/pricing"
+            className="btn btn-ghost font-semibold text-base font-semibold"
+          >
+            Contact Us
+          </Link>
+          <Link
+            href="/pricing"
+            className="btn btn-ghost font-semibold text-base font-semibold"
+          >
             Pricing
           </Link>
           {user && (
-            <Link href="/account" className={s.link}>
+            <Link
+              href="/account"
+              className="btn btn-ghost font-semibold text-base font-semibold"
+            >
               Account
             </Link>
           )}
-        </nav>
-      </div>
-      <div className="flex justify-end space-x-8">
+        </div>
+
         {user ? (
           <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
             <input type="hidden" name="pathName" value={usePathname()} />
-            <button type="submit" className={s.link}>
+            <button
+              type="submit"
+              className="btn btn-outline btn-secondary font-semibold text-base font-semibold"
+            >
               Sign out
             </button>
           </form>
         ) : (
-          <Link href="/signin" className={s.link}>
+          <Link
+            href="/signin"
+            className="btn btn-outline btn-secondary font-semibold text-base font-semibold w-[150px]"
+          >
             Sign In
           </Link>
         )}
       </div>
-    </div>
+    </>
   );
 }
