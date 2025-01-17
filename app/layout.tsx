@@ -14,9 +14,6 @@ import { Toaster } from '@/components/ui/Toaster';
 import { Roboto } from 'next/font/google';
 import { M_PLUS_Rounded_1c } from 'next/font/google';
 
-// Import the fontsource CSS
-import '@fontsource/m-plus-rounded-1c/700.css';
-
 const roboto = Roboto({
     weight: ['400', '500', '700'],
     subsets: ['latin'],
