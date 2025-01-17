@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Text, Link as ChakraLink } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { Logo } from './Logo';
 
 const Footer: NextPage = () => {
     return (
@@ -7,15 +8,12 @@ const Footer: NextPage = () => {
             as="footer"
             bg="background-color-alternate"
             overflow="hidden"
-            py={{ base: '20', md: '52' }}
-            px={{ base: '16', md: '8' }}
-            gap={{ base: '8px', md: '40px', sm: '20px' }}
+            py={8}
+            gap={6}
             display="flex"
             flexDirection="column"
             alignItems="start"
             justifyContent="start"
-            textAlign="left"
-            fontSize="sm"
         >
             <Flex
                 w="full"
@@ -25,19 +23,7 @@ const Footer: NextPage = () => {
                 gap={{ base: '8px', lg: '32px', sm: '16px' }}
                 flexWrap={{ lg: 'wrap' }}
             >
-                <Box w="189px" h="75px" overflow="hidden" flexShrink={0}>
-                    <Image
-                        position="absolute"
-                        top="16px"
-                        left="15px"
-                        w="157px"
-                        h="42px"
-                        objectFit="cover"
-                        loading="lazy"
-                        alt="Trimatech Logo"
-                        src="/trimatech-logo33real1-1@2x.png"
-                    />
-                </Box>
+                <Logo size="sm" />
                 <Flex flexDirection="column" alignItems="start" justifyContent="start" gap="24px">
                     <Flex flexDirection="row" alignItems="start" justifyContent="start" gap="12px">
                         {['facebook', 'instagram', 'x', 'linkedin'].map((icon) => (
@@ -54,45 +40,39 @@ const Footer: NextPage = () => {
                     </Flex>
                 </Flex>
             </Flex>
+
+            <Box flex="1" borderTop="1px" borderColor="white" borderStyle="solid" h="1px" w="full" />
             <Flex
                 w="full"
-                flexDirection="column"
+                flexDirection="row"
                 alignItems="start"
-                justifyContent="start"
-                gap={{ base: '32px', md: '16px' }}
+                justifyContent="space-between"
+                gap="20px"
+                flexWrap={{ md: 'wrap' }}
+                fontSize="sm"
             >
-                <Box h="1px" bg="background-color-alternate" border="1px solid" />
+                <Text h="21px" w="240px" lineHeight="150%">
+                    © 2024 Trimatech. All rights reserved.
+                </Text>
                 <Flex
-                    w="full"
+                    w="377px"
                     flexDirection="row"
                     alignItems="start"
-                    justifyContent="space-between"
-                    gap="20px"
-                    flexWrap={{ md: 'wrap' }}
+                    justifyContent="start"
+                    gap="24px"
+                    flexWrap={{ sm: 'wrap' }}
                 >
-                    <Text h="21px" w="240px" lineHeight="150%">
-                        © 2024 Trimatech. All rights reserved.
-                    </Text>
-                    <Flex
-                        w="377px"
-                        flexDirection="row"
-                        alignItems="start"
-                        justifyContent="start"
-                        gap="24px"
-                        flexWrap={{ sm: 'wrap' }}
-                    >
-                        {['Privacy Policy', 'Terms and Conditions', 'Cookies Settings'].map((text, index) => (
-                            <ChakraLink
-                                key={index}
-                                h="21px"
-                                lineHeight="150%"
-                                textDecoration="underline"
-                                minW={index === 1 ? '89px' : 'auto'}
-                            >
-                                {text}
-                            </ChakraLink>
-                        ))}
-                    </Flex>
+                    {['Privacy Policy', 'Terms and Conditions', 'Cookies Settings'].map((text, index) => (
+                        <ChakraLink
+                            key={index}
+                            h="21px"
+                            lineHeight="150%"
+                            textDecoration="underline"
+                            minW={index === 1 ? '89px' : 'auto'}
+                        >
+                            {text}
+                        </ChakraLink>
+                    ))}
                 </Flex>
             </Flex>
         </Box>

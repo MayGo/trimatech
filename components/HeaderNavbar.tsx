@@ -7,6 +7,7 @@ import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { User } from '@supabase/supabase-js';
 import { NextPage } from 'next';
+import { Logo } from './Logo';
 
 const HeaderNavbar: NextPage = () => {
     const [user, setUser] = useState<User | null>(null);
@@ -27,35 +28,13 @@ const HeaderNavbar: NextPage = () => {
             bg="background-color-alternate"
             py={3}
             borderBottom="1px solid"
-            borderColor="text-alternate"
+            borderColor="white"
             textAlign="left"
             fontSize="13xl"
             color="background-color-alternate"
         >
             <Flex align="center" justify="space-between" gap={5} maxW="full">
-                <Link href="/" aria-label="Logo">
-                    <Flex align="center" justify="center" gap={2.5} w="201px">
-                        <Image
-                            h="50px"
-                            flex="1"
-                            maxW="full"
-                            objectFit="cover"
-                            loading="lazy"
-                            alt=""
-                            src="/trimatech-logo-1@2x.png"
-                        />
-                        <Text
-                            h="42px"
-                            w="147px"
-                            lineHeight="130%"
-                            textTransform="capitalize"
-                            display="none"
-                            whiteSpace="nowrap"
-                        >
-                            Trimatech
-                        </Text>
-                    </Flex>
-                </Link>
+                <Logo />
 
                 <Navlinks user={user} />
             </Flex>
