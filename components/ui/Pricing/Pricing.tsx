@@ -1,7 +1,6 @@
 'use client';
 
 import { Box, Flex, Heading, Link, Text, VStack } from '@chakra-ui/react';
-import LogoCloud from '@/components/ui/LogoCloud';
 import type { Tables } from '@/types_db';
 import { getStripe } from '@/utils/stripe/client';
 import { checkoutWithStripe } from '@/utils/stripe/server';
@@ -89,7 +88,6 @@ export default function Pricing({ user, products, subscription }: Props) {
                             .
                         </Text>
                     </VStack>
-                    <LogoCloud />
                 </Box>
             </Box>
         );
@@ -102,10 +100,9 @@ export default function Pricing({ user, products, subscription }: Props) {
                             Pricing Plans
                         </Heading>
                         <Text maxW="2xl" mt={5} fontSize="xl" color="gray.200" textAlign="center">
-                            Start building for free, then add a site plan to go live. Account plans unlock additional
-                            features.
+                            Select a plan that suits your development needs
                         </Text>
-                        <Flex mt={6} bg="gray.900" rounded="lg" p={0.5} border="1px" borderColor="gray.800">
+                        {/* <Flex mt={6} bg="gray.900" rounded="lg" p={0.5} border="1px" borderColor="gray.800">
                             {intervals.includes('month') && (
                                 <Button
                                     onClick={() => setBillingInterval('month')}
@@ -128,7 +125,7 @@ export default function Pricing({ user, products, subscription }: Props) {
                                     Yearly billing
                                 </Button>
                             )}
-                        </Flex>
+                        </Flex> */}
                     </VStack>
                     <Flex mt={12} wrap="wrap" justify="center" gap={6}>
                         {products.map((product) => {
@@ -188,7 +185,6 @@ export default function Pricing({ user, products, subscription }: Props) {
                             );
                         })}
                     </Flex>
-                    <LogoCloud />
                 </Box>
             </Box>
         );

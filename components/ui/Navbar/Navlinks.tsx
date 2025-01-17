@@ -16,7 +16,7 @@ export default function Navlinks({ user }: NavlinksProps) {
 
     return (
         <Flex flexDirection="row" alignItems="center" justifyContent="center" gap="8" maxW="full">
-            <Flex flex="1" overflow="hidden" flexDirection="row" alignItems="end" gap="8">
+            <Flex flex="1" flexDirection="row" alignItems="end" gap="8">
                 <ChakraLink href="/pricing" fontWeight="semibold">
                     About Us
                 </ChakraLink>

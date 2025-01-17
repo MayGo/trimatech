@@ -3,31 +3,10 @@ import type { NextPage } from 'next';
 
 const OtherPointsPart: NextPage = () => {
     return (
-        <Box
-            as="section"
-            bg="background-color-alternate"
-            overflow="hidden"
-            py={{ base: '47px', md: '73px', lg: '16' }}
-            px={{ base: '8', lg: '16' }}
-            textAlign="left"
-            fontSize="13xl"
-        >
+        <Box as="section" py={16}>
             <Flex flexDirection="row" flexWrap="wrap" alignItems="start" justifyContent="start" maxW="full">
-                <Flex
-                    flex="1"
-                    flexDirection="column"
-                    alignItems="start"
-                    justifyContent="start"
-                    pt={{ base: '34px', lg: '52px' }}
-                    maxW="full"
-                >
-                    <Flex
-                        flexDirection="column"
-                        alignItems="start"
-                        justifyContent="start"
-                        gap={{ base: '20px', lg: '40px' }}
-                        maxW="full"
-                    >
+                <Flex flex="1" flexDirection="column" alignItems="start" justifyContent="start" maxW="full">
+                    <Flex flexDirection="column" alignItems="start" justifyContent="start" gap={12} maxW="full">
                         {[
                             {
                                 title: 'Part-time software development services',
@@ -72,7 +51,16 @@ const OtherPointsPart: NextPage = () => {
                         ))}
                     </Flex>
                 </Flex>
-                <Image flex="1" maxW="full" objectFit="cover" mr="-64px" src="/placeholder-image-2@2x.png" alt="" />
+
+                <Box
+                    bgImage="url('/placeholder-image-2@2x.png')"
+                    bgSize="contain"
+                    bgRepeat="no-repeat"
+                    bgPos="center"
+                    w="full"
+                    h="600px"
+                    flex={1}
+                />
             </Flex>
         </Box>
     );

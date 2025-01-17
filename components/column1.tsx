@@ -76,7 +76,6 @@ const Column1: NextPage<Column1Type> = ({
     return (
         <Flex
             flex="1"
-            overflow="hidden"
             flexDirection="column"
             alignItems="start"
             justifyContent="start"
@@ -86,7 +85,7 @@ const Column1: NextPage<Column1Type> = ({
             textAlign="left"
             fontSize="xl"
         >
-            <Flex overflow="hidden" flexDirection="row" alignItems="start" justifyContent="start" gap="4px">
+            <Flex flexDirection="row" alignItems="start" justifyContent="start" gap="4px">
                 {Array(5)
                     .fill('')
                     .map((_, index) => (
@@ -149,7 +148,6 @@ const Column1: NextPage<Column1Type> = ({
                 <Box
                     boxSizing="border-box"
                     borderRight="1px solid"
-                    borderColor="background-color-alternate"
                     w={{ base: 'full', md: '1px' }}
                     h={{ base: '1px', md: '62px' }}
                 />
@@ -168,7 +166,6 @@ const Column1: NextPage<Column1Type> = ({
                         alignSelf="stretch"
                         h="14"
                         maxW="full"
-                        overflow="hidden"
                         flexShrink="0"
                         loading="lazy"
                         alt=""

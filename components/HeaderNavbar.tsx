@@ -23,16 +23,7 @@ const HeaderNavbar: NextPage = () => {
     }, []);
 
     return (
-        <Box
-            as="header"
-            bg="background-color-alternate"
-            py={3}
-            borderBottom="1px solid"
-            borderColor="white"
-            textAlign="left"
-            fontSize="13xl"
-            color="background-color-alternate"
-        >
+        <Box as="header" py={3} borderBottom="1px solid" borderColor="white" textAlign="left">
             <Flex align="center" justify="space-between" gap={5} maxW="full">
                 <Logo />
 

@@ -5,14 +5,7 @@ import MainActions from './MainActions';
 // TODO: Remove this
 const AffordablePart: NextPage = () => {
     return (
-        <Box
-            as="section"
-            bg="background-color-alternate"
-            overflow="hidden"
-            py={{ base: 8, md: 73, lg: 73 }}
-            px={{ base: 8, md: 16 }}
-            textAlign="center"
-        >
+        <Box as="section" py={{ base: 8, md: 73, lg: 73 }} px={{ base: 8, md: 16 }} textAlign="center">
             <Flex
                 direction="row"
                 wrap="wrap"

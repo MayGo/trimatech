@@ -4,17 +4,7 @@ import { Logo } from './Logo';
 
 const Footer: NextPage = () => {
     return (
-        <Box
-            as="footer"
-            bg="background-color-alternate"
-            overflow="hidden"
-            py={8}
-            gap={6}
-            display="flex"
-            flexDirection="column"
-            alignItems="start"
-            justifyContent="start"
-        >
+        <Box as="footer" py={8} gap={6} display="flex" flexDirection="column" alignItems="start" justifyContent="start">
             <Flex
                 w="full"
                 flexDirection="row"

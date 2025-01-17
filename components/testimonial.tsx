@@ -7,17 +7,12 @@ const Testimonial: NextPage = () => {
     return (
         <Box
             as="section"
-            bg="background-color-alternate"
-            overflow="hidden"
-            py={{ base: 3, md: 16 }}
-            px={{ base: 4, md: 8 }}
-            gap={{ base: '20px', md: '40px', lg: '80px' }}
+            gap={8}
             display="flex"
             flexDirection="column"
             alignItems="start"
             justifyContent="start"
             textAlign="left"
-            fontSize="29xl"
         >
             <Box
                 w={{ base: 'full', md: '560px' }}

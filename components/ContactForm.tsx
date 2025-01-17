@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
 import { contactFormSchema } from '@/validation/contact.validation';
 import { ContactState, sendContactForm } from '@/utils/contact/server';
-import { Box, Input, Text } from '@chakra-ui/react';
+import { Box, Flex, Input, Text } from '@chakra-ui/react';
 import { Field } from './ui/field';
 import { Checkbox } from './ui/checkbox';
 import { Button } from './ui/button';
@@ -29,18 +29,25 @@ function FormContent({
     isPending: boolean;
 }) {
     return (
-        <Box display="grid" gridTemplateColumns="1fr" gap={3} w="full">
+        <Flex flexDirection="column" alignItems="start" justifyContent="start" gap={8} w="full">
             <Field label="First Name" invalid={!!errors.firstName} errorText={errors.firstName?.message || ''}>
-                <Input {...register('firstName')} placeholder="First name" />
+                <Input {...register('firstName')} placeholder="First name" variant="subtle" rounded="full" bg="white" />
             </Field>
             <Field label="Last Name" invalid={!!errors.lastName} errorText={errors.lastName?.message || ''}>
-                <Input {...register('lastName')} placeholder="Last name" />
+                <Input {...register('lastName')} placeholder="Last name" variant="subtle" rounded="full" bg="white" />
             </Field>
-            <Button type="submit" disabled={isPending || !isValid} colorScheme="blue" fontWeight="semibold" w="150px">
+            <Button
+                type="submit"
+                disabled={isPending || !isValid}
+                fontWeight="semibold"
+                w="150px"
+                bg="primary"
+                color="white"
+            >
                 Send
             </Button>
             {isPending && <Text>Loading...</Text>}
-        </Box>
+        </Flex>
     );
 }
 
@@ -76,23 +83,8 @@ export function ContactForm() {
     }, [state, setError, reset]);
 
     return (
-        <>
-            <Box pb={1.5} mb={1.5} borderBottom="1px solid" display="flex" alignItems="center">
-                <Field label="Enable client-side validation">
-                    <Checkbox
-                        checked={clientSideValidation}
-                        onChange={() => {
-                            reset();
-                            setClientSideValidation(!clientSideValidation);
-                        }}
-                        id="client-side-validation-checkbox"
-                        mr={3}
-                    />
-                </Field>
-            </Box>
-            <form action={formAction} style={{ width: '100%' }}>
-                <FormContent register={register} isValid={isValid} errors={errors} isPending={isPending} />
-            </form>
-        </>
+        <form action={formAction} style={{ width: '100%' }}>
+            <FormContent register={register} isValid={isValid} errors={errors} isPending={isPending} />
+        </form>
     );
 }

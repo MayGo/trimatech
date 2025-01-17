@@ -29,6 +29,9 @@ const config = defineConfig({
                 },
                 primary: {
                     value: primaryColor
+                },
+                black: {
+                    value: '#000000'
                 }
             },
             fonts: {

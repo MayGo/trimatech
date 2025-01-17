@@ -6,57 +6,51 @@ const Contact: NextPage = () => {
     return (
         <Box
             as="section"
-            bg="background-color-alternate"
-            overflow="hidden"
             display="flex"
             flexDirection="row"
             alignItems="start"
             justifyContent="start"
-            py={{ base: '47px', md: '73px', lg: '112px' }}
-            px={{ base: 8, md: 16 }}
             textAlign="center"
-            gap={{ base: '20px', md: '40px' }}
+            gap={8}
+            py={16}
         >
-            <Flex flex="1" flexDirection="row" alignItems="start" justifyContent="start" gap="21px" maxW="full">
+            <Flex flex="1" flexDirection="row" alignItems="start" justifyContent="start" gap={8} maxW="full">
                 <Flex
                     flexDirection="column"
                     alignItems="start"
                     justifyContent="start"
-                    gap="8"
+                    gap={8}
                     minW="350px"
                     maxW="full"
-                    flex={{ lg: 1 }}
+                    flex={0.7}
                 >
-                    <Flex flexDirection="column" alignItems="start" justifyContent="start" gap="16px" w="full">
-                        <Text w="60px" lineHeight="150%" fontWeight="semibold" display="inline-block" minW="60px">
-                            Efficient
-                        </Text>
+                    <Flex flexDirection="column" alignItems="start" justifyContent="start" gap={8} w="full">
                         <Flex
                             flexDirection="column"
                             alignItems="start"
                             justifyContent="start"
-                            gap="24px"
+                            gap={8}
                             textAlign="left"
-                            fontSize="29xl"
                             w="full"
                         >
-                            <Heading as="h1" m="0" fontWeight="bold" w="full">
+                            <Heading fontWeight="bold" w="full" fontSize="3xl">
                                 Get in touch
                             </Heading>
-                            <Text fontSize="lg" lineHeight="150%" w="full">
+                            <Text lineHeight="150%" w="full">
                                 Have a question or want to learn more? Contact us!
                             </Text>
                         </Flex>
                     </Flex>
                     <ContactForm />
                 </Flex>
-                <Image
-                    flex="1"
-                    maxW="full"
-                    objectFit="cover"
-                    alt=""
-                    src="/placeholder-image-3@2x.png"
-                    alignSelf="center"
+                <Box
+                    bgImage="url('/placeholder-image-3@2x.png')"
+                    bgSize="contain"
+                    bgRepeat="no-repeat"
+                    bgPos="center"
+                    w="full"
+                    h="500px"
+                    flex={1}
                 />
             </Flex>
         </Box>
