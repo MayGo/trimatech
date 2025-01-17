@@ -1,8 +1,6 @@
 import OtherPointsPart from '@/components/OtherPointsPart';
 import EngagePart from '@/components/EngagePart';
 import UnlockPotentialPart from '@/components/UnlockPotentialPart';
-import AffordablePart from '@/components/AffordablePart';
-import Testimonial from '@/components/testimonial';
 import MainActions from '@/components/MainActions';
 import Contact from '@/components/contact';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
@@ -31,7 +29,7 @@ export default async function HomePage() {
                     borderRadius="3xl"
                     backdropFilter="blur(10px)"
                 >
-                    <Heading fontWeight="bold" lineHeight="moderate" mb="8">
+                    <Heading fontWeight="bold" lineHeight="moderate" mb="8" fontSize="3xl">
                         Get access to affordable part-time software development services of high quality.
                     </Heading>
                     <Text fontSize="lg" lineHeight="150%" mb="8" fontWeight="light">
@@ -55,27 +53,26 @@ export default async function HomePage() {
                 bgSize="cover"
                 bgRepeat="no-repeat"
                 bgPos="top"
-                textAlign="left"
-                fontSize={{ base: '10xl', md: '19xl', lg: '29xl' }}
             >
-                <Box
+                <Flex
                     w="full"
                     maxW="768px"
                     bg="rgba(75, 0, 130, 0.2)"
                     p={8}
+                    gap="8"
                     borderRadius="3xl"
                     backdropFilter="blur(10px)"
+                    flexDirection="column"
                 >
-                    <Box>
-                        <Heading as="h1" fontWeight="bold" textShadow="2px 2px 0px #000">
-                            Transform your software development experience
-                        </Heading>
-                        <Text fontSize="lg" lineHeight="150%" textShadow="2px 2px 0px #000">
-                            Unlock the potential of your software with Trimatech's unique subscription model.
-                        </Text>
-                    </Box>
+                    <Heading fontWeight="bold" fontSize="3xl">
+                        Transform your software development experience
+                    </Heading>
+                    <Text fontSize="lg" lineHeight="150%" textShadow="2px 2px 0px #000">
+                        Unlock the potential of your software with Trimatech's unique subscription model.
+                    </Text>
+
                     <MainActions />
-                </Box>
+                </Flex>
             </Flex>
             <Contact />
         </>

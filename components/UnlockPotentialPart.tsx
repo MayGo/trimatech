@@ -34,14 +34,7 @@ const UnlockPotentialPart: NextPage = () => {
                     minW={{ base: 'full', lg: '390px' }}
                     maxW="full"
                 >
-                    <Heading
-                        as="h1"
-                        m="0"
-                        textAlign="inherit"
-                        lineHeight={{ base: '29px', md: '38px', lg: '120%' }}
-                        fontSize={{ base: '5xl', md: '13xl', lg: '45px' }}
-                        fontWeight="bold"
-                    >
+                    <Heading as="h1" m="0" textAlign="inherit" fontSize="3xl">
                         Unlock your software's full potential with trimatech
                     </Heading>
                 </Flex>

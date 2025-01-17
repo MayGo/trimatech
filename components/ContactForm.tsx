@@ -1,8 +1,7 @@
 'use client';
 
 import { FieldErrors, useForm, UseFormRegister, FieldPath } from 'react-hook-form';
-
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useEffect, useState } from 'react';
@@ -12,6 +11,7 @@ import { Box, Input, Text } from '@chakra-ui/react';
 import { Field } from './ui/field';
 import { Checkbox } from './ui/checkbox';
 import { Button } from './ui/button';
+
 export interface FormValues {
     firstName: string;
     lastName: string;
@@ -20,14 +20,14 @@ export interface FormValues {
 function FormContent({
     register,
     isValid,
-    errors
+    errors,
+    isPending
 }: {
     register: UseFormRegister<FormValues>;
     isValid: boolean;
     errors: FieldErrors<FormValues>;
+    isPending: boolean;
 }) {
-    const { pending } = useFormStatus();
-
     return (
         <Box display="grid" gridTemplateColumns="1fr" gap={3} w="full">
             <Field label="First Name" invalid={!!errors.firstName} errorText={errors.firstName?.message || ''}>
@@ -36,10 +36,10 @@ function FormContent({
             <Field label="Last Name" invalid={!!errors.lastName} errorText={errors.lastName?.message || ''}>
                 <Input {...register('lastName')} placeholder="Last name" />
             </Field>
-            <Button type="submit" disabled={pending || !isValid} colorScheme="blue" fontWeight="semibold" w="150px">
+            <Button type="submit" disabled={isPending || !isValid} colorScheme="blue" fontWeight="semibold" w="150px">
                 Send
             </Button>
-            {pending && <Text>Loading...</Text>}
+            {isPending && <Text>Loading...</Text>}
         </Box>
     );
 }
@@ -55,7 +55,7 @@ export function ContactForm() {
         mode: 'all',
         resolver: clientSideValidation ? zodResolver(contactFormSchema) : undefined
     });
-    const [state, formAction] = useFormState<ContactState, FormData>(sendContactForm, null);
+    const [state, formAction, isPending] = useActionState<ContactState, FormData>(sendContactForm, null);
 
     useEffect(() => {
         if (!state) {
@@ -91,7 +91,7 @@ export function ContactForm() {
                 </Field>
             </Box>
             <form action={formAction} style={{ width: '100%' }}>
-                <FormContent register={register} isValid={isValid} errors={errors} />
+                <FormContent register={register} isValid={isValid} errors={errors} isPending={isPending} />
             </form>
         </>
     );

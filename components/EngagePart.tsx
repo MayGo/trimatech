@@ -43,7 +43,7 @@ const EngagePart: NextPage = () => {
                     textAlign="left"
                     fontSize="29xl"
                 >
-                    <Heading fontWeight="bold" fontSize="4xl">
+                    <Heading fontWeight="bold" fontSize="3xl">
                         Engage with Trimatech: from video calls to Trello
                     </Heading>
                     <Text fontSize="lg" lineHeight="150%">

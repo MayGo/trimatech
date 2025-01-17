@@ -1,15 +1,25 @@
-import type { NextPage } from 'next';
-import { createClient } from '@/utils/supabase/server';
+'use client';
+
+import { useEffect, useState } from 'react';
+import { createClient } from '@/utils/supabase/client';
 import Navlinks from './ui/Navbar/Navlinks';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
+import { User } from '@supabase/supabase-js';
+import { NextPage } from 'next';
 
-const Navbar: NextPage = async () => {
-    const supabase = createClient();
+const HeaderNavbar: NextPage = () => {
+    const [user, setUser] = useState<User | null>(null);
 
-    const {
-        data: { user }
-    } = await supabase.auth.getUser();
+    useEffect(() => {
+        const fetchUser = async () => {
+            const supabase = await createClient();
+            const { data } = await supabase.auth.getUser();
+            setUser(data.user);
+        };
+
+        fetchUser();
+    }, []);
 
     return (
         <Box
@@ -53,4 +63,4 @@ const Navbar: NextPage = async () => {
     );
 };
 
-export default Navbar;
+export default HeaderNavbar;

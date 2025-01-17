@@ -4,14 +4,18 @@ import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
 
 import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
+import HeaderNavbar from '@/components/HeaderNavbar';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 import { Box } from '@chakra-ui/react';
 import { ParamsToaster } from '@/components/ui/ParamsToaster/ParamsToaster';
 import { Toaster } from '@/components/ui/Toaster';
 
-import { Roboto, M_PLUS_Rounded_1c } from 'next/font/google';
+import { Roboto } from 'next/font/google';
+import { M_PLUS_Rounded_1c } from 'next/font/google';
+
+// Import the fontsource CSS
+import '@fontsource/m-plus-rounded-1c/700.css';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -24,7 +28,8 @@ const mPlusRounded = M_PLUS_Rounded_1c({
     weight: ['700'],
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-mplus'
+    variable: '--font-mplus',
+    preload: false // Add this to prevent the font loading error
 });
 
 const meta = {
@@ -74,7 +79,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                 <ThemeProvider enableColorScheme={false} defaultTheme="dark">
                     <Box bg="black">
                         <Box maxW="1180px" mx="auto">
-                            <Navbar />
+                            <HeaderNavbar />
 
                             {children}
                             <Footer />
