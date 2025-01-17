@@ -47,7 +47,7 @@
     "zod-form-data": "^2.0.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.2",
+    "@types/node": "^22.10.7",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "autoprefixer": "^10.4.19",
@@ -58,6 +58,6 @@
     "postcss": "^8.4.38",
     "prettier": "^3.3.1",
     "supabase": "^1.172.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.7.3"
   }
 }
