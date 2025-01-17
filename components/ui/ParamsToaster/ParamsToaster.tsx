@@ -1,11 +1,10 @@
 'use client';
 
-import { useToast as useChakraToast } from '@chakra-ui/react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
+import { toaster } from '@/components/ui/Toaster';
 
-export function Toaster() {
-    const toast = useChakraToast();
+export function ParamsToaster() {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const router = useRouter();
@@ -16,13 +15,9 @@ export function Toaster() {
         const error = searchParams.get('error');
         const error_description = searchParams.get('error_description');
         if (error || status) {
-            toast({
+            toaster.create({
                 title: error ? error ?? 'Hmm... Something went wrong.' : status ?? 'Alright!',
-                description: error ? error_description : status_description,
-                status: error ? 'error' : 'success',
-                duration: 5000,
-                isClosable: true,
-                position: 'top'
+                description: error ? error_description : status_description
             });
             // Clear params
             const newSearchParams = new URLSearchParams(searchParams.toString());
@@ -31,7 +26,7 @@ export function Toaster() {
             const redirectPath = `${pathname}?${newSearchParams.toString()}`;
             router.replace(redirectPath, { scroll: false });
         }
-    }, [searchParams, toast, pathname, router]);
+    }, [searchParams, pathname, router]);
 
     return null;
 }

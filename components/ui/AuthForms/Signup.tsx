@@ -1,12 +1,13 @@
 'use client';
 
-import Button from '@/components/ui/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { signUp } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Box, Input, VStack, Text } from '@chakra-ui/react';
+import { Field } from '../field';
+import { Button } from '../button';
 
 // Define prop type with allowEmail boolean
 interface SignUpProps {
@@ -25,58 +26,51 @@ export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
   };
 
   return (
-    <div className="my-8">
-      <form
-        noValidate={true}
-        className="mb-4"
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <div className="grid gap-2">
-          <div className="grid gap-1">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              placeholder="name@example.com"
-              type="email"
-              name="email"
-              autoCapitalize="none"
-              autoComplete="email"
-              autoCorrect="off"
-              className="w-full p-3 rounded-md bg-zinc-800"
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              placeholder="Password"
-              type="password"
-              name="password"
-              autoComplete="current-password"
-              className="w-full p-3 rounded-md bg-zinc-800"
-            />
-          </div>
-          <Button
-            variant="slim"
-            type="submit"
-            className="mt-1"
-            loading={isSubmitting}
-          >
+    <Box my={8}>
+      <form noValidate onSubmit={(e) => handleSubmit(e)}>
+        <VStack gap={4} mb={4}>
+          <VStack gap={2} align="start" w="full">
+            <Field label="Email">
+              <Input
+                id="email"
+                placeholder="name@example.com"
+                type="email"
+                name="email"
+                autoCapitalize="none"
+                autoComplete="email"
+                autoCorrect="off"
+                bg="gray.800"
+                p={3}
+                borderRadius="md"
+              />
+            </Field>
+            <Field label="Password">
+              <Input
+                id="password"
+                placeholder="Password"
+                type="password"
+                name="password"
+                autoComplete="current-password"
+                bg="gray.800"
+                p={3}
+                borderRadius="md"
+              />
+            </Field>
+          </VStack>
+          <Button type="submit" isLoading={isSubmitting}>
             Sign up
           </Button>
-        </div>
+        </VStack>
       </form>
-      <p>Already have an account?</p>
-      <p>
-        <Link href="/signin/password_signin" className="font-light text-sm">
-          Sign in with email and password
-        </Link>
-      </p>
+      <Text>Already have an account?</Text>
+      <Text>
+        <Link href="/signin/password_signin">Sign in with email and password</Link>
+      </Text>
       {allowEmail && (
-        <p>
-          <Link href="/signin/email_signin" className="font-light text-sm">
-            Sign in via magic link
-          </Link>
-        </p>
+        <Text>
+          <Link href="/signin/email_signin">Sign in via magic link</Link>
+        </Text>
       )}
-    </div>
+    </Box>
   );
 }

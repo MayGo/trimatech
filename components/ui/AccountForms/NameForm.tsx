@@ -1,11 +1,12 @@
 'use client';
 
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Card from '@/components/ui/Card';
 import { updateName } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { Box, Flex, Input, Text } from '@chakra-ui/react';
 
 export default function NameForm({ userName }: { userName: string }) {
   const router = useRouter();
@@ -28,31 +29,38 @@ export default function NameForm({ userName }: { userName: string }) {
       title="Your Name"
       description="Please enter your full name, or a display name you are comfortable with."
       footer={
-        <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-          <p className="pb-4 sm:pb-0">64 characters maximum</p>
+        <Flex
+          direction={{ base: 'column', sm: 'row' }}
+          align={{ base: 'start', sm: 'center' }}
+          justify="space-between"
+        >
+          <Text pb={{ base: 4, sm: 0 }}>64 characters maximum</Text>
           <Button
-            variant="slim"
+            variant="solid"
             type="submit"
             form="nameForm"
-            loading={isSubmitting}
+            isLoading={isSubmitting}
           >
             Update Name
           </Button>
-        </div>
+        </Flex>
       }
     >
-      <div className="mt-8 mb-4 text-xl font-semibold">
+      <Box mt={8} mb={4} fontSize="xl" fontWeight="semibold">
         <form id="nameForm" onSubmit={(e) => handleSubmit(e)}>
-          <input
+          <Input
             type="text"
             name="fullName"
-            className="w-1/2 p-3 rounded-md bg-zinc-800"
+            width="50%"
+            p={3}
+            borderRadius="md"
+            bg="gray.800"
             defaultValue={userName}
             placeholder="Your name"
             maxLength={64}
           />
         </form>
-      </div>
+      </Box>
     </Card>
   );
 }

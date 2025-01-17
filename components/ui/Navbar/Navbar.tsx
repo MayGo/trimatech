@@ -1,5 +1,5 @@
 import { createClient } from '@/utils/supabase/server';
-import s from './Navbar.module.css';
+import { Box, Link, Flex } from '@chakra-ui/react';
 import Navlinks from './Navlinks';
 
 export default async function Navbar() {
@@ -10,13 +10,13 @@ export default async function Navbar() {
   } = await supabase.auth.getUser();
 
   return (
-    <nav className={s.root}>
-      <a href="#skip" className="sr-only focus:not-sr-only">
+    <Box as="nav">
+      <Link href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
-      </a>
-      <div className="max-w-6xl px-6 mx-auto">
+      </Link>
+      <Flex maxW="6xl" px="6" mx="auto" alignItems="center" justifyContent="space-between">
         <Navlinks user={user} />
-      </div>
-    </nav>
+      </Flex>
+    </Box>
   );
 }

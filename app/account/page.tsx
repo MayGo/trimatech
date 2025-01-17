@@ -1,3 +1,4 @@
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import CustomerPortalForm from '@/components/ui/AccountForms/CustomerPortalForm';
 import EmailForm from '@/components/ui/AccountForms/EmailForm';
 import NameForm from '@/components/ui/AccountForms/NameForm';
@@ -11,10 +12,7 @@ export default async function Account() {
     data: { user }
   } = await supabase.auth.getUser();
 
-  const { data: userDetails } = await supabase
-    .from('users')
-    .select('*')
-    .single();
+  const { data: userDetails } = await supabase.from('users').select('*').single();
 
   const { data: subscription, error } = await supabase
     .from('subscriptions')
@@ -31,22 +29,22 @@ export default async function Account() {
   }
 
   return (
-    <section className="mb-32 bg-black">
-      <div className="max-w-6xl px-4 py-8 mx-auto sm:px-6 sm:pt-24 lg:px-8">
-        <div className="sm:align-center sm:flex sm:flex-col">
-          <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
+    <Box as="section" mb={32} bg="black">
+      <Box maxW="6xl" px={4} py={8} mx="auto" sm={{ px: 6, pt: 24 }} lg={{ px: 8 }}>
+        <Flex direction="column" align="center">
+          <Heading as="h1" size="2xl" fontWeight="extrabold" color="white" textAlign="center">
             Account
-          </h1>
-          <p className="max-w-2xl m-auto mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl">
+          </Heading>
+          <Text maxW="2xl" mt={5} fontSize="xl" color="zinc.200" textAlign="center">
             We partnered with Stripe for a simplified billing.
-          </p>
-        </div>
-      </div>
-      <div className="p-4">
+          </Text>
+        </Flex>
+      </Box>
+      <Box p={4}>
         <CustomerPortalForm subscription={subscription} />
         <NameForm userName={userDetails?.full_name ?? ''} />
         <EmailForm userEmail={user.email} />
-      </div>
-    </section>
+      </Box>
+    </Box>
   );
 }

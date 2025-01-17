@@ -1,28 +1,52 @@
-import type { NextPage } from 'next';
+import { Box, Image, Heading, Text } from '@chakra-ui/react';
+import type { FC } from 'react';
 
 export type ColumnType = {
-  iconCalendar?: string;
-  heading?: string;
-  text?: string;
+    iconCalendar?: string;
+    heading?: string;
+    text?: string;
 };
 
-const Column: NextPage<ColumnType> = ({ iconCalendar, heading, text }) => {
-  return (
-    <div className="flex-1 flex flex-col items-start justify-start gap-[24px] min-w-[297px] max-w-full text-left text-13xl text-text-alternate font-heading-desktop-h2">
-      <img
-        className="w-12 h-12 relative overflow-hidden shrink-0"
-        loading="lazy"
-        alt=""
-        src={iconCalendar}
-      />
-      <h1 className="m-0 self-stretch relative text-inherit leading-[130%] font-bold font-inherit mq1050:text-7xl mq1050:leading-[33px] mq450:text-lgi mq450:leading-[25px]">
-        {heading}
-      </h1>
-      <div className="self-stretch relative text-base leading-[150%] font-text-small-link">
-        {text}
-      </div>
-    </div>
-  );
+const Column: FC<ColumnType> = ({ iconCalendar, heading, text }) => {
+    return (
+        <Box
+            flex="1"
+            display="flex"
+            flexDirection="column"
+            alignItems="start"
+            justifyContent="start"
+            gap="24px"
+            minW="297px"
+            maxW="full"
+            textAlign="left"
+            fontSize="13xl"
+        >
+            <Image boxSize="48px" objectFit="cover" loading="lazy" alt="" src={iconCalendar} />
+            <Heading
+                as="h1"
+                m="0"
+                w="full"
+                fontSize="inherit"
+                lineHeight="130%"
+                fontWeight="bold"
+                css={{
+                    '@media (max-width: 1050px)': {
+                        fontSize: '7xl',
+                        lineHeight: '33px'
+                    },
+                    '@media (max-width: 450px)': {
+                        fontSize: 'lgi',
+                        lineHeight: '25px'
+                    }
+                }}
+            >
+                {heading}
+            </Heading>
+            <Text w="full" lineHeight="150%">
+                {text}
+            </Text>
+        </Box>
+    );
 };
 
 export default Column;

@@ -1,11 +1,13 @@
 'use client';
 
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { signInWithEmail } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { Box, Input, VStack, Text } from '@chakra-ui/react';
+import { Field } from '../field';
 
 // Define prop type with allowPassword boolean
 interface EmailSignInProps {
@@ -14,11 +16,7 @@ interface EmailSignInProps {
   disableButton?: boolean;
 }
 
-export default function EmailSignIn({
-  allowPassword,
-  redirectMethod,
-  disableButton
-}: EmailSignInProps) {
+export default function EmailSignIn({ allowPassword, redirectMethod, disableButton }: EmailSignInProps) {
   const router = redirectMethod === 'client' ? useRouter() : null;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -29,16 +27,11 @@ export default function EmailSignIn({
   };
 
   return (
-    <div className="my-8">
-      <form
-        noValidate={true}
-        className="mb-4"
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <div className="grid gap-2">
-          <div className="grid gap-1">
-            <label htmlFor="email">Email</label>
-            <input
+    <Box my={8}>
+      <form noValidate onSubmit={(e) => handleSubmit(e)}>
+        <VStack gap={4} mb={4}>
+          <Field label="Email">
+            <Input
               id="email"
               placeholder="name@example.com"
               type="email"
@@ -46,34 +39,26 @@ export default function EmailSignIn({
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
-              className="w-full p-3 rounded-md bg-zinc-800"
+              bg="gray.800"
+              p={3}
+              borderRadius="md"
             />
-          </div>
-          <Button
-            variant="slim"
-            type="submit"
-            className="mt-1"
-            loading={isSubmitting}
-            disabled={disableButton}
-          >
+          </Field>
+          <Button variant="solid" type="submit" isLoading={isSubmitting} disabled={disableButton}>
             Sign in
           </Button>
-        </div>
+        </VStack>
       </form>
       {allowPassword && (
         <>
-          <p>
-            <Link href="/signin/password_signin" className="font-light text-sm">
-              Sign in with email and password
-            </Link>
-          </p>
-          <p>
-            <Link href="/signin/signup" className="font-light text-sm">
-              Don't have an account? Sign up
-            </Link>
-          </p>
+          <Text fontSize="sm" fontWeight="light">
+            <Link href="/signin/password_signin">Sign in with email and password</Link>
+          </Text>
+          <Text fontSize="sm" fontWeight="light">
+            <Link href="/signin/signup">Don't have an account? Sign up</Link>
+          </Text>
         </>
       )}
-    </div>
+    </Box>
   );
 }

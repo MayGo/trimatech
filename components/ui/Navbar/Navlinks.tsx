@@ -1,77 +1,55 @@
 'use client';
 
-import Link from 'next/link';
+import { Flex, Link as ChakraLink } from '@chakra-ui/react';
 import { SignOut } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
-import Logo from '@/components/icons/Logo';
 import { usePathname, useRouter } from 'next/navigation';
 import { getRedirectMethod } from '@/utils/auth-helpers/settings';
-import s from './Navbar.module.css';
-
+import NextLink from 'next/link';
+import { Button } from '../button';
 interface NavlinksProps {
-  user?: any;
+    user?: any;
 }
 
 export default function Navlinks({ user }: NavlinksProps) {
-  const router = getRedirectMethod() === 'client' ? useRouter() : null;
+    const router = getRedirectMethod() === 'client' ? useRouter() : null;
 
-  return (
-    <>
-      <div className="flex flex-row items-center justify-center gap-[32px] max-w-full  mq750:w-[461px] mq750:gap-[16px] mq1050:w-[266px]">
-        <div className="flex-1 overflow-hidden flex flex-row items-end  gap-[20px] mq1050:hidden">
-          <Link
-            href="/pricing"
-            className="btn btn-ghost font-semibold text-base font-semibold"
-          >
-            About Us
-          </Link>
-          <Link
-            href="/pricing"
-            className="btn btn-ghost font-semibold text-base font-semibold"
-          >
-            Services
-          </Link>
-          <Link
-            href="/pricing"
-            className="btn btn-ghost font-semibold text-base font-semibold"
-          >
-            Contact Us
-          </Link>
-          <Link
-            href="/pricing"
-            className="btn btn-ghost font-semibold text-base font-semibold"
-          >
-            Pricing
-          </Link>
-          {user && (
-            <Link
-              href="/account"
-              className="btn btn-ghost font-semibold text-base font-semibold"
-            >
-              Account
-            </Link>
-          )}
-        </div>
+    return (
+        <Flex flexDirection="row" alignItems="center" justifyContent="center" gap="8" maxW="full">
+            <Flex flex="1" overflow="hidden" flexDirection="row" alignItems="end" gap="8">
+                <ChakraLink href="/pricing" fontWeight="semibold">
+                    About Us
+                </ChakraLink>
+                <ChakraLink href="/pricing" fontWeight="semibold">
+                    Services
+                </ChakraLink>
+                <ChakraLink href="/pricing" fontWeight="semibold">
+                    Contact Us
+                </ChakraLink>
+                <ChakraLink href="/pricing" fontWeight="semibold">
+                    Pricing
+                </ChakraLink>
+                {user && (
+                    <ChakraLink href="/account" fontWeight="semibold">
+                        Account
+                    </ChakraLink>
+                )}
+            </Flex>
 
-        {user ? (
-          <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
-            <input type="hidden" name="pathName" value={usePathname()} />
-            <button
-              type="submit"
-              className="btn btn-outline btn-secondary font-semibold text-base font-semibold"
-            >
-              Sign out
-            </button>
-          </form>
-        ) : (
-          <Link
-            href="/signin"
-            className="btn btn-outline btn-secondary font-semibold text-base font-semibold w-[150px]"
-          >
-            Sign In
-          </Link>
-        )}
-      </div>
-    </>
-  );
+            {user ? (
+                <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
+                    <input type="hidden" name="pathName" value={usePathname()} />
+                    <Button type="submit" variant="outline">
+                        Sign out
+                    </Button>
+                </form>
+            ) : (
+                <NextLink href="/signin">
+                    <Button variant="solid" bg="primary" w="150px" color="white">
+                        Sign In
+                    </Button>
+                </NextLink>
+            )}
+        </Flex>
+    );
 }

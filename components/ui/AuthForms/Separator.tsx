@@ -1,17 +1,19 @@
+import { Box, Flex, Text } from '@chakra-ui/react';
+
 interface SeparatorProps {
   text: string;
 }
 
 export default function Separator({ text }: SeparatorProps) {
   return (
-    <div className="relative">
-      <div className="relative flex items-center py-1">
-        <div className="grow border-t border-zinc-700"></div>
-        <span className="mx-3 shrink text-sm leading-8 text-zinc-500">
+    <Box position="relative">
+      <Flex position="relative" alignItems="center" py={1}>
+        <Box flex="1" borderTop="1px" borderColor="gray.700"></Box>
+        <Text mx={3} flexShrink={0} fontSize="sm" lineHeight="8" color="gray.500">
           {text}
-        </span>
-        <div className="grow border-t border-zinc-700"></div>
-      </div>
-    </div>
+        </Text>
+        <Box flex="1" borderTop="1px" borderColor="gray.700"></Box>
+      </Flex>
+    </Box>
   );
 }

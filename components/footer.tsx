@@ -1,67 +1,102 @@
+import { Box, Flex, Image, Text, Link as ChakraLink } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 
 const Footer: NextPage = () => {
-  return (
-    <footer className="self-stretch bg-background-color-alternate overflow-hidden flex flex-col items-start justify-start py-20 px-16 gap-[8px] shrink-0 [debug_commit:f6aba90] text-left text-sm text-text-alternate font-text-small-link mq750:gap-[40px] mq750:py-[52px] mq750:px-8 mq750:box-border mq450:gap-[20px]">
-      <div className="self-stretch flex flex-row items-start justify-between gap-[8px] max-w-full lg:flex-wrap mq750:gap-[32px] mq450:gap-[16px]">
-        <div className="w-[189px] h-[75px] relative overflow-hidden shrink-0">
-          <img
-            className="absolute top-[16px] left-[15px] w-[157px] h-[42px] object-cover"
-            loading="lazy"
-            alt=""
-            src="/trimatech-logo33real1-1@2x.png"
-          />
-        </div>
-        <div className="self-center flex flex-col items-start justify-start gap-[24px]">
-          <div className="flex flex-row items-start justify-start gap-[12px]">
-            <img
-              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-              loading="lazy"
-              alt=""
-              src="/icon--facebook.svg"
-            />
-            <img
-              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-              loading="lazy"
-              alt=""
-              src="/icon--instagram.svg"
-            />
-            <img
-              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-              loading="lazy"
-              alt=""
-              src="/icon--x.svg"
-            />
-            <img
-              className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-              loading="lazy"
-              alt=""
-              src="/icon--linkedin.svg"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="self-stretch flex flex-col items-start justify-start gap-[32px] max-w-full mq750:gap-[16px]">
-        <div className="self-stretch h-px relative bg-background-color-alternate box-border border-[1px] border-solid border-background-color-alternate" />
-        <div className="self-stretch flex flex-row items-start justify-between max-w-full gap-[20px] mq750:flex-wrap">
-          <div className="h-[21px] w-[240px] relative leading-[150%] inline-block">
-            © 2024 Trimatech. All rights reserved.
-          </div>
-          <div className="w-[377px] flex flex-row items-start justify-start gap-[24px] max-w-full mq450:flex-wrap">
-            <div className="h-[21px] w-[87px] relative [text-decoration:underline] leading-[150%] inline-block">
-              Privacy Policy
-            </div>
-            <div className="h-[21px] flex-1 relative [text-decoration:underline] leading-[150%] inline-block min-w-[89px]">
-              Terms and Conditions
-            </div>
-            <div className="h-[21px] w-[105px] relative [text-decoration:underline] leading-[150%] inline-block">
-              Cookies Settings
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+    return (
+        <Box
+            as="footer"
+            bg="background-color-alternate"
+            overflow="hidden"
+            py={{ base: '20', md: '52' }}
+            px={{ base: '16', md: '8' }}
+            gap={{ base: '8px', md: '40px', sm: '20px' }}
+            display="flex"
+            flexDirection="column"
+            alignItems="start"
+            justifyContent="start"
+            textAlign="left"
+            fontSize="sm"
+        >
+            <Flex
+                w="full"
+                flexDirection="row"
+                alignItems="start"
+                justifyContent="space-between"
+                gap={{ base: '8px', lg: '32px', sm: '16px' }}
+                flexWrap={{ lg: 'wrap' }}
+            >
+                <Box w="189px" h="75px" overflow="hidden" flexShrink={0}>
+                    <Image
+                        position="absolute"
+                        top="16px"
+                        left="15px"
+                        w="157px"
+                        h="42px"
+                        objectFit="cover"
+                        loading="lazy"
+                        alt="Trimatech Logo"
+                        src="/trimatech-logo33real1-1@2x.png"
+                    />
+                </Box>
+                <Flex flexDirection="column" alignItems="start" justifyContent="start" gap="24px">
+                    <Flex flexDirection="row" alignItems="start" justifyContent="start" gap="12px">
+                        {['facebook', 'instagram', 'x', 'linkedin'].map((icon) => (
+                            <Image
+                                key={icon}
+                                h="6"
+                                w="6"
+                                objectFit="cover"
+                                loading="lazy"
+                                alt={`${icon} icon`}
+                                src={`/icon--${icon}.svg`}
+                            />
+                        ))}
+                    </Flex>
+                </Flex>
+            </Flex>
+            <Flex
+                w="full"
+                flexDirection="column"
+                alignItems="start"
+                justifyContent="start"
+                gap={{ base: '32px', md: '16px' }}
+            >
+                <Box h="1px" bg="background-color-alternate" border="1px solid" />
+                <Flex
+                    w="full"
+                    flexDirection="row"
+                    alignItems="start"
+                    justifyContent="space-between"
+                    gap="20px"
+                    flexWrap={{ md: 'wrap' }}
+                >
+                    <Text h="21px" w="240px" lineHeight="150%">
+                        © 2024 Trimatech. All rights reserved.
+                    </Text>
+                    <Flex
+                        w="377px"
+                        flexDirection="row"
+                        alignItems="start"
+                        justifyContent="start"
+                        gap="24px"
+                        flexWrap={{ sm: 'wrap' }}
+                    >
+                        {['Privacy Policy', 'Terms and Conditions', 'Cookies Settings'].map((text, index) => (
+                            <ChakraLink
+                                key={index}
+                                h="21px"
+                                lineHeight="150%"
+                                textDecoration="underline"
+                                minW={index === 1 ? '89px' : 'auto'}
+                            >
+                                {text}
+                            </ChakraLink>
+                        ))}
+                    </Flex>
+                </Flex>
+            </Flex>
+        </Box>
+    );
 };
 
 export default Footer;

@@ -1,11 +1,12 @@
 'use client';
 
-import Button from '@/components/ui/Button';
+import { Box, VStack, Input } from '@chakra-ui/react';
+import { Button } from '@/components/ui/button';
 import { updatePassword } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-
+import { Field } from '../field';
 interface UpdatePasswordProps {
   redirectMethod: string;
 }
@@ -23,43 +24,38 @@ export default function UpdatePassword({
   };
 
   return (
-    <div className="my-8">
-      <form
-        noValidate={true}
-        className="mb-4"
-        onSubmit={(e) => handleSubmit(e)}
-      >
-        <div className="grid gap-2">
-          <div className="grid gap-1">
-            <label htmlFor="password">New Password</label>
-            <input
+    <Box my={8}>
+      <form noValidate onSubmit={(e) => handleSubmit(e)}>
+        <VStack gap={2} mb={4}>
+          <Field label="New Password">
+            <Input
               id="password"
               placeholder="Password"
               type="password"
               name="password"
               autoComplete="current-password"
-              className="w-full p-3 rounded-md bg-zinc-800"
+              bg="gray.800"
+              p={3}
+              borderRadius="md"
             />
-            <label htmlFor="passwordConfirm">Confirm New Password</label>
-            <input
+          </Field>
+          <Field label="Confirm New Password">
+            <Input
               id="passwordConfirm"
               placeholder="Password"
               type="password"
               name="passwordConfirm"
               autoComplete="current-password"
-              className="w-full p-3 rounded-md bg-zinc-800"
+              bg="gray.800"
+              p={3}
+              borderRadius="md"
             />
-          </div>
-          <Button
-            variant="slim"
-            type="submit"
-            className="mt-1"
-            loading={isSubmitting}
-          >
+          </Field>
+          <Button variant="solid" type="submit" isLoading={isSubmitting} mt={1}>
             Update Password
           </Button>
-        </div>
+        </VStack>
       </form>
-    </div>
+    </Box>
   );
 }

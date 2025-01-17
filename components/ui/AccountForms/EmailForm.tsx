@@ -1,11 +1,12 @@
 'use client';
 
-import Button from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 import Card from '@/components/ui/Card';
 import { updateEmail } from '@/utils/auth-helpers/server';
 import { handleRequest } from '@/utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { Box, Flex, Input, Text } from '@chakra-ui/react';
 
 export default function EmailForm({
   userEmail
@@ -32,33 +33,40 @@ export default function EmailForm({
       title="Your Email"
       description="Please enter the email address you want to use to login."
       footer={
-        <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-          <p className="pb-4 sm:pb-0">
+        <Flex
+          direction={{ base: 'column', sm: 'row' }}
+          align={{ base: 'start', sm: 'center' }}
+          justify="space-between"
+        >
+          <Text pb={{ base: 4, sm: 0 }}>
             We will email you to verify the change.
-          </p>
+          </Text>
           <Button
-            variant="slim"
+            variant="solid"
             type="submit"
             form="emailForm"
-            loading={isSubmitting}
+            isLoading={isSubmitting}
           >
             Update Email
           </Button>
-        </div>
+        </Flex>
       }
     >
-      <div className="mt-8 mb-4 text-xl font-semibold">
+      <Box mt={8} mb={4} fontSize="xl" fontWeight="semibold">
         <form id="emailForm" onSubmit={(e) => handleSubmit(e)}>
-          <input
+          <Input
             type="text"
             name="newEmail"
-            className="w-1/2 p-3 rounded-md bg-zinc-800"
+            width="50%"
+            p={3}
+            borderRadius="md"
+            bg="gray.800"
             defaultValue={userEmail ?? ''}
             placeholder="Your email"
             maxLength={64}
           />
         </form>
-      </div>
+      </Box>
     </Card>
   );
 }

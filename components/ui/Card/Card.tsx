@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 
 interface Props {
   title: string;
@@ -9,17 +10,19 @@ interface Props {
 
 export default function Card({ title, description, footer, children }: Props) {
   return (
-    <div className="w-full max-w-3xl m-auto my-8 border rounded-md p border-zinc-700">
-      <div className="px-5 py-4">
-        <h3 className="mb-1 text-2xl font-medium">{title}</h3>
-        <p className="text-zinc-300">{description}</p>
+    <Box w="full" maxW="3xl" m="auto" my={8} borderWidth="1px" borderRadius="md" p={0} borderColor="gray.700">
+      <Box px={5} py={4}>
+        <Heading as="h3" mb={1} size="lg" fontWeight="medium">
+          {title}
+        </Heading>
+        {description && <Text color="gray.300">{description}</Text>}
         {children}
-      </div>
+      </Box>
       {footer && (
-        <div className="p-4 border-t rounded-b-md border-zinc-700 bg-zinc-900 text-zinc-500">
+        <Box p={4} borderTopWidth="1px" borderRadius="md" borderColor="gray.700" bg="gray.900" color="gray.500">
           {footer}
-        </div>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 }

@@ -1,28 +1,33 @@
-import type { NextPage } from "next";
+import { Box, Image, Text } from '@chakra-ui/react';
 
 export type ListItemType = {
-  iconAlarm?: string;
-  heading?: string;
-  text?: string;
+    iconAlarm?: string;
+    heading?: string;
+    text?: string;
 };
 
-const ListItem: NextPage<ListItemType> = ({ iconAlarm, heading, text }) => {
-  return (
-    <div className="flex-1 flex flex-col items-start justify-start gap-[16px] min-w-[187px] text-left text-xl text-text-alternate font-heading-desktop-h2">
-      <img
-        className="w-12 h-12 relative overflow-hidden shrink-0"
-        loading="lazy"
-        alt=""
-        src={iconAlarm}
-      />
-      <b className="self-stretch relative leading-[140%] mq450:text-base mq450:leading-[22px]">
-        {heading}
-      </b>
-      <div className="self-stretch relative text-base leading-[150%] font-text-small-link">
-        {text}
-      </div>
-    </div>
-  );
+const ListItem: React.FC<ListItemType> = ({ iconAlarm, heading, text }) => {
+    return (
+        <Box
+            flex="1"
+            display="flex"
+            flexDirection="column"
+            alignItems="start"
+            justifyContent="start"
+            gap="4"
+            minW="187px"
+            textAlign="left"
+            fontSize="xl"
+        >
+            <Image boxSize="12" objectFit="cover" loading="lazy" alt="" src={iconAlarm} />
+            <Text as="b" width="full" fontSize={{ base: 'base', md: 'xl' }} lineHeight="140%">
+                {heading}
+            </Text>
+            <Text width="full" lineHeight="150%">
+                {text}
+            </Text>
+        </Box>
+    );
 };
 
 export default ListItem;

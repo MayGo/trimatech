@@ -1,12 +1,12 @@
 'use client';
 
-import Button from '@/components/ui/Button';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { createStripePortal } from '@/utils/stripe/server';
 import Link from 'next/link';
-import Card from '@/components/ui/Card';
+import { Box, Text, VStack, HStack, Heading } from '@chakra-ui/react';
 import { Tables } from '@/types_db';
+import { Button } from '../button';
 
 type Subscription = Tables<'subscriptions'>;
 type Price = Tables<'prices'>;
@@ -45,33 +45,43 @@ export default function CustomerPortalForm({ subscription }: Props) {
   };
 
   return (
-    <Card
-      title="Your Plan"
-      description={
-        subscription
-          ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
-          : 'You are not currently subscribed to any plan.'
-      }
-      footer={
-        <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-          <p className="pb-4 sm:pb-0">Manage your subscription on Stripe.</p>
+    <Box
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      p={5}
+      boxShadow="md"
+    >
+      <VStack align="start" gap={4}>
+        <Heading size="md">Your Plan</Heading>
+        <Text>
+          {subscription
+            ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
+            : 'You are not currently subscribed to any plan.'}
+        </Text>
+        <HStack
+          w="full"
+          justify="space-between"
+          align="center"
+          flexDirection={{ base: 'column', sm: 'row' }}
+        >
+          <Text>Manage your subscription on Stripe.</Text>
           <Button
-            variant="slim"
+            colorScheme="teal"
             onClick={handleStripePortalRequest}
-            loading={isSubmitting}
+            isLoading={isSubmitting}
           >
             Open customer portal
           </Button>
-        </div>
-      }
-    >
-      <div className="mt-8 mb-4 text-xl font-semibold">
-        {subscription ? (
-          `${subscriptionPrice}/${subscription?.prices?.interval}`
-        ) : (
-          <Link href="/">Choose your plan</Link>
-        )}
-      </div>
-    </Card>
+        </HStack>
+        <Text fontSize="xl" fontWeight="semibold" mt={8} mb={4}>
+          {subscription ? (
+            `${subscriptionPrice}/${subscription?.prices?.interval}`
+          ) : (
+            <Link href="/">Choose your plan</Link>
+          )}
+        </Text>
+      </VStack>
+    </Box>
   );
 }
