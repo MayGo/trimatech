@@ -10,7 +10,7 @@ import { LuGithub } from 'react-icons/lu';
 type OAuthProviders = {
     name: Provider;
     displayName: string;
-    icon: JSX.Element;
+    icon: any; //JSX.Element
 };
 
 export default function OauthSignIn() {
