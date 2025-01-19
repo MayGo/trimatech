@@ -27,19 +27,19 @@ export default function Navlinks({ user }: NavlinksProps) {
                     </form>
                 ) : (
                     <NextLink href="/signin">
-                        <Button variant="outline" w="150px" borderColor="primary" color="primary">
+                        <Button variant="outline" w="150px" colorPalette="blue">
                             Sign In
                         </Button>
                     </NextLink>
                 )}
                 <NextLink href="/signin">
-                    <Button variant="outline" w="150px" borderColor="primary" color="primary">
+                    <Button variant="outline" w="150px" colorPalette="blue">
                         <LuCalendarDays />
                         Book a Call
                     </Button>
                 </NextLink>
                 <NextLink href="/signin">
-                    <Button variant="solid" bg="primary" w="150px" color="white">
+                    <Button variant="solid" colorPalette="blue" w="150px">
                         See pricing
                     </Button>
                 </NextLink>

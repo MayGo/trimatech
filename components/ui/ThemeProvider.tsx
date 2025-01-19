@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 const primaryColor = '#2563EB';
 const bgColor = '#EEF2FF';
 const textColor = '#1E293B';
+const borderColor = '#84B2FE';
 
 const config = defineConfig({
     ...defaultSystem._config,
@@ -16,9 +17,6 @@ const config = defineConfig({
             ...defaultSystem._config.theme?.tokens,
             colors: {
                 ...defaultSystem._config.theme?.tokens?.colors,
-                text: {
-                    value: textColor
-                },
 
                 blue: {
                     '50': { value: '#eff4ff' },
@@ -41,11 +39,24 @@ const config = defineConfig({
                 },
                 bgColor: {
                     value: bgColor
+                },
+                borderColor: {
+                    value: borderColor
                 }
             },
             fonts: {
                 body: { value: 'var(--font-roboto), sans-serif' },
                 heading: { value: 'var(--font-mplus), sans-serif' }
+            }
+        },
+        semanticTokens: {
+            colors: {
+                ...defaultSystem._config.theme?.semanticTokens?.colors,
+                fg: {
+                    DEFAULT: {
+                        value: { _light: textColor }
+                    }
+                }
             }
         }
     }
