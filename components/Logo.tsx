@@ -13,6 +13,7 @@ export const Logo = ({ size = 'md' }: { size?: 'sm' | 'md' }) => {
                     loading="lazy"
                     alt=""
                     src="/trimatech-logo.png"
+                    ml="-12px"
                 />
             </Flex>
         </Link>
