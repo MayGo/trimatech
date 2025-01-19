@@ -4,7 +4,9 @@ import { ChakraProvider, createSystem, defaultSystem, defineConfig } from '@chak
 import { ColorModeProvider, type ColorModeProviderProps } from './color-mode';
 import { useEffect, useState } from 'react';
 
-const primaryColor = '#6410f5';
+const primaryColor = '#2563EB';
+const bgColor = '#EEF2FF';
+const textColor = '#1E293B';
 
 const config = defineConfig({
     ...defaultSystem._config,
@@ -14,24 +16,31 @@ const config = defineConfig({
             ...defaultSystem._config.theme?.tokens,
             colors: {
                 ...defaultSystem._config.theme?.tokens?.colors,
-                purple: {
-                    '50': { value: '#f4f1ff' },
-                    '100': { value: '#eae6ff' },
-                    '200': { value: '#d8d0ff' },
-                    '300': { value: '#bbaaff' },
-                    '400': { value: '#9b7aff' },
-                    '500': { value: '#7e44ff' },
-                    '600': { value: '#701eff' },
-                    '700': { value: primaryColor },
-                    '800': { value: '#520acd' },
-                    '900': { value: '#440aa8' },
-                    '950': { value: '#270372' }
+                text: {
+                    value: textColor
+                },
+
+                blue: {
+                    '50': { value: '#eff4ff' },
+                    '100': { value: '#dbe6fe' },
+                    '200': { value: '#bfd3fe' },
+                    '300': { value: '#93b4fd' },
+                    '400': { value: '#6090fa' },
+                    '500': { value: '#3b76f6' },
+                    '600': { value: '#2563eb' },
+                    '700': { value: '#1d58d8' },
+                    '800': { value: '#1e4baf' },
+                    '900': { value: '#1e408a' },
+                    '950': { value: '#172a54' }
                 },
                 primary: {
                     value: primaryColor
                 },
                 black: {
                     value: '#000000'
+                },
+                bgColor: {
+                    value: bgColor
                 }
             },
             fonts: {

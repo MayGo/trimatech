@@ -7,6 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { getRedirectMethod } from '@/utils/auth-helpers/settings';
 import NextLink from 'next/link';
 import { Button } from '../button';
+import { LuCalendar, LuCalendar1, LuCalendarDays } from 'react-icons/lu';
 interface NavlinksProps {
     user?: any;
 }
@@ -17,39 +18,37 @@ export default function Navlinks({ user }: NavlinksProps) {
     return (
         <Flex flexDirection="row" alignItems="center" justifyContent="center" gap="8" maxW="full">
             <Flex flex="1" flexDirection="row" alignItems="end" gap="8">
-                <ChakraLink href="/pricing" fontWeight="semibold">
-                    About Us
-                </ChakraLink>
-                <ChakraLink href="/pricing" fontWeight="semibold">
-                    Services
-                </ChakraLink>
-                <ChakraLink href="/pricing" fontWeight="semibold">
-                    Contact Us
-                </ChakraLink>
-                <ChakraLink href="/pricing" fontWeight="semibold">
-                    Pricing
-                </ChakraLink>
-                {user && (
+                {user ? (
+                    <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
+                        <input type="hidden" name="pathName" value={usePathname()} />
+                        <Button type="submit" variant="outline">
+                            Sign out
+                        </Button>
+                    </form>
+                ) : (
+                    <NextLink href="/signin">
+                        <Button variant="outline" w="150px" borderColor="primary" color="primary">
+                            Sign In
+                        </Button>
+                    </NextLink>
+                )}
+                <NextLink href="/signin">
+                    <Button variant="outline" w="150px" borderColor="primary" color="primary">
+                        <LuCalendarDays />
+                        Book a Call
+                    </Button>
+                </NextLink>
+                <NextLink href="/signin">
+                    <Button variant="solid" bg="primary" w="150px" color="white">
+                        See pricing
+                    </Button>
+                </NextLink>
+                {/* {user && (
                     <ChakraLink href="/account" fontWeight="semibold">
                         Account
                     </ChakraLink>
-                )}
+                )} */}
             </Flex>
-
-            {user ? (
-                <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
-                    <input type="hidden" name="pathName" value={usePathname()} />
-                    <Button type="submit" variant="outline">
-                        Sign out
-                    </Button>
-                </form>
-            ) : (
-                <NextLink href="/signin">
-                    <Button variant="solid" bg="primary" w="150px" color="white">
-                        Sign In
-                    </Button>
-                </NextLink>
-            )}
         </Flex>
     );
 }

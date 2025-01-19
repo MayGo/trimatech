@@ -31,10 +31,10 @@ function FormContent({
     return (
         <Flex flexDirection="column" alignItems="start" justifyContent="start" gap={8} w="full">
             <Field label="First Name" invalid={!!errors.firstName} errorText={errors.firstName?.message || ''}>
-                <Input {...register('firstName')} placeholder="First name" variant="subtle" rounded="full" bg="white" />
+                <Input {...register('firstName')} placeholder="First name" variant="subtle" rounded="full" />
             </Field>
             <Field label="Last Name" invalid={!!errors.lastName} errorText={errors.lastName?.message || ''}>
-                <Input {...register('lastName')} placeholder="Last name" variant="subtle" rounded="full" bg="white" />
+                <Input {...register('lastName')} placeholder="Last name" variant="subtle" rounded="full" />
             </Field>
             <Button
                 type="submit"

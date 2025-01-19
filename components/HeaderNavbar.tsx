@@ -23,8 +23,8 @@ const HeaderNavbar: NextPage = () => {
     }, []);
 
     return (
-        <Box as="header" py={3} borderBottom="1px solid" borderColor="white" textAlign="left">
-            <Flex align="center" justify="space-between" gap={5} maxW="full">
+        <Box as="header" borderBottom="1px solid" borderColor="white" bg="bgColor" textAlign="left">
+            <Flex align="center" justify="space-between" gap={5} maxW="full" px={9}>
                 <Logo />
 
                 <Navlinks user={user} />

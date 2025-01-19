@@ -73,9 +73,9 @@ export default async function RootLayout({ children }: PropsWithChildren) {
     return (
         <html suppressHydrationWarning lang="en" className={`${roboto.variable} ${mPlusRounded.variable}`}>
             <body>
-                <ThemeProvider enableColorScheme={false} defaultTheme="dark">
-                    <Box bg="black">
-                        <Box maxW="1180px" mx="auto">
+                <ThemeProvider enableColorScheme={false} defaultTheme="light">
+                    <Box bg="white">
+                        <Box maxW="1440px" mx="auto">
                             <HeaderNavbar />
 
                             {children}
