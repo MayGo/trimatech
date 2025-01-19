@@ -75,7 +75,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             <body>
                 <ThemeProvider enableColorScheme={false} defaultTheme="light">
                     <Box bg="white">
-                        <Box maxW="1440px" mx="auto">
+                        <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
                             <HeaderNavbar />
 
                             {children}

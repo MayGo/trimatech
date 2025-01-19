@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { getRedirectMethod } from '@/utils/auth-helpers/settings';
 import NextLink from 'next/link';
 import { Button } from '../button';
-import { LuCalendar, LuCalendar1, LuCalendarDays } from 'react-icons/lu';
+import { LuCalendarDays } from 'react-icons/lu';
 interface NavlinksProps {
     user?: any;
 }
@@ -17,7 +17,7 @@ export default function Navlinks({ user }: NavlinksProps) {
 
     return (
         <Flex flexDirection="row" alignItems="center" justifyContent="center" gap="8" maxW="full">
-            <Flex flex="1" flexDirection="row" alignItems="end" gap="4">
+            <Flex flex="1" flexDirection={['column', 'row']} alignItems="end" gap="4">
                 {user ? (
                     <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
                         <input type="hidden" name="pathName" value={usePathname()} />

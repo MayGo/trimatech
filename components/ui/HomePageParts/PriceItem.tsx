@@ -1,13 +1,13 @@
 import { Box, Text, VStack, List, Flex, Heading } from '@chakra-ui/react';
-import { LuCircleCheck } from 'react-icons/lu';
 import { Button } from '../button';
+import { mainHeadingSize, mainRound } from '../padding.utils';
 
 export function PriceItem() {
     return (
         <Flex
             flexDirection="column"
             borderWidth="1px"
-            borderRadius={20}
+            borderRadius={mainRound}
             borderColor="borderColor"
             overflow="hidden"
             boxShadow="md"
@@ -20,12 +20,12 @@ export function PriceItem() {
             <Heading fontSize="3xl" fontWeight="bold">
                 Monthly Club
             </Heading>
-            <Box position="relative">
-                <Flex justify="center" align="center">
-                    <Heading size="6xl" fontWeight="bold" color="primary">
+            <Box>
+                <Flex justify="center" align="baseline">
+                    <Heading size={mainHeadingSize} fontWeight="bold" color="primary" position="relative">
                         €3,995
                     </Heading>
-                    <Text fontSize="md" mb={6} position="absolute" top={'40px'} right={'-6px'}>
+                    <Text fontSize="md" w="0" whiteSpace="nowrap">
                         / month
                     </Text>
                 </Flex>
@@ -56,7 +56,7 @@ export function PriceItem() {
                                     {index + 1}
                                 </Flex>
                             </List.Indicator>
-                            {feature}
+                            <Text textAlign="left">{feature}</Text>
                         </List.Item>
                     ))}
                 </List.Root>

@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { LuCircleCheck, LuCirclePause } from 'react-icons/lu';
+import { mainRound, mainRounded } from '../padding.utils';
 
 const PauseTryItem = ({
     title,
@@ -11,7 +12,7 @@ const PauseTryItem = ({
     children: React.ReactNode;
 }) => {
     return (
-        <Box w="full" rounded={20} p={10} border="2px dashed" borderColor="primary">
+        <Box w="full" rounded={mainRound} p={10} border="2px dashed" borderColor="primary">
             <Flex align="center" gap={4}>
                 {children}
                 <Heading size="4xl" color="fg">
@@ -28,7 +29,7 @@ const PauseTryItem = ({
 export const PauseTry = () => {
     return (
         <Box w="full">
-            <Flex flexDirection="row" gap={4}>
+            <Flex flexDirection={['column', 'column', 'row']} gap={4}>
                 <PauseTryItem
                     title="Pause anytime"
                     description="Temporarily pause your subscription anytime, no sweat."

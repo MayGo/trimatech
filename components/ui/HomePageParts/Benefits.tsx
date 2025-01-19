@@ -1,8 +1,9 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import { DedicatedMaintananceImage } from './animations/DedicatedMaintananceImage';
 import { TurnaroundImage } from './animations/TurnaroundImage';
 import { UpgradeImage } from './animations/UpgradeImage';
 import { CommunicationImage } from './animations/CommunicationImage';
+import { mainRounded } from '../padding.utils';
 
 const BenefitItem = ({
     title,
@@ -14,7 +15,16 @@ const BenefitItem = ({
     children: React.ReactNode;
 }) => {
     return (
-        <Flex flexDirection="column" bg="bgColor" w="full" h="container.height" rounded={20} p={6} gap={4}>
+        <Flex
+            flexDirection="column"
+            bg="bgColor"
+            w="full"
+            h="container.height"
+            rounded={mainRounded}
+            p={6}
+            gap={4}
+            minW="300px"
+        >
             <Box h="200px">{children}</Box>
             <Heading size="lg">{title}</Heading>
             <Text fontSize="md" textAlign="justify">
@@ -27,10 +37,10 @@ const BenefitItem = ({
 export const Benefits = () => {
     return (
         <Box w="full">
-            <Box pb={2}>
+            <Box pb={2} pl={[4, 0]}>
                 <Heading size="5xl">Benefits</Heading>
             </Box>
-            <Flex flexDirection="row" gap={4}>
+            <SimpleGrid columns={[1, 1, 2, 2, 4]} gap={4}>
                 <BenefitItem
                     title="Dedicated Maintenance for Your Existing Projects"
                     description="No need for a full team—one senior developer focuses on ensuring your React application remains performant and up-to-date."
@@ -55,7 +65,7 @@ export const Benefits = () => {
                 >
                     <CommunicationImage />
                 </BenefitItem>
-            </Flex>
+            </SimpleGrid>
         </Box>
     );
 };

@@ -4,6 +4,7 @@ import { FaPaperPlane } from 'react-icons/fa';
 import { AccordionItem, AccordionItemTrigger, AccordionItemContent, AccordionRoot } from '../accordion';
 import { LuArrowRight } from 'react-icons/lu';
 import { Button } from '../button';
+import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
 
 const items = [
     {
@@ -55,7 +56,7 @@ const items = [
 
 const IntroCallCard = () => {
     return (
-        <Box bg="white" borderRadius={20} p={8} boxShadow="md">
+        <Box bg="white" borderRadius={mainRound} p={8} boxShadow="md">
             <Flex direction="column" gap={8}>
                 <Image borderRadius="full" boxSize="100px" src="/avatar.png" alt="Emoji" />
                 <Heading fontSize="3xl" width="210px">
@@ -87,11 +88,18 @@ const IntroCallCard = () => {
 
 export const Faq = () => {
     return (
-        <Flex bg="bgColor" w="full" rounded={20} p={4 * 4} gap={4 * 4}>
+        <Flex
+            flexDirection={['column', 'column', 'row']}
+            bg="bgColor"
+            w="full"
+            rounded={mainRounded}
+            p={outerPadding}
+            gap={outerPadding}
+        >
             <Flex flexDirection="column" h="full" gap={10} flex="2">
                 <Box flex="1">
-                    <Heading size="6xl">Frequently Asked Questions</Heading>
-                    <Text fontSize="lg" pt={4}>
+                    <Heading size={mainHeadingSize}>Frequently Asked Questions</Heading>
+                    <Text fontSize={mainSubtextSize} pt={4}>
                         Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.
                     </Text>
                 </Box>
