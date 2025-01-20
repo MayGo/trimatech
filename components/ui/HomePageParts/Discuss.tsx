@@ -4,6 +4,7 @@ import { DiscussImage } from './animations/DiscussImage';
 
 import { InlineWidget } from 'react-calendly';
 import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
+import { shadowSharp } from '../theme.utils';
 
 export const Discuss = () => {
     return (
@@ -27,7 +28,7 @@ export const Discuss = () => {
                 </Box>
             </Flex>
             <Flex justifyContent="center" alignItems="center" flex="1">
-                <Box w="400px" h="fit-content" rounded={mainRound} bg="white" overflow="hidden">
+                <Box w="400px" h="fit-content" rounded={mainRound} bg="white" overflow="hidden" shadow={shadowSharp}>
                     <InlineWidget url="https://calendly.com/maigo-erit/30min?hide_event_type_details=1&hide_gdpr_banner=1" />
                 </Box>
             </Flex>

@@ -1,6 +1,7 @@
 import { Box, Text, VStack, List, Flex, Heading } from '@chakra-ui/react';
 import { Button } from '../button';
 import { mainHeadingSize, mainRound } from '../padding.utils';
+import { shadowSharp } from '../theme.utils';
 
 export function PriceItem() {
     return (
@@ -16,6 +17,7 @@ export function PriceItem() {
             textAlign="center"
             height="fit-content"
             gap={4}
+            shadow={shadowSharp}
         >
             <Heading fontSize="3xl" fontWeight="bold">
                 Monthly Club

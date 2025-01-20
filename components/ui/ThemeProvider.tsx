@@ -8,6 +8,7 @@ const primaryColor = '#2563EB';
 const bgColor = '#EEF2FF';
 const textColor = '#1E293B';
 const borderColor = '#84B2FE';
+const shadowColor = '#D1DCFF';
 
 const config = defineConfig({
     ...defaultSystem._config,
@@ -42,6 +43,9 @@ const config = defineConfig({
                 },
                 borderColor: {
                     value: borderColor
+                },
+                shadowColor: {
+                    value: shadowColor
                 }
             },
             fonts: {

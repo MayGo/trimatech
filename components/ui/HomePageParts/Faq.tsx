@@ -5,6 +5,7 @@ import { AccordionItem, AccordionItemTrigger, AccordionItemContent, AccordionRoo
 import { LuArrowRight } from 'react-icons/lu';
 import { Button } from '../button';
 import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
+import { shadowSharp } from '../theme.utils';
 
 const items = [
     {
@@ -56,7 +57,7 @@ const items = [
 
 const IntroCallCard = () => {
     return (
-        <Box bg="white" borderRadius={mainRound} p={8} boxShadow="md">
+        <Box bg="white" borderRadius={mainRound} p={8} boxShadow={shadowSharp}>
             <Flex direction="column" gap={8}>
                 <Image borderRadius="full" boxSize="100px" src="/avatar.png" alt="Emoji" />
                 <Heading fontSize="3xl" width="210px">
