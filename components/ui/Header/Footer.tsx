@@ -1,10 +1,10 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import type { NextPage } from 'next';
 import { Logo } from './Logo';
-import { mainRounded, outerPadding } from './ui/padding.utils';
+import { mainRounded, outerPadding } from '../padding.utils';
 
-const Footer: NextPage = () => {
+export const Footer: NextPage = () => {
     return (
         <Box as="footer" bg="bgColor" w="full" roundedTop={mainRounded} mt={6} px={outerPadding}>
             <Flex
@@ -41,5 +41,3 @@ const Footer: NextPage = () => {
         </Box>
     );
 };
-
-export default Footer;

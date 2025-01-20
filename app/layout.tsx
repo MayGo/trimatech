@@ -3,16 +3,15 @@ import { Metadata } from 'next';
 import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
 
-import Footer from '@/components/Footer2';
-import { HeaderNavbar } from '@/components/HeaderNavbar';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 import { Box } from '@chakra-ui/react';
-import { ParamsToaster } from '@/components/ui/ParamsToaster/ParamsToaster';
 import { Toaster } from '@/components/ui/Toaster';
 
 import { Roboto } from 'next/font/google';
 import { M_PLUS_Rounded_1c } from 'next/font/google';
+import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
+import { Footer } from '@/components/ui/Header/Footer';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -83,7 +82,6 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                         </Box>
                     </Box>
                     <Suspense>
-                        <ParamsToaster />
                         <Toaster />
                     </Suspense>
                 </ThemeProvider>
