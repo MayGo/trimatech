@@ -2,7 +2,8 @@ import { Box, Text, VStack, List, Flex, Heading } from '@chakra-ui/react';
 import { Button } from '../button';
 import { mainHeadingSize, mainRound } from '../padding.utils';
 import { shadowSharp } from '../theme.utils';
-
+import { PRODUCT_LINK } from '@/utils/constants';
+import NextLink from 'next/link';
 export function PriceItem() {
     return (
         <Flex
@@ -25,7 +26,7 @@ export function PriceItem() {
             <Box>
                 <Flex justify="center" align="baseline">
                     <Heading size={mainHeadingSize} fontWeight="bold" color="primary" position="relative">
-                        €3,995
+                        €4,995
                     </Heading>
                     <Text fontSize="md" w="0" whiteSpace="nowrap">
                         / month
@@ -63,9 +64,11 @@ export function PriceItem() {
                     ))}
                 </List.Root>
             </VStack>
-            <Button colorPalette="blue" size="lg" mt={4}>
-                Join today
-            </Button>
+            <NextLink href={PRODUCT_LINK}>
+                <Button colorPalette="blue" size="lg" mt={4}>
+                    Join today
+                </Button>
+            </NextLink>
         </Flex>
     );
 }

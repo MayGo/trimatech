@@ -15,6 +15,7 @@ export const Discuss = () => {
             rounded={mainRounded}
             p={outerPadding}
             gap={outerPadding}
+            id="book"
         >
             <Flex flexDirection="column" justifyContent="center" alignItems="center" h="full" gap={outerPadding}>
                 <Box flex="1">

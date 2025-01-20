@@ -1,6 +1,6 @@
-import { Box, Flex, Heading, Text, Image, IconButton } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image, IconButton, LinkOverlay, LinkBox } from '@chakra-ui/react';
 import { FaPaperPlane } from 'react-icons/fa';
-
+import NextLink from 'next/link';
 import { AccordionItem, AccordionItemTrigger, AccordionItemContent, AccordionRoot } from '../accordion';
 import { LuArrowRight } from 'react-icons/lu';
 import { Button } from '../button';
@@ -25,7 +25,7 @@ const items = [
     },
     {
         value: 'd',
-        title: 'How fast will I receive my designs?',
+        title: 'How fast will my requests be completed?',
         text: 'On average, most requests are completed in just two days or less. However, more complex requests can take longer.'
     },
     {
@@ -35,8 +35,8 @@ const items = [
     },
     {
         value: 'f',
-        title: 'Who are the designers?',
-        text: "Designjoy is a one-man agency, ran by Brett, the founder. Designjoy does not employ other designers, or outsource work to any other entity. You'll work directly with me through the entirety of your experience."
+        title: 'Who are the developers?',
+        text: "Trimatech is a one-man agency, ran by Maigo, the founder. Trimatech does not employ other developers, or outsource work to any other entity. You'll work directly with me through the entirety of your experience."
     },
     {
         value: 'g',
@@ -63,25 +63,31 @@ const IntroCallCard = () => {
                 <Heading fontSize="3xl" width="210px">
                     Book a 15 min intro call
                 </Heading>
-                <Button colorPalette="blue" size="lg" w="full">
-                    Book a call
-                </Button>
-                <Flex align="center" gap={8} justifyContent="space-between">
-                    <Box color="gray.500">
-                        <FaPaperPlane size={32} />
-                    </Box>
-                    <Flex direction="column">
-                        <Text fontSize="md" fontWeight="bold">
-                            Prefer to email?
-                        </Text>
-                        <Text fontSize="md" color="gray.500">
-                            info@trimatech.ee
-                        </Text>
+                <NextLink href="#book">
+                    <Button colorPalette="blue" size="lg" w="full">
+                        Book a call
+                    </Button>
+                </NextLink>
+                <LinkBox>
+                    <Flex align="center" gap={8} justifyContent="space-between">
+                        <Box color="gray.500">
+                            <FaPaperPlane size={32} />
+                        </Box>
+                        <Flex direction="column">
+                            <Text fontSize="md" fontWeight="bold">
+                                Prefer to email?
+                            </Text>
+                            <Text fontSize="md" color="gray.500">
+                                <LinkOverlay asChild>
+                                    <NextLink href="mailto:info@trimatech.ee">info@trimatech.ee</NextLink>
+                                </LinkOverlay>
+                            </Text>
+                        </Flex>
+                        <IconButton colorPalette="blue" rounded="full">
+                            <LuArrowRight />
+                        </IconButton>
                     </Flex>
-                    <IconButton colorPalette="blue" rounded="full">
-                        <LuArrowRight />
-                    </IconButton>
-                </Flex>
+                </LinkBox>
             </Flex>
         </Box>
     );

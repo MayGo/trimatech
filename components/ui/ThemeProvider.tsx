@@ -12,6 +12,11 @@ const shadowColor = '#D1DCFF';
 
 const config = defineConfig({
     ...defaultSystem._config,
+    globalCss: {
+        html: {
+            scrollBehavior: 'smooth !important'
+        }
+    },
     theme: {
         ...defaultSystem._config.theme,
         tokens: {

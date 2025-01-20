@@ -5,7 +5,7 @@ import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../
 
 export const Pricing = () => {
     return (
-        <Box bg="bgColor" w="full" rounded={mainRounded} p={outerPadding}>
+        <Box bg="bgColor" w="full" rounded={mainRounded} p={outerPadding} id="pricing">
             <Box textAlign="center" pb={outerPadding}>
                 <Heading size={mainHeadingSize}>Simple & transparent pricing</Heading>
                 <Text fontSize={mainSubtextSize} pt={4}>

@@ -4,7 +4,7 @@ import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
 
 import Footer from '@/components/Footer2';
-import HeaderNavbar from '@/components/HeaderNavbar';
+import { HeaderNavbar } from '@/components/HeaderNavbar';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 import { Box } from '@chakra-ui/react';
