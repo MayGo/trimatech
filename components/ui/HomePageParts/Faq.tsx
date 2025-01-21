@@ -59,7 +59,7 @@ const IntroCallCard = () => {
     return (
         <Box bg="white" borderRadius={mainRound} p={8} boxShadow={shadowSharp}>
             <Flex direction="column" gap={8}>
-                <Image borderRadius="full" boxSize="100px" src="/avatar.png" alt="Emoji" />
+                <Image borderRadius="full" boxSize="100px" src="/avatar-round.png" alt="Emoji" />
                 <Heading fontSize="3xl" width="210px">
                     Book a 15 min intro call
                 </Heading>

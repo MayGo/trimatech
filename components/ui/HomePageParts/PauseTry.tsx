@@ -28,7 +28,7 @@ const PauseTryItem = ({
 
 export const PauseTry = () => {
     return (
-        <Box w="full">
+        <Box w="full" px={[2, 0]}>
             <Flex flexDirection={['column', 'column', 'row']} gap={4}>
                 <PauseTryItem
                     title="Pause anytime"
