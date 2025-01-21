@@ -43,7 +43,7 @@ export const Benefits = () => {
             <SimpleGrid columns={[1, 1, 2, 2, 4]} gap={4}>
                 <BenefitItem
                     title="Dedicated Maintenance for Your Existing Projects"
-                    description="No need for a full team—one senior developer focuses on ensuring your React application remains performant and up-to-date."
+                    description="No need for a full team - one senior developer focuses on ensuring your React application remains performant and up-to-date."
                 >
                     <DedicatedMaintananceImage />
                 </BenefitItem>

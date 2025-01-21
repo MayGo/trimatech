@@ -31,7 +31,7 @@ const items = [
     {
         value: 'e',
         title: 'How does onboarding work?',
-        text: "Subscribe to a plan and we'll quickly add you to your very own Trello board. This process usually takes about an hour to complete from the time you subscribe. Once you accept the invite to Trello, you're ready to rock. Further instructions on how to use the Trello board to request designs can be found on the board itself."
+        text: "When you subscribe to a plan, we'll work closely with you to ensure a smooth onboarding experience. If you already have a ticketing system, such as Jira, Trello, or another platform, and prefer to use it for collaboration, we're happy to adapt and work within your system. If not, we can set up a Trello board for you, which will be ready within a few hours after subscribing. We'll also provide guidance on how to use the board effectively to track and request software development tasks. The choice is entirely yours!"
     },
     {
         value: 'f',
@@ -41,17 +41,17 @@ const items = [
     {
         value: 'g',
         title: 'Is there a limit to how many requests I can make?',
-        text: "Once subscribed, you're able to add as many design requests to your queue as you'd like, and they will be delivered one by one."
+        text: "Once subscribed, you're able to add as many requests to your queue as you'd like, and they will be delivered one by one."
     },
     {
         value: 'h',
         title: 'How does the pause feature work?',
-        text: "We understand you may not have enough design work to fill up entire month. Perhaps you only have one or two design requests at the moment. That's where pausing your subscription comes in handy. Billing cycles are based on 31 day period. Let's say you sign up and use the service for 21 days, and then decide to pause your subscription. This means that the billing cycle will be paused and you'll have 10 days of service remaining to be used anytime in the future."
+        text: "We understand you may not have enough work to fill up entire month. Perhaps you only have one or two requests at the moment. That's where pausing your subscription comes in handy. Billing cycles are based on 31 day period. Let's say you sign up and use the service for 21 days, and then decide to pause your subscription. This means that the billing cycle will be paused and you'll have 10 days of service remaining to be used anytime in the future."
     },
     {
         value: 'i',
         title: 'What if I only have a single request?',
-        text: "That's fine. You can pause your subscription when finished and return when you have additional design needs. There's no need to let the remainder of your subscription go to waste."
+        text: "That's fine. You can pause your subscription when finished and return when you have additional development needs. There's no need to let the remainder of your subscription go to waste."
     }
 ];
 
