@@ -19,7 +19,8 @@
         "supabase:generate-migration": "npx supabase db diff | npx supabase migration new",
         "supabase:generate-seed": "npx supabase db dump --data-only -f supabase/seed.sql",
         "supabase:push": "npx supabase db push",
-        "supabase:pull": "npx supabase db pull"
+        "supabase:pull": "npx supabase db pull",
+        "postbuild": "next-sitemap"
     },
     "dependencies": {
         "@chakra-ui/cli": "^3.4.0",
@@ -47,7 +48,8 @@
         "react-merge-refs": "^2.1.1",
         "stripe": "^14.25.0",
         "zod": "^3.22.4",
-        "zod-form-data": "^2.0.2"
+        "zod-form-data": "^2.0.2",
+        "next-sitemap": "^2.0.0"
     },
     "devDependencies": {
         "@types/node": "^22.10.7",
