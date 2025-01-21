@@ -1,10 +1,11 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { HeroImage } from './animations/HeroImage';
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
+import { GlowingDotBox } from '../GlowingDotBox';
 
 export const Hero = () => {
     return (
-        <Box bg="bgColor" w="full" roundedBottom={mainRounded} p={outerPadding}>
+        <Box position="relative" bg="bgColor" w="full" roundedBottom={mainRounded} p={outerPadding}>
             <Flex
                 flexDirection={['column', 'column', 'row', 'row', 'row']}
                 justify="center"

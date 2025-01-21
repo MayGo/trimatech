@@ -14,6 +14,9 @@ import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
 import { Footer } from '@/components/ui/Header/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AnimatedGradient } from '@/components/ui/AnimatedGradient';
+import { GridBackground } from '@/components/ui/HomePageParts/GridBackground';
+import { GlowingDotBox } from '@/components/ui/GlowingDotBox';
+import { Hero } from '@/components/ui/HomePageParts/Hero';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
