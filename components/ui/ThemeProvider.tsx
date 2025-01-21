@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 
 const primaryColor = '#2563EB';
 const bgColor = '#EEF2FF';
+export const bgColorTransparent = 'rgba(238, 242, 255, 0.8)';
+export const bgColorWhiteTransparent = 'rgba(255, 255, 255, 0.8)';
 const textColor = '#1E293B';
 const borderColor = '#84B2FE';
 const shadowColor = '#D1DCFF';
@@ -44,13 +46,16 @@ const config = defineConfig({
                     value: '#000000'
                 },
                 bgColor: {
-                    value: bgColor
+                    value: bgColorTransparent
                 },
                 borderColor: {
                     value: borderColor
                 },
                 shadowColor: {
                     value: shadowColor
+                },
+                bgColorWhiteTransparent: {
+                    value: bgColorWhiteTransparent
                 }
             },
             fonts: {

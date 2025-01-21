@@ -1,0 +1,107 @@
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+    z-index: -1;
+}
+
+:global(.dark) .container {
+    background-color: #09090b;
+}
+
+.wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.aurora {
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+    --transparent: rgba(0, 0, 0, 0);
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --indigo-300: #a5b4fc;
+    --violet-200: #ddd6fe;
+
+    position: absolute;
+    inset: -10px;
+    opacity: 0.7;
+    pointer-events: none;
+    will-change: transform;
+    filter: blur(8px);
+    background-image: repeating-linear-gradient(
+            100deg,
+            var(--white) 0%,
+            var(--white) 7%,
+            var(--transparent) 10%,
+            var(--transparent) 12%,
+            var(--white) 16%
+        ),
+        repeating-linear-gradient(
+            100deg,
+            var(--blue-500) 10%,
+            var(--indigo-300) 15%,
+            var(--blue-300) 20%,
+            var(--violet-200) 25%,
+            var(--blue-400) 30%
+        );
+    background-size: 200% 200%;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+:global(.dark) .aurora {
+    opacity: 0.4;
+    filter: blur(8px) invert(0);
+    background-image: repeating-linear-gradient(
+            100deg,
+            var(--black) 0%,
+            var(--black) 7%,
+            var(--transparent) 10%,
+            var(--transparent) 12%,
+            var(--black) 16%
+        ),
+        repeating-linear-gradient(
+            100deg,
+            var(--blue-500) 10%,
+            var(--indigo-300) 15%,
+            var(--blue-300) 20%,
+            var(--violet-200) 25%,
+            var(--blue-400) 30%
+        );
+}
+
+.aurora::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: 200% 100%;
+    background-attachment: fixed;
+    mix-blend-mode: soft-light;
+    animation: aurora 60s linear infinite;
+    opacity: 0.8;
+}
+
+.radialMask {
+    mask-image: radial-gradient(ellipse at 100% 0%, black 10%, transparent 70%);
+}
+
+@keyframes aurora {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 400% 0%;
+    }
+}

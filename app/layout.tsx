@@ -13,6 +13,8 @@ import { M_PLUS_Rounded_1c } from 'next/font/google';
 import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
 import { Footer } from '@/components/ui/Header/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { AuroraBackground } from '@/components/ui/BackgroundAurora/BackgroundAurora';
+import { SplashCursor } from '@/components/ui/SplashCursor';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -74,7 +76,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         <html suppressHydrationWarning lang="en" className={`${roboto.variable} ${mPlusRounded.variable}`}>
             <body>
                 <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                    <Box bg="white">
+                    <Box>
                         <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
                             <HeaderNavbar />
 
@@ -83,6 +85,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                             <Footer />
                         </Box>
                     </Box>
+                    <SplashCursor />
                     <Suspense>
                         <Toaster />
                     </Suspense>

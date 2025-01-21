@@ -12,7 +12,7 @@ const PauseTryItem = ({
     children: React.ReactNode;
 }) => {
     return (
-        <Box w="full" rounded={mainRound} p={10} border="2px dashed" borderColor="primary">
+        <Box w="full" rounded={mainRound} p={10} border="2px dashed" borderColor="primary" bg="bgColorWhiteTransparent">
             <Flex align="center" gap={4}>
                 {children}
                 <Heading size="4xl" color="fg">
