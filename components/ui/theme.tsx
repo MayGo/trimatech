@@ -19,8 +19,20 @@ const config = defineConfig({
     },
     theme: {
         ...defaultSystem._config.theme,
+        keyframes: {
+            gradientBg: {
+                '0%': { backgroundPosition: '0% 0%' },
+                '25%': { backgroundPosition: '100% 0%' },
+                '50%': { backgroundPosition: '100% 100%' },
+                '75%': { backgroundPosition: '0% 100%' },
+                '100%': { backgroundPosition: '0% 0%' }
+            }
+        },
         tokens: {
             ...defaultSystem._config.theme?.tokens,
+            animations: {
+                gradientBg: { value: 'gradientBg 20s ease-in-out infinite' }
+            },
             colors: {
                 ...defaultSystem._config.theme?.tokens?.colors,
 

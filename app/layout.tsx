@@ -13,8 +13,7 @@ import { M_PLUS_Rounded_1c } from 'next/font/google';
 import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
 import { Footer } from '@/components/ui/Header/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { AuroraBackground } from '@/components/ui/BackgroundAurora/BackgroundAurora';
-import { SplashCursor } from '@/components/ui/SplashCursor';
+import { AnimatedGradient } from '@/components/ui/AnimatedGradient';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -85,7 +84,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                             <Footer />
                         </Box>
                     </Box>
-                    <SplashCursor />
+
                     <Suspense>
                         <Toaster />
                     </Suspense>
