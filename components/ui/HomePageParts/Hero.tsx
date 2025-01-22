@@ -16,8 +16,8 @@ export const Hero = () => {
                 <Box flex="1">
                     <Heading size={mainHeadingSize}>Expert React Maintenance & Development</Heading>
                     <Text fontSize={mainSubtextSize} pt={4}>
-                        Keep your React applications running smoothly with dedicated senior-level support. No mid-level
-                        teams, no overhead—just direct access to expert maintenance when you need it.
+                        Keep your React applications running smoothly with dedicated senior level support. No mid-level
+                        teams, no overhead - just direct access to expert maintenance when you need it.
                     </Text>
                 </Box>
                 <Box flex="1" h="full">

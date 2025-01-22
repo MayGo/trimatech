@@ -33,7 +33,7 @@ const mPlusRounded = M_PLUS_Rounded_1c({
 const meta = {
     title: 'Expert React Maintenance & Development',
     description:
-        'Keep your React applications running smoothly with dedicated senior-level support. No mid-level teams, no overhead—just direct access to expert maintenance when you need it.',
+        'Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.',
     cardImage: '/og.png',
     robots: 'follow, index',
     favicon: '/favicon.ico',
