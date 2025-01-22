@@ -21,17 +21,17 @@ const items = [
     {
         value: 'c',
         title: 'How do I get started with maintenance?',
-        text: "Simply contact us to discuss your project, and we'll set you up with immediate access to our ticketing system."
+        text: 'To get started, contact me to discuss your project and specific needs. I’ll also need secure access to your codebase to begin supporting your application. Once everything is set up, we’ll choose a ticketing system - whether it’s your existing system (like Jira or Trello) or one I create for you - so you can start submitting tasks right away.'
     },
     {
         value: 'd',
         title: 'How fast will my requests be completed?',
-        text: 'On average, most requests are completed in just two days or less. However, more complex requests can take longer.'
+        text: 'Each task will start within 48 hours of being submitted. From there, most requests are completed in one to two days, depending on their complexity.'
     },
     {
         value: 'e',
         title: 'How does onboarding work?',
-        text: "When you subscribe to a plan, we'll work closely with you to ensure a smooth onboarding experience. If you already have a ticketing system, such as Jira, Trello, or another platform, and prefer to use it for collaboration, we're happy to adapt and work within your system. If not, we can set up a Trello board for you, which will be ready within a few hours after subscribing. We'll also provide guidance on how to use the board effectively to track and request software development tasks. The choice is entirely yours!"
+        text: 'When you subscribe to a plan, I’ll ensure a seamless onboarding process. If you already have a ticketing system, such as Jira, Trello, or another platform, I’m happy to adapt and work within your existing setup. If not, I’ll create one for you and guide you through the process. I’ll also securely access your codebase to ensure everything is ready for maintenance. The setup process is quick and focused entirely on your needs.'
     },
     {
         value: 'f',
