@@ -1,11 +1,12 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { HeroImage } from './animations/HeroImage';
+import { GiEuropeanFlag } from 'react-icons/gi';
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
-import { GlowingDotBox } from '../GlowingDotBox';
+import { AbstractBg } from './animations/AbstractBg';
+import { IntroCallCard } from './IntroCallCard';
 
 export const Hero = () => {
     return (
-        <Box position="relative" bg="bgColor" w="full" roundedBottom={mainRounded} p={outerPadding}>
+        <Box position="relative" bg="bgColor" w="full" roundedBottom={mainRounded} p={outerPadding} overflow="hidden">
             <Flex
                 flexDirection={['column', 'column', 'row', 'row', 'row']}
                 justify="center"
@@ -19,9 +20,20 @@ export const Hero = () => {
                         Keep your React applications running smoothly with dedicated senior level support. No mid-level
                         teams, no overhead - just direct access to expert maintenance when you need it.
                     </Text>
+                    <Flex align="center" mt={4}>
+                        <Box bg="primary" p={1} rounded="full">
+                            <GiEuropeanFlag color="yellow" size="36px" />
+                        </Box>
+                        <Text ml={2} fontWeight="medium" fontSize="md">
+                            EU-Based
+                        </Text>
+                    </Flex>
                 </Box>
-                <Box flex="1" h="full">
-                    <HeroImage />
+                <Box flex="1" h="full" position="relative" justifyItems="center">
+                    <Box position="absolute" top="-200px" left="-300px" opacity={0.3}>
+                        <AbstractBg />
+                    </Box>
+                    <IntroCallCard />
                 </Box>
             </Flex>
         </Box>

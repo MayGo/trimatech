@@ -6,6 +6,7 @@ import { LuArrowRight } from 'react-icons/lu';
 import { Button } from '../button';
 import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
 import { shadowSharp } from '../theme.utils';
+import { HeroImage } from './animations/HeroImage';
 
 const items = [
     {
@@ -55,44 +56,6 @@ const items = [
     }
 ];
 
-const IntroCallCard = () => {
-    return (
-        <Box bg="white" borderRadius={mainRound} p={8} boxShadow={shadowSharp}>
-            <Flex direction="column" gap={8}>
-                <Image borderRadius="full" boxSize="100px" src="/avatar-round.png" alt="Emoji" />
-                <Heading fontSize="3xl" width="210px">
-                    Book a 15 min intro call
-                </Heading>
-                <NextLink href="#book">
-                    <Button colorPalette="blue" size="lg" w="full">
-                        Book a call
-                    </Button>
-                </NextLink>
-                <LinkBox>
-                    <Flex align="center" gap={8} justifyContent="space-between">
-                        <Box color="gray.500">
-                            <FaPaperPlane size={32} />
-                        </Box>
-                        <Flex direction="column">
-                            <Text fontSize="md" fontWeight="bold">
-                                Prefer to email?
-                            </Text>
-                            <Text fontSize="md" color="gray.500">
-                                <LinkOverlay asChild>
-                                    <NextLink href="mailto:info@trimatech.ee">info@trimatech.ee</NextLink>
-                                </LinkOverlay>
-                            </Text>
-                        </Flex>
-                        <IconButton colorPalette="blue" rounded="full">
-                            <LuArrowRight />
-                        </IconButton>
-                    </Flex>
-                </LinkBox>
-            </Flex>
-        </Box>
-    );
-};
-
 export const Faq = () => {
     return (
         <Flex
@@ -103,7 +66,7 @@ export const Faq = () => {
             p={outerPadding}
             gap={outerPadding}
         >
-            <Flex flexDirection="column" h="full" gap={10} flex="2">
+            <Flex flexDirection="column" h="full" gap={10} flex="1">
                 <Box flex="1">
                     <Heading size={mainHeadingSize}>Frequently Asked Questions</Heading>
                     <Text fontSize={mainSubtextSize} pt={4}>
@@ -124,7 +87,7 @@ export const Faq = () => {
                 </Box>
             </Flex>
             <Flex justifyContent="center" alignItems="start" flex="1" pt={8}>
-                <IntroCallCard />
+                <HeroImage />
             </Flex>
         </Flex>
     );
