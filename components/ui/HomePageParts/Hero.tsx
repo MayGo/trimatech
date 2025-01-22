@@ -14,13 +14,13 @@ export const Hero = () => {
                 h="full"
                 gap={outerPadding}
             >
-                <Box flex="1">
+                <Flex flexDirection="column" flex="1" gap={6}>
                     <Heading size={mainHeadingSize}>Expert React Maintenance & Development</Heading>
-                    <Text fontSize={mainSubtextSize} pt={4}>
+                    <Text fontSize={mainSubtextSize}>
                         Keep your React applications running smoothly with dedicated senior level support. No mid-level
                         teams, no overhead - just direct access to expert maintenance when you need it.
                     </Text>
-                    <Flex align="center" mt={4}>
+                    <Flex align="center">
                         <Box bg="primary" p={1} rounded="full">
                             <GiEuropeanFlag color="yellow" size="36px" />
                         </Box>
@@ -28,7 +28,7 @@ export const Hero = () => {
                             EU-Based
                         </Text>
                     </Flex>
-                </Box>
+                </Flex>
                 <Box flex="1" h="full" position="relative" justifyItems="center">
                     <Box position="absolute" top="-200px" left="-300px" opacity={0.3}>
                         <AbstractBg />
