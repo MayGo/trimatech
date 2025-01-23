@@ -80,7 +80,7 @@ export const HiringCompany = () => (
             />
             <TextRow
                 heading="Commitment"
-                text="Many companies require minimum monthly contracts or long-term retainers (e.g., 3-6 months), making it difficult to pause during inconsistent workloads."
+                text="Many companies require minimum monthly contracts or long-term retainers (e.g., 3-6 months), making it difficult to pause during inconsistent workloads. After pausing, they may not have capacity when you need to resume."
             />
             <TextRow
                 heading="Downsides"
@@ -94,7 +94,7 @@ export const HiringCompany = () => (
         <Flex flexDirection="column" gap={textGap}>
             <TextRow
                 heading="Cost"
-                text={`~50% savings compared to 50 hours with a company, and significantly less for larger workloads.`}
+                text={`~25% savings compared to 50 hours with a company, and significantly less for larger workloads.`}
             />
             <TextRow heading="Flexible Commitment" text="Pause or cancel anytime based on your workload." />
             <TextRow
@@ -129,7 +129,7 @@ const SubscriptionValue = () => (
                 />
                 <TextRow
                     heading="Cost Savings"
-                    text="Save ~50% compared to hiring a full-time engineer and ~75% compared to outsourcing to a company."
+                    text="Save ~50% compared to hiring a full-time engineer and ~25% compared to outsourcing to a company."
                 />
                 <TextRow
                     heading="Hassle-Free Start"
