@@ -7,6 +7,7 @@ import { Button } from '../button';
 import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
 import { shadowSharp } from '../theme.utils';
 import { HeroImage } from './animations/HeroImage';
+import { Questions } from './animations/Questions';
 
 const items = [
     {
@@ -87,7 +88,7 @@ export const Faq = () => {
                 </Box>
             </Flex>
             <Flex justifyContent="center" alignItems="start" flex="1" pt={8}>
-                <HeroImage />
+                <Questions />
             </Flex>
         </Flex>
     );

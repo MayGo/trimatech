@@ -1,10 +1,9 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { DiscussImage } from './animations/DiscussImage';
-
 import { InlineWidget } from 'react-calendly';
 import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
 import { shadowSharp } from '../theme.utils';
+import { OnlineVideoChatting } from './animations/OnlineVideoChatting';
 
 export const Discuss = () => {
     return (
@@ -24,8 +23,8 @@ export const Discuss = () => {
                         Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.
                     </Text>
                 </Box>
-                <Box h="400px">
-                    <DiscussImage />
+                <Box h="450px" display="flex" alignItems="center" justifyContent="center">
+                    <OnlineVideoChatting />
                 </Box>
             </Flex>
             <Flex justifyContent="center" alignItems="center" flex="1">

@@ -1,10 +1,10 @@
 'use client';
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import dedicatedMaintenanceAnimation from './dedicated-maintenance.json';
+import workingHomeAnimation from './working-home.json';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 
-export const DedicatedMaintananceImage = () => {
+export const WorkingHome = () => {
     const lottieRef = useRef<LottieRefCurrentProps | null>(null);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export const DedicatedMaintananceImage = () => {
     return (
         <Lottie
             lottieRef={lottieRef}
-            animationData={dedicatedMaintenanceAnimation}
+            animationData={workingHomeAnimation}
             loop={true}
             style={{ height: '120%', width: '120%', objectFit: 'contain' }}
         />

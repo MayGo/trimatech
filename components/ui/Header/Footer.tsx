@@ -19,7 +19,7 @@ export const Footer: NextPage = () => {
                 <Flex alignItems="center" gap={4}>
                     <Logo size="sm" />
                     <Text textStyle="sm" fontWeight="extralight" py={4}>
-                        Headquartered in Tallinn, Estonia
+                        Headquartered in Tallinn, Estonia (GMT+2)
                     </Text>
                 </Flex>
                 <Flex gap={6} py={[4, 4, 4, 8]}>

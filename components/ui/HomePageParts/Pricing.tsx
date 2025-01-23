@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { PriceItem } from './PriceItem';
-import { PricingImage } from './animations/PricingImage';
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
+import { BusinessValue } from './animations/BusinessValue';
 
 export const Pricing = () => {
     return (
@@ -16,8 +16,8 @@ export const Pricing = () => {
                 <Box>
                     <PriceItem />
                 </Box>
-                <Box flex="1">
-                    <PricingImage />
+                <Box flex="1" display="flex" alignItems="center" justifyContent="center">
+                    <BusinessValue />
                 </Box>
             </Flex>
         </Box>

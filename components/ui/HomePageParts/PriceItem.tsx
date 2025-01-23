@@ -2,7 +2,7 @@ import { Box, Text, VStack, List, Flex, Heading } from '@chakra-ui/react';
 import { Button } from '../button';
 import { mainHeadingSize, mainRound } from '../padding.utils';
 import { shadowSharp } from '../theme.utils';
-import { PRODUCT_LINK } from '@/utils/constants';
+import { MAIN_PRICE, PRODUCT_LINK } from '@/utils/constants';
 import NextLink from 'next/link';
 export function PriceItem() {
     return (
@@ -19,6 +19,8 @@ export function PriceItem() {
             height="fit-content"
             gap={4}
             shadow={shadowSharp}
+            maxW={['full', 'full', '450px']}
+            position="relative"
         >
             <Heading fontSize="3xl" fontWeight="bold">
                 Monthly Club
@@ -26,22 +28,27 @@ export function PriceItem() {
             <Box>
                 <Flex justify="center" align="baseline">
                     <Heading size={mainHeadingSize} fontWeight="bold" color="primary" position="relative">
-                        €4,995
+                        €{MAIN_PRICE}
                     </Heading>
                     <Text fontSize="md" w="0" whiteSpace="nowrap">
                         / month
                     </Text>
                 </Flex>
             </Box>
+            <Box py={4} alignSelf="center">
+                <Text fontSize="lg" fontWeight="light" maxW="300px">
+                    React development & maintenance by a senior developer
+                </Text>
+            </Box>
             <VStack gap={3} align="start">
                 <List.Root gap={4} variant="plain" align="center">
                     {[
-                        'One request at a time',
-                        'Average 48-hour delivery',
-                        'Unlimited projects',
-                        'React maintenance & development',
-                        'Direct access to senior developer',
-                        'Pause or cancel anytime'
+                        'One task handled at a time for complete focus',
+                        'New tasks begin within ~48 hours of completion',
+                        'Unlimited projects managed under one unified backlog',
+                        'Direct communication with the developer working on your tasks',
+                        'Flexible subscription to fit your needs - pause or cancel anytime',
+                        'Full transparency, with tasks tracked in your preferred system (Jira, Trello, etc)'
                     ].map((feature, index) => (
                         <List.Item key={index} fontWeight={'semibold'}>
                             <List.Indicator asChild>

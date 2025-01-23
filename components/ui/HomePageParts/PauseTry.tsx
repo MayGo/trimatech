@@ -32,13 +32,13 @@ export const PauseTry = () => {
             <Flex flexDirection={['column', 'column', 'row']} gap={4}>
                 <PauseTryItem
                     title="Pause anytime"
-                    description="Temporarily pause your subscription anytime, no sweat."
+                    description="When everything’s running smoothly and there’s no work left, simply pause your subscription. Resume when new tasks come in - your plan picks up right where you left off."
                 >
                     <LuCirclePause size={40} color="primary" />
                 </PauseTryItem>
                 <PauseTryItem
                     title="Try it for a week"
-                    description="Not loving it after a week? Get 75% back, no questions asked."
+                    description="Test the service for a week. If you're not satisfied, get 3 weeks of your subscription fee back, no strings attached."
                 >
                     <LuCircleCheck size={40} color="primary" />
                 </PauseTryItem>

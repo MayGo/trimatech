@@ -3,7 +3,12 @@ import { DedicatedMaintananceImage } from './animations/DedicatedMaintananceImag
 import { TurnaroundImage } from './animations/TurnaroundImage';
 import { UpgradeImage } from './animations/UpgradeImage';
 import { CommunicationImage } from './animations/CommunicationImage';
-import { mainRounded } from '../padding.utils';
+import { mainHeadingSize, mainRounded } from '../padding.utils';
+import { DeveloperCommunications } from './animations/DeveloperCommunications';
+import { ManWorking } from './animations/ManWorking';
+import { WebDevelopment } from './animations/WebDevelopment';
+import { AdaptiveInterface } from './animations/AdaptiveInterface';
+import { WorkingHome } from './animations/WorkingHome';
 
 const BenefitItem = ({
     title,
@@ -25,7 +30,9 @@ const BenefitItem = ({
             gap={4}
             minW="300px"
         >
-            <Box h="200px">{children}</Box>
+            <Box h="200px" display="flex" alignItems="center" justifyContent="center">
+                {children}
+            </Box>
             <Heading size="lg">{title}</Heading>
             <Text fontSize="md" textAlign="justify">
                 {description}
@@ -37,33 +44,33 @@ const BenefitItem = ({
 export const Benefits = () => {
     return (
         <Box w="full">
-            <Box pb={2} pl={[4, 0]}>
-                <Heading size="5xl">Benefits</Heading>
+            <Box pb={4} pl={[4, 0]}>
+                <Heading size={mainHeadingSize}>Benefits</Heading>
             </Box>
             <SimpleGrid columns={[1, 1, 2, 2, 4]} gap={4}>
                 <BenefitItem
                     title="Dedicated Maintenance for Your Existing Projects"
                     description="No need for a full team - one senior developer focuses on ensuring your React application remains performant and up-to-date."
                 >
-                    <DedicatedMaintananceImage />
+                    <WorkingHome />
                 </BenefitItem>
                 <BenefitItem
                     title="Quick Turnaround for Bug Fixes & Updates"
                     description="Rapid response for bug fixes and feature requests, starting within 48 hours. Keep your application running optimally!"
                 >
-                    <TurnaroundImage />
+                    <WebDevelopment />
                 </BenefitItem>
                 <BenefitItem
                     title="Upgrade and Enhance Your Application"
                     description="Seamlessly add new features and upgrade libraries to leverage the latest React capabilities without disrupting your workflow."
                 >
-                    <UpgradeImage />
+                    <AdaptiveInterface />
                 </BenefitItem>
                 <BenefitItem
                     title="Streamlined Ticket-Based Communication"
                     description="All updates and requests are tracked through our ticketing system, ensuring transparency and organization for every task."
                 >
-                    <CommunicationImage />
+                    <DeveloperCommunications />
                 </BenefitItem>
             </SimpleGrid>
         </Box>
