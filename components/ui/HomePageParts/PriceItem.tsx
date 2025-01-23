@@ -35,7 +35,7 @@ export function PriceItem() {
                     </Text>
                 </Flex>
             </Box>
-            <Box py={4} alignSelf="center">
+            <Box pb={4} alignSelf="center">
                 <Text fontSize="lg" fontWeight="light" maxW="300px">
                     React development & maintenance by a senior developer
                 </Text>
