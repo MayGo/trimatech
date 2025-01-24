@@ -143,9 +143,23 @@ const SubscriptionValue = () => (
                     heading="Exclusive Expertise"
                     text="Work is completed by a senior React developer who provides dedicated attention to your needs - no juniors, no middle management, and no compromises on quality."
                 />
+
+                <TextRow
+                    heading="Efficiency Through AI and Modern Practices"
+                    text="Using AI-powered solutions like Cursor.ai and the latest development methodologies, combined with continuous improvements in workflows, results are delivered with a speed and proficiency comparable to small software teams of just a few years ago. This ensures exceptional quality and faster project delivery."
+                />
             </Flex>
         </Flex>
-        <Box w="full" flex="1" h="300px" mt={9} display="flex" justifyContent="center" alignItems="center">
+        <Box
+            w="full"
+            flex="1"
+            h="300px"
+            mt={9}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            alignSelf="center"
+        >
             <MoneyValueImage />
         </Box>
     </Flex>
