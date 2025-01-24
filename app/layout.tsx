@@ -14,6 +14,7 @@ import { M_PLUS_Rounded_1c } from 'next/font/google';
 import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
 import { Footer } from '@/components/ui/Header/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -87,7 +88,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                                 <HeaderNavbar />
 
                                 {children}
-                                <SpeedInsights />
+
                                 <Footer />
                             </Box>
                         </Box>
@@ -96,6 +97,8 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                             <Toaster />
                         </Suspense>
                     </ThemeProvider>
+                    <Analytics />
+                    <SpeedInsights />
                 </body>
             </html>
         </>
