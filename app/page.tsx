@@ -7,6 +7,8 @@ import { Discuss } from '@/components/ui/HomePageParts/Discuss';
 import { Faq } from '@/components/ui/HomePageParts/Faq';
 import { ScrollToAnchorOnPageLoad } from '@/components/ui/HomePageParts/ScollToAnchorOnPageLoad';
 import { ComparePricing } from '@/components/ui/HomePageParts/ComparePricing';
+import { Testimonials } from '@/components/ui/HomePageParts/Testimonials';
+
 export default async function HomePage() {
     return (
         <Flex flexDirection="column" gap={6}>
@@ -16,6 +18,7 @@ export default async function HomePage() {
             <PauseTry />
             <ComparePricing />
             <Faq />
+            <Testimonials />
             <Discuss />
             <ScrollToAnchorOnPageLoad />
         </Flex>
