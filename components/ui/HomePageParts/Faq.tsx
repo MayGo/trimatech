@@ -1,12 +1,6 @@
-import { Box, Flex, Heading, Text, Image, IconButton, LinkOverlay, LinkBox } from '@chakra-ui/react';
-import { FaPaperPlane } from 'react-icons/fa';
-import NextLink from 'next/link';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { AccordionItem, AccordionItemTrigger, AccordionItemContent, AccordionRoot } from '../accordion';
-import { LuArrowRight } from 'react-icons/lu';
-import { Button } from '../button';
-import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
-import { shadowSharp } from '../theme.utils';
-import { HeroImage } from './animations/HeroImage';
+import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../padding.utils';
 import { Questions } from './animations/Questions';
 
 const items = [

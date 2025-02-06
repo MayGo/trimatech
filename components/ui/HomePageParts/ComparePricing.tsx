@@ -1,8 +1,5 @@
 import { Box, Flex, Heading, SimpleGrid, Span, Text } from '@chakra-ui/react';
 import { mainHeadingSize, mainRounded, outerPadding } from '../padding.utils';
-import { MAIN_PRICE } from '@/utils/constants';
-import { CompanyImage } from './animations/CompanyImage';
-import { EmployeeImage } from './animations/EmployeeImage';
 import { MoneyValueImage } from './animations/MoneyValueImage';
 import { BusinessAgreement } from './animations/BusinessAgreement';
 import { CustomerAssistance } from './animations/CustomerAssistance';

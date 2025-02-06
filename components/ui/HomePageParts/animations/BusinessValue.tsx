@@ -17,7 +17,7 @@ export const BusinessValue = () => {
             lottieRef={lottieRef}
             animationData={businessValueAnimation}
             loop={true}
-            style={{ height: '90%', width: '90%', objectFit: 'contain' }}
+            style={{ height: '110%', width: '110%', objectFit: 'contain' }}
         />
     );
 };

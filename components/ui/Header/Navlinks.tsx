@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { Button } from '../button';
 import { LuCalendarDays } from 'react-icons/lu';

@@ -1,11 +1,6 @@
 import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import { DedicatedMaintananceImage } from './animations/DedicatedMaintananceImage';
-import { TurnaroundImage } from './animations/TurnaroundImage';
-import { UpgradeImage } from './animations/UpgradeImage';
-import { CommunicationImage } from './animations/CommunicationImage';
 import { mainHeadingSize, mainRounded } from '../padding.utils';
 import { DeveloperCommunications } from './animations/DeveloperCommunications';
-import { ManWorking } from './animations/ManWorking';
 import { WebDevelopment } from './animations/WebDevelopment';
 import { AdaptiveInterface } from './animations/AdaptiveInterface';
 import { WorkingHome } from './animations/WorkingHome';
