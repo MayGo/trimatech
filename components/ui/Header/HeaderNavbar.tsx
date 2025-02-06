@@ -1,21 +1,9 @@
-'use client';
 import Navlinks from './Navlinks';
-import { Box, Flex, IconButton } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Logo } from './Logo';
 import { outerPadding } from '../padding.utils';
-import { useState } from 'react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import {
-    DialogBody,
-    DialogCloseTrigger,
-    DialogContent,
-    DialogFooter,
-    DialogHeader,
-    DialogRoot,
-    DialogTitle,
-    DialogTrigger
-} from '@/components/ui/dialog';
+import { MenuDialog } from './MenuDialog';
 
 export const HeaderNavbar: NextPage = () => {
     return (
@@ -35,25 +23,7 @@ export const HeaderNavbar: NextPage = () => {
                 </Box>
 
                 <Box display={{ base: 'flex', md: 'none' }}>
-                    <DialogRoot size="xl">
-                        <DialogTrigger>
-                            <IconButton aria-label="Options" variant="outline" colorPalette="blue" rounded="xl">
-                                <HamburgerIcon />
-                            </IconButton>
-                        </DialogTrigger>
-                        <DialogContent>
-                            <DialogCloseTrigger />
-                            <DialogHeader>
-                                <DialogTitle></DialogTitle>
-                            </DialogHeader>
-                            <DialogBody>
-                                <Box w="full" justifyItems="center">
-                                    <Navlinks />
-                                </Box>
-                            </DialogBody>
-                            <DialogFooter />
-                        </DialogContent>
-                    </DialogRoot>
+                    <MenuDialog />
                 </Box>
             </Flex>
         </Box>

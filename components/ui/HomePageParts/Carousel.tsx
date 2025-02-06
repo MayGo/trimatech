@@ -2,7 +2,7 @@
 
 import { Box, Flex, IconButton, useBreakpointValue } from '@chakra-ui/react';
 import { useState, useEffect, ReactNode } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 interface CarouselProps {
     children: ReactNode[];
@@ -55,7 +55,7 @@ export const Carousel = ({ children }: CarouselProps) => {
                 transform="translateY(-50%)"
                 onClick={handlePrev}
             >
-                <ChevronLeftIcon />
+                <FaChevronLeft />
             </IconButton>
 
             <Box overflow="hidden" mx={`-${itemGap / 2}px`}>
@@ -83,7 +83,7 @@ export const Carousel = ({ children }: CarouselProps) => {
                 transform="translateY(-50%)"
                 onClick={handleNext}
             >
-                <ChevronRightIcon />
+                <FaChevronRight />
             </IconButton>
         </Box>
     );

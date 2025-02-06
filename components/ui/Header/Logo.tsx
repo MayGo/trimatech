@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export const Logo = ({ size = 'md' }: { size?: 'sm' | 'md' }) => {

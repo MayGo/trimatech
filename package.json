@@ -23,9 +23,8 @@
         "postbuild": "next-sitemap"
     },
     "dependencies": {
-        "@chakra-ui/cli": "^3.4.0",
-        "@chakra-ui/icons": "^2.2.4",
-        "@chakra-ui/react": "3.4.0",
+        "@chakra-ui/cli": "3.7.0",
+        "@chakra-ui/react": "3.7.0",
         "@emotion/cache": "^11.14.0",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",

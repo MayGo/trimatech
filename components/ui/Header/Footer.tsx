@@ -1,9 +1,8 @@
-import { Box, Flex, Text, Container, HStack } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import type { NextPage } from 'next';
 import { Logo } from './Logo';
 import { mainRounded, outerPadding } from '../padding.utils';
-import Link from 'next/link';
 import { PRIVACY_POLICY_LINK, TERMS_AND_CONDITIONS_LINK } from '@/utils/constants';
 
 export const Footer: NextPage = () => {
