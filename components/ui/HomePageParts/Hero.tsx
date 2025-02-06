@@ -28,6 +28,10 @@ export const Hero = () => {
                             EU-Based
                         </Text>
                     </Flex>
+                    <Box flex="1" />
+                    <Heading as="h2" size="xl" color="primary">
+                        Mission: Make all React apps fast, modern, and user-friendly
+                    </Heading>
                 </Flex>
                 <Box flex="1" h="full" position="relative" justifyItems="center">
                     <Box position="absolute" top="-200px" left="-300px" opacity={0.3}>
