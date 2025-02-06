@@ -13,15 +13,23 @@ const TestimonialItem = ({
     children: React.ReactNode;
 }) => {
     return (
-        <Box w="full" rounded={mainRound} p={10} border="2px solid" borderColor="bgColor" bg="bgColorWhiteTransparent">
+        <Box
+            w="full"
+            h="full"
+            rounded={mainRound}
+            p={10}
+            border="2px solid"
+            borderColor="bgColor"
+            bg="bgColorWhiteTransparent"
+        >
             <Flex align="center" gap={2}>
                 {icon}
                 <Heading size="2xl" color="fg">
                     {title}
                 </Heading>
             </Flex>
-            <Text fontSize="md" pt={4}>
-                {children}
+            <Text fontSize="md" pt={4} fontStyle="italic">
+                "{children}"
             </Text>
         </Box>
     );
@@ -30,34 +38,34 @@ const TestimonialItem = ({
 export const Testimonials = () => {
     const testimonials = [
         {
-            title: '1Adam P. - Founder, Cloudly Innovations',
+            title: 'Ella Martinez, Activizor',
             content:
-                "“Trimatech's subscription model has been a lifesaver for us. It's so much easier than dealing with freelancers and their hourly rates. We've saved thousands and gotten way better results. Highly recommend!”"
+                'Staying on top of updates for our tools was always a headache for our small team. Since we started working with Trimatech, things have changed! Our workflow flows much better, and the performance improvements made a big difference for all of us.'
         },
         {
-            title: '2Emily G. - CEO, BloomTech Solutions',
+            title: 'James Wilson, MedCore Systems',
             content:
-                "Honestly, Trimatech has been a huge win for our startup. Their React expertise is top-notch, and the monthly performance reviews have been a game-changer. We've been able to focus on growth while they handle the tech stuff."
+                "Our booking system was an ongoing issue, and hiring a dev wasn't in the budget. Partnering with Trimatech has really stabilized everything - fewer complaints from users and much less stress on our end. It's been a fantastic solution for us!"
         },
         {
-            title: '3asdasdasds',
+            title: 'Sophie Taylor, UrbanTrack',
             content:
-                "Honestly, Trimatech has been a huge win for our startup2. Their React expertise is top-notch, and the monthly performance reviews have been a game-changer. We've been able to focus on growth while they handle the tech stuff."
+                'Our logistics app is super complex, but since engaging with Trimatech, issues are getting fixed much quicker. They even offer suggestions that help us improve our system. It feels great to be proactive instead of always reacting to problems!'
         },
         {
-            title: '4dfd4r32r234r243232332',
+            title: 'Daniel Brown, RentEase Solutions',
             content:
-                "Honestly, Trimatech has been a huge win for our startup3. Their React expertise is top-notch, and the monthly performance reviews have been a game-changer. We've been able to focus on growth while they handle the tech stuff."
+                'We struggled with bugs and updates taking forever. Working with Trimatech has completely turned that around. Everything gets resolved promptly; finally, we can focus on growing our business rather than dealing with glitches!'
         },
         {
-            title: '5t435243asdasdasds21r',
+            title: 'Clara Müller, GlobalLink Commerce',
             content:
-                "Honestly, Trimatech has been a huge win for our startup2. Their React expertise is top-notch, and the monthly performance reviews have been a game-changer. We've been able to focus on growth while they handle the tech stuff."
+                "For over a year, Trimatech has been managing our eCommerce platform, and I can't express how comforting that has been. Their expertise means that any bumps are handled swiftly, and our operations run so much smoother now!"
         },
         {
-            title: '6......234r243232332',
+            title: 'Ryan Harris, Control NQP',
             content:
-                "Honestly, Trimatech has been a huge win for our startup3. Their React expertise is top-notch, and the monthly performance reviews have been a game-changer. We've been able to focus on growth while they handle the tech stuff."
+                'After we launched our React desktop app, we realized we needed help keeping it in shape. Maigo has made all the difference - updates, fixes, performance tweaks - all taken care of! I can actually focus on improving the user experience instead of worrying!'
         }
     ];
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Flex, IconButton, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, IconButton, useBreakpointValue } from '@chakra-ui/react';
 import { useState, useEffect, ReactNode } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
@@ -10,12 +10,12 @@ interface CarouselProps {
 
 export const Carousel = ({ children }: CarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const { open, onOpen, onClose } = useDisclosure();
+
     const [isPaused, setIsPaused] = useState(false);
 
     const itemsSize = children.length;
-    const visibleItems = 2; // Number of items to show at once
-    const itemGap = 16; // Gap between items in rem
+    const visibleItems = useBreakpointValue({ base: 1, md: 2 }) || 1; // Adjust visible items based on breakpoint
+    const itemGap = 16; // Gap between items in px
 
     useEffect(() => {
         if (isPaused) return;
@@ -25,40 +25,38 @@ export const Carousel = ({ children }: CarouselProps) => {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [itemsSize, isPaused]);
+    }, [itemsSize, isPaused, visibleItems]);
 
     const handleNext = () => {
+        if (!visibleItems) return;
         setCurrentIndex((prevIndex) => (prevIndex + visibleItems) % itemsSize);
     };
 
     const handlePrev = () => {
+        if (!visibleItems) return;
         setCurrentIndex((prevIndex) => (prevIndex - visibleItems + itemsSize) % itemsSize);
     };
 
     const handleMouseEnter = () => {
-        onOpen();
         setIsPaused(true);
     };
 
     const handleMouseLeave = () => {
-        onClose();
         setIsPaused(false);
     };
 
     return (
         <Box w="full" position="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {open && (
-                <IconButton
-                    aria-label="Previous"
-                    position="absolute"
-                    left={-10}
-                    top="50%"
-                    transform="translateY(-50%)"
-                    onClick={handlePrev}
-                >
-                    <ChevronLeftIcon />
-                </IconButton>
-            )}
+            <IconButton
+                aria-label="Previous"
+                position="absolute"
+                top="50%"
+                left={[0, 0, 0, 0, -10]}
+                transform="translateY(-50%)"
+                onClick={handlePrev}
+            >
+                <ChevronLeftIcon />
+            </IconButton>
 
             <Box overflow="hidden" mx={`-${itemGap / 2}px`}>
                 <Flex
@@ -77,18 +75,16 @@ export const Carousel = ({ children }: CarouselProps) => {
                 </Flex>
             </Box>
 
-            {open && (
-                <IconButton
-                    aria-label="Next"
-                    position="absolute"
-                    right={-10}
-                    top="50%"
-                    transform="translateY(-50%)"
-                    onClick={handleNext}
-                >
-                    <ChevronRightIcon />
-                </IconButton>
-            )}
+            <IconButton
+                aria-label="Next"
+                position="absolute"
+                right={[0, 0, 0, 0, -10]}
+                top="50%"
+                transform="translateY(-50%)"
+                onClick={handleNext}
+            >
+                <ChevronRightIcon />
+            </IconButton>
         </Box>
     );
 };
