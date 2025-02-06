@@ -1,9 +1,21 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, IconButton, Text } from '@chakra-ui/react';
 import { mainRound } from '../padding.utils';
+import NextLink from 'next/link';
+import { MdOutlineKeyboardDoubleArrowDown } from 'react-icons/md';
 
-export const PriceForOthers = ({ title, price, subtext }: { title: string; price: string; subtext: string }) => {
+export const PriceForOthers = ({
+    title,
+    price,
+    subtext,
+    href
+}: {
+    title: string;
+    price: string;
+    subtext: string;
+    href: string;
+}) => {
     return (
-        <Box borderWidth="1px" borderRadius={mainRound} borderColor="borderColor" p={8} w="full">
+        <Box borderWidth="1px" borderRadius={mainRound} borderColor="borderColor" p={8} w="full" position="relative">
             <Text fontSize="larger" fontWeight="semibold" mb={2}>
                 {title}
             </Text>
@@ -17,6 +29,11 @@ export const PriceForOthers = ({ title, price, subtext }: { title: string; price
             <Text fontSize="lg" fontWeight="light">
                 {subtext}
             </Text>
+            <NextLink href={href} passHref legacyBehavior>
+                <IconButton as="a" aria-label="Go to target section" position="absolute" bottom="4" right="4">
+                    <MdOutlineKeyboardDoubleArrowDown />
+                </IconButton>
+            </NextLink>
         </Box>
     );
 };

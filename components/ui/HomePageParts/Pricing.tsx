@@ -28,11 +28,13 @@ export const Pricing = () => {
                             title="Hiring a full time senior developer"
                             price="10,000"
                             subtext="with the overhead"
+                            href="#full-time-engineer"
                         />
                         <PriceForOthers
                             title="Hiring a good development company"
                             price="16,000"
                             subtext="or €100 / hour"
+                            href="#development-company"
                         />
                     </Flex>
                     <Box display="flex" alignItems="center" justifyContent="center" height={'530px'}>

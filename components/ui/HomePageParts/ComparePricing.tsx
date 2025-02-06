@@ -18,7 +18,15 @@ const TextRow = ({ heading, text }: { heading: string; text: string }) => (
 );
 
 const FullTimeEngineer = () => (
-    <Flex flexDirection="column" gap={headingGap} flex="1" bg="bgColor" rounded={mainRounded} p={outerPadding}>
+    <Flex
+        flexDirection="column"
+        gap={headingGap}
+        flex="1"
+        bg="bgColor"
+        rounded={mainRounded}
+        p={outerPadding}
+        id="full-time-engineer"
+    >
         <Box w="full" h="200px">
             <CustomerAssistance />
         </Box>
@@ -63,7 +71,15 @@ const FullTimeEngineer = () => (
 );
 
 export const HiringCompany = () => (
-    <Flex flexDirection="column" gap={headingGap} flex="1" bg="bgColor" rounded={mainRounded} p={outerPadding}>
+    <Flex
+        flexDirection="column"
+        gap={headingGap}
+        flex="1"
+        bg="bgColor"
+        rounded={mainRounded}
+        p={outerPadding}
+        id="development-company"
+    >
         <Box w="full" h="200px">
             <BusinessAgreement />
         </Box>
