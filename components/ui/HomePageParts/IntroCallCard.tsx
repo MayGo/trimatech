@@ -10,35 +10,43 @@ import { EMAIL_TO, GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants';
 export const IntroCallCard = () => {
     return (
         <Box bg="white" borderRadius={mainRound} p={8} boxShadow={shadowSharp} position="relative" zIndex={1} w="350px">
-            <Flex direction="column" gap={8}>
-                <Stack direction="row" align="flex-end" justify="center" gap={4}>
-                    <NextLink href={LINKEDIN_LINK} target="_blank">
-                        <IconButton
-                            aria-label="LinkedIn Profile"
-                            bg="bgColor"
-                            size="lg"
-                            rounded="full"
-                            alignSelf="center"
-                        >
-                            <FaLinkedin size={24} />
-                        </IconButton>
-                    </NextLink>
-                    <Box bg="bgColor" p={1} rounded="full">
-                        <Image borderRadius="full" boxSize="150px" src="/avatar2.jpg" alt="Maigo" />
-                    </Box>
+            <Flex direction="column" gap={7}>
+                <Box>
+                    <Stack direction="row" align="flex-end" justify="center" gap={4}>
+                        <NextLink href={LINKEDIN_LINK} target="_blank">
+                            <IconButton
+                                aria-label="LinkedIn Profile"
+                                bg="bgColor"
+                                size="lg"
+                                rounded="full"
+                                alignSelf="center"
+                            >
+                                <FaLinkedin size={24} />
+                            </IconButton>
+                        </NextLink>
+                        <Box bg="bgColor" p={1} rounded="full">
+                            <Image borderRadius="full" boxSize="150px" src="/avatar2.jpg" alt="Maigo" />
+                        </Box>
 
-                    <NextLink href={GITHUB_LINK} target="_blank">
-                        <IconButton
-                            aria-label="GitHub Profile"
-                            bg="bgColor"
-                            size="lg"
-                            rounded="full"
-                            alignSelf="center"
-                        >
-                            <FaGithub size={24} />
-                        </IconButton>
-                    </NextLink>
-                </Stack>
+                        <NextLink href={GITHUB_LINK} target="_blank">
+                            <IconButton
+                                aria-label="GitHub Profile"
+                                bg="bgColor"
+                                size="lg"
+                                rounded="full"
+                                alignSelf="center"
+                            >
+                                <FaGithub size={24} />
+                            </IconButton>
+                        </NextLink>
+                    </Stack>
+                    <Heading size="xl" fontWeight="medium" textAlign="center" mt={3}>
+                        Maigo Erit
+                    </Heading>
+                    <Heading size="md" fontWeight="light" textAlign="center">
+                        Owner & React Expert
+                    </Heading>
+                </Box>
                 <Heading fontSize="3xl" width="210px">
                     Book a 15 min intro call
                 </Heading>

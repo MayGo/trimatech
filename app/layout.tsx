@@ -24,7 +24,7 @@ const roboto = Roboto({
 });
 
 const mPlusRounded = M_PLUS_Rounded_1c({
-    weight: ['700'],
+    weight: ['300', '500', '700'],
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-mplus',
