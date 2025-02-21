@@ -1,8 +1,8 @@
+import { LOGIN_LINK } from '@/utils/constants';
 import { SimpleGrid } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { Button } from '../button';
 import { LuCalendarDays } from 'react-icons/lu';
-import { LOGIN_LINK } from '@/utils/constants';
+import { Button } from '../button';
 
 export default function Navlinks() {
     return (

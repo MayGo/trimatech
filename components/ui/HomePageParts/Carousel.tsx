@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Flex, IconButton, useBreakpointValue } from '@chakra-ui/react';
-import { useState, useEffect, ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 interface CarouselProps {

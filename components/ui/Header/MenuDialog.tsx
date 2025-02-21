@@ -1,8 +1,8 @@
 'use client';
-import Navlinks from './Navlinks';
 import { Box, IconButton } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { IoMenu } from 'react-icons/io5';
+import Navlinks from './Navlinks';
 
 import {
     DialogBody,
@@ -19,7 +19,7 @@ export const MenuDialog: NextPage = () => {
     return (
         <DialogRoot size="xl">
             <DialogTrigger>
-                <IconButton aria-label="Options" variant="outline" colorPalette="blue" rounded="xl">
+                <IconButton as="a" aria-label="Options" variant="outline" colorPalette="blue" rounded="xl">
                     <IoMenu />
                 </IconButton>
             </DialogTrigger>
