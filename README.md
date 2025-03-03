@@ -8,10 +8,8 @@ A modern, high-performance application built with Next.js App Router and Chakra 
 
 - **Framework**: [Next.js](https://nextjs.org/) with App Router
 - **UI**: [Chakra UI v3](https://chakra-ui.com/)
-- **Authentication**: [Supabase Auth](https://supabase.com/auth)
-- **Database**: [PostgreSQL](https://www.postgresql.org/) via [Supabase](https://supabase.com/)
 - **Payments**: [Stripe](https://stripe.com/) for subscription management
-- **Deployment**: [Vercel](https://vercel.com/) and [Replit](https://replit.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
 ## Getting Started
 
@@ -19,7 +17,6 @@ A modern, high-performance application built with Next.js App Router and Chakra 
 
 - Node.js 18.x or later
 - pnpm (recommended) or npm
-- A Supabase account
 - A Stripe account (for payment features)
 
 ### Installation
