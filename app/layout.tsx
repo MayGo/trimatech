@@ -45,20 +45,45 @@ export async function generateMetadata(): Promise<Metadata> {
         title: meta.title,
         description: meta.description,
         referrer: 'origin-when-cross-origin',
-        keywords: ['React', 'Maintenance', 'Development', 'Senior Developer', 'Bug Fixes', 'Feature Updates'],
+        keywords: [
+            'React',
+            'Maintenance',
+            'Development',
+            'Senior Developer',
+            'Bug Fixes',
+            'Feature Updates',
+            'React Consulting',
+            'Web Development',
+            'Application Maintenance',
+            'Code Review'
+        ],
         authors: [{ name: 'Trimatech', url: 'https://trimatech.dev/' }],
         creator: 'Trimatech',
         publisher: 'Trimatech',
         robots: meta.robots,
-        icons: { icon: meta.favicon },
+        icons: {
+            icon: meta.favicon,
+            apple: [{ url: '/apple-icon.png' }]
+        },
         metadataBase: new URL(meta.url),
+        alternates: {
+            canonical: '/'
+        },
         openGraph: {
             url: meta.url,
             title: meta.title,
             description: meta.description,
-            images: [meta.cardImage],
+            images: [
+                {
+                    url: meta.cardImage,
+                    width: 1200,
+                    height: 630,
+                    alt: 'Trimatech - Expert React Maintenance & Development'
+                }
+            ],
             type: 'website',
-            siteName: meta.title
+            siteName: meta.title,
+            locale: 'en_US'
         },
         twitter: {
             card: 'summary_large_image',
@@ -66,7 +91,12 @@ export async function generateMetadata(): Promise<Metadata> {
             creator: '@Trimatech',
             title: meta.title,
             description: meta.description,
-            images: [meta.cardImage]
+            images: [
+                {
+                    url: meta.cardImage,
+                    alt: 'Trimatech - Expert React Maintenance & Development'
+                }
+            ]
         }
     };
 }

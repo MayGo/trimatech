@@ -12,7 +12,7 @@ import { Flex } from '@chakra-ui/react';
 
 export default async function HomePage() {
     return (
-        <Flex flexDirection="column" gap={6}>
+        <Flex flexDirection="column" gap={[4, 6, 6, 6, 10]}>
             <Hero />
             <Benefits />
             <TechScroll />
