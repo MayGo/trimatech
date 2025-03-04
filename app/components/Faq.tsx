@@ -2,12 +2,7 @@
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../../components/theme/padding.utils';
-import {
-    AccordionItem,
-    AccordionItemContent,
-    AccordionItemTrigger,
-    AccordionRoot
-} from '../../components/ui/accordion';
+import { CustomAccordion, CustomAccordionItem } from '../../components/ui/custom-accordion';
 import { Questions } from './animations/Questions';
 
 const items = [
@@ -67,16 +62,13 @@ export const Faq = () => {
                     </Text>
                 </Box>
                 <Box w="full">
-                    <AccordionRoot size="lg" variant="outline" collapsible multiple>
-                        {items.map((item) => (
-                            <AccordionItem key={item.title} value={item.title}>
-                                <AccordionItemTrigger>{item.title}</AccordionItemTrigger>
-                                <AccordionItemContent>
-                                    <Box pb={4}>{item.text}</Box>
-                                </AccordionItemContent>
-                            </AccordionItem>
+                    <CustomAccordion variant="subtle">
+                        {items.map((item, index) => (
+                            <CustomAccordionItem key={index} title={item.title}>
+                                {item.text}
+                            </CustomAccordionItem>
                         ))}
-                    </AccordionRoot>
+                    </CustomAccordion>
                 </Box>
             </Flex>
             <Flex justifyContent="center" alignItems="start" flex="1" pt={8}>
