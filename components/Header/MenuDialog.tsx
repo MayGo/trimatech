@@ -2,6 +2,7 @@
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Box, IconButton, Text, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
+import { useTranslations } from 'next-intl';
 import { IoMenu } from 'react-icons/io5';
 import Navlinks from './Navlinks';
 
@@ -17,6 +18,8 @@ import {
 } from '@/components/ui/dialog';
 
 export const MenuDialog: NextPage = () => {
+    const t = useTranslations('menuDialog');
+
     return (
         <DialogRoot size="xl">
             <DialogTrigger>
@@ -35,7 +38,7 @@ export const MenuDialog: NextPage = () => {
 
                         <Box pt={4}>
                             <Text fontSize="sm" mb={2} textAlign="center">
-                                Language
+                                {t('language')}
                             </Text>
                             <LanguageSwitcher />
                         </Box>
