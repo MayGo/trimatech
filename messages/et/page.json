@@ -261,6 +261,17 @@
             }
         }
     },
+    "gridBackground": {
+        "callNow": "Call Now"
+    },
+    "priceForOthers": {
+        "upTo": "up to",
+        "perMonth": "/ month",
+        "goToSection": "Go to target section"
+    },
+    "techScroll": {
+        "heading": "Technology Stack"
+    },
     "faq": {
         "heading": "Frequently Asked Questions",
         "description": "Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.",

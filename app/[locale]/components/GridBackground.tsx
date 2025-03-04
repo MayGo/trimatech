@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 
 interface GridBackgroundProps {
     title: string;
@@ -9,6 +10,8 @@ interface GridBackgroundProps {
 }
 
 export function GridBackground({ title, description, showAvailability = true }: GridBackgroundProps) {
+    const t = useTranslations('gridBackground');
+
     return (
         <Box
             px="10"
@@ -69,7 +72,7 @@ export function GridBackground({ title, description, showAvailability = true }: 
                             animation="pulse 2s infinite"
                             boxShadow="0 0 8px #20bb5a"
                         />
-                        Call Now
+                        {t('callNow')}
                     </Flex>
                 )}
             </Flex>
