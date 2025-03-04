@@ -1,14 +1,14 @@
-import { Benefits } from '@/app/components/Benefits';
-import { ComparePricing } from '@/app/components/ComparePricing';
-import { Discuss } from '@/app/components/Discuss';
-import { Faq } from '@/app/components/Faq';
-import { Hero } from '@/app/components/Hero';
-import { PauseTry } from '@/app/components/PauseTry';
-import { Pricing } from '@/app/components/Pricing';
-import { ScrollToAnchorOnPageLoad } from '@/app/components/ScollToAnchorOnPageLoad';
-import { TechScroll } from '@/app/components/TechScroll';
-import { Testimonials } from '@/app/components/Testimonials';
 import { Flex } from '@chakra-ui/react';
+import { Benefits } from './components/Benefits';
+import { ComparePricing } from './components/ComparePricing';
+import { Discuss } from './components/Discuss';
+import { Faq } from './components/Faq';
+import { Hero } from './components/Hero';
+import { PauseTry } from './components/PauseTry';
+import { Pricing } from './components/Pricing';
+import { ScrollToAnchorOnPageLoad } from './components/ScollToAnchorOnPageLoad';
+import { TechScroll } from './components/TechScroll';
+import { Testimonials } from './components/Testimonials';
 
 export default async function HomePage() {
     return (

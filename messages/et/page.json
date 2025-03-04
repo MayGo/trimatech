@@ -1,0 +1,9 @@
+{
+    "page": {
+        "title": "Kasutajad",
+        "form": {
+            "name": "Nimi",
+            "email": "E-post"
+        }
+    }
+}

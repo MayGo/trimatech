@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Head from 'next/head';
 
 import { getURL } from '@/utils/helpers';
-import { PropsWithChildren, Suspense } from 'react';
+import { Suspense } from 'react';
 
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
 
@@ -11,9 +11,14 @@ import { Box } from '@chakra-ui/react';
 
 import { Footer } from '@/components/Header/Footer';
 import { HeaderNavbar } from '@/components/Header/HeaderNavbar';
+import { routing } from '@/i18n/routing';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -101,7 +106,25 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+type Props = {
+    children: ReactNode;
+    params: Promise<{ locale: string }>;
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+    const { locale } = await params;
+
+    // Ensure that the incoming `locale` is valid
+    if (!routing.locales.includes(locale as any)) {
+        notFound();
+    }
+
+    // Enable static rendering
+    setRequestLocale(locale);
+
+    // Providing all messages to the client
+    // side is the easiest way to get started
+    const messages = await getMessages();
     return (
         <>
             <Head>
@@ -109,23 +132,25 @@ export default async function RootLayout({ children }: PropsWithChildren) {
                 <link rel="canonical" href={meta.url} />
                 <meta http-equiv="Content-Language" content="en" />
             </Head>
-            <html suppressHydrationWarning lang="en" className={`${roboto.variable} ${mPlusRounded.variable}`}>
+            <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
                 <body>
-                    <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                        <Box>
-                            <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
-                                <HeaderNavbar />
+                    <NextIntlClientProvider messages={messages}>
+                        <ThemeProvider enableColorScheme={false} defaultTheme="light">
+                            <Box>
+                                <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
+                                    <HeaderNavbar />
 
-                                {children}
+                                    {children}
 
-                                <Footer />
+                                    <Footer />
+                                </Box>
                             </Box>
-                        </Box>
 
-                        <Suspense>
-                            <Toaster />
-                        </Suspense>
-                    </ThemeProvider>
+                            <Suspense>
+                                <Toaster />
+                            </Suspense>
+                        </ThemeProvider>
+                    </NextIntlClientProvider>
                     <Analytics />
                     <SpeedInsights />
                 </body>

@@ -1,0 +1,9 @@
+{
+    "page": {
+        "title": "Users",
+        "form": {
+            "name": "Name",
+            "email": "Email"
+        }
+    }
+}
