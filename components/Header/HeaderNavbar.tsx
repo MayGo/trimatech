@@ -1,4 +1,4 @@
-import { outerPadding } from '@/theme/padding.utils';
+import { outerPadding } from '@/components/theme/padding.utils';
 import { Box, Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Logo } from './Logo';

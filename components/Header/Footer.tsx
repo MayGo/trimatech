@@ -1,4 +1,4 @@
-import { mainRounded, outerPadding } from '@/theme/padding.utils';
+import { mainRounded, outerPadding } from '@/components/theme/padding.utils';
 import { PRIVACY_POLICY_LINK, TERMS_AND_CONDITIONS_LINK } from '@/utils/constants';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
