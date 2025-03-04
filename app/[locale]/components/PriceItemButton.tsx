@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Box, BoxProps } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
+import { useTranslations } from 'next-intl';
 
 const pulse = keyframes`
   0%  { transform: scaleX(1) scaleY(1); opacity: 0.3; }
@@ -29,10 +30,12 @@ const AnimatedBox = (props: BoxProps) => {
 };
 
 export function PriceItemButton() {
+    const t = useTranslations('priceItem');
+
     return (
         <Box display="inline-block" position="relative" mt={4}>
             <Button colorPalette="blue" size="lg" zIndex={10}>
-                Join today
+                {t('button')}
             </Button>
             <AnimatedBox animationDelay="0s" />
             <AnimatedBox animationDelay="0.5s" />

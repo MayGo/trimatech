@@ -2,10 +2,13 @@ import { mainHeadingSize, mainRound } from '@/components/theme/padding.utils';
 import { shadowSharp } from '@/components/theme/theme.utils';
 import { MAIN_PRICE, PRODUCT_LINK } from '@/utils/constants';
 import { Box, Flex, Heading, List, Text, VStack } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
 import { PriceItemButton } from './PriceItemButton';
 
 export function PriceItem() {
+    const t = useTranslations('priceItem');
+
     return (
         <Flex
             flexDirection="column"
@@ -24,7 +27,7 @@ export function PriceItem() {
             position="relative"
         >
             <Heading fontSize="3xl" fontWeight="bold">
-                Monthly Club
+                {t('title')}
             </Heading>
             <Box>
                 <Flex justify="center" align="baseline">
@@ -32,25 +35,18 @@ export function PriceItem() {
                         €{MAIN_PRICE}
                     </Heading>
                     <Text fontSize="md" w="0" whiteSpace="nowrap">
-                        / month
+                        {t('perMonth')}
                     </Text>
                 </Flex>
             </Box>
             <Box pb={4} alignSelf="center">
                 <Text fontSize="lg" fontWeight="light" maxW="300px">
-                    React development & maintenance by a senior developer
+                    {t('subtitle')}
                 </Text>
             </Box>
             <VStack gap={3} align="start">
                 <List.Root gap={4} variant="plain" align="center">
-                    {[
-                        'One task handled at a time for complete focus',
-                        'New tasks begin within ~48 hours of completion',
-                        'Unlimited projects managed under one unified backlog',
-                        'Direct communication with the developer working on your tasks',
-                        'Flexible subscription to fit your needs - pause or cancel anytime',
-                        'Full transparency, with tasks tracked in your preferred system (Jira, Trello, etc)'
-                    ].map((feature, index) => (
+                    {t.raw('features').map((feature: string, index: number) => (
                         <List.Item key={index} fontWeight={'semibold'}>
                             <List.Indicator asChild>
                                 <Flex

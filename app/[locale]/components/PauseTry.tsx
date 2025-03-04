@@ -1,6 +1,7 @@
 import { mainRound } from '@/components/theme/padding.utils';
 import { REFUND_PRICE, WEEK_PRICE } from '@/utils/constants';
 import { Box, Flex, Heading, Span, Stack, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import { LuCircleCheck, LuCirclePause } from 'react-icons/lu';
 
 const PauseTryItem = ({
@@ -29,66 +30,52 @@ const PauseTryItem = ({
 const fontSize = 'md';
 
 export const PauseTry = () => {
+    const pauseT = useTranslations('pauseTry.pause');
+    const tryT = useTranslations('pauseTry.try');
+
     return (
         <Box w="full" px={[2, 0]}>
             <Flex flexDirection={['column', 'column', 'row']} gap={4}>
-                <PauseTryItem title="Pause anytime" icon={<LuCirclePause size={40} color="primary" />}>
+                <PauseTryItem title={pauseT('title')} icon={<LuCirclePause size={40} color="primary" />}>
                     <Stack pt={4}>
-                        <Text fontSize={fontSize}>
-                            When there’s no work left to be done on your projects, just pause your subscription.
-                            Resuming is easy, and your plan picks up right where you left off, ensuring no lost progress
-                            or continuity gaps.
-                        </Text>
-                        <Text fontSize={fontSize}>
-                            This flexibility is essential for managing your budget effectively, especially during
-                            periods of downtime.
-                        </Text>
-                        <Text fontSize={fontSize}>Benefits include:</Text>
+                        <Text fontSize={fontSize}>{pauseT('text1')}</Text>
+                        <Text fontSize={fontSize}>{pauseT('text2')}</Text>
+                        <Text fontSize={fontSize}>{pauseT('benefits')}</Text>
                         <Stack>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">No Commitment</Span>: Easily pause whenever necessary without
-                                financial penalties.
+                                <Span fontWeight="bold">{pauseT('noCommitment.title')}</Span>:{' '}
+                                {pauseT('noCommitment.description')}
                             </Text>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Stay on Track</Span>: Return to ongoing work without losing
-                                progress.
+                                <Span fontWeight="bold">{pauseT('stayOnTrack.title')}</Span>:{' '}
+                                {pauseT('stayOnTrack.description')}
                             </Text>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Focused Management</Span>: Use your time and resources
-                                efficiently while still having access to quality React maintenance when you need it.
+                                <Span fontWeight="bold">{pauseT('focusedManagement.title')}</Span>:{' '}
+                                {pauseT('focusedManagement.description')}
                             </Text>
                         </Stack>
                     </Stack>
                 </PauseTryItem>
-                <PauseTryItem title="Try it for a week" icon={<LuCircleCheck size={40} color="primary" />}>
+                <PauseTryItem title={tryT('title')} icon={<LuCircleCheck size={40} color="primary" />}>
                     <Stack pt={4}>
-                        <Text fontSize={fontSize}>
-                            For €{WEEK_PRICE}, experience the value of senior-level React maintenance for the first
-                            week.
-                        </Text>
-                        <Text fontSize={fontSize}>In one week, you could either:</Text>
+                        <Text fontSize={fontSize}>{tryT('text1', { weekPrice: WEEK_PRICE })}</Text>
+                        <Text fontSize={fontSize}>{tryT('text2')}</Text>
                         <Stack>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Fix</Span> ~8 bugs, from minor UI issues to moderate
-                                functionality fixes.
+                                <Span fontWeight="bold">{tryT('fix.title')}</Span> {tryT('fix.description')}
                             </Text>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Implement</Span> ~2 features, like a custom dashboard component
-                                or an interactive form.
+                                <Span fontWeight="bold">{tryT('implement.title')}</Span> {tryT('implement.description')}
                             </Text>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Update</Span> all libraries to the latest versions and enhance
-                                app performance for smoother functionality.
+                                <Span fontWeight="bold">{tryT('update.title')}</Span> {tryT('update.description')}
                             </Text>
                             <Text fontSize={fontSize}>
-                                <Span fontWeight="bold">Set up</Span> automated testing, laying the groundwork for
-                                continuous integration and better long-term reliability.
+                                <Span fontWeight="bold">{tryT('setUp.title')}</Span> {tryT('setUp.description')}
                             </Text>
                         </Stack>
-                        <Text fontSize={fontSize}>
-                            If you're not satisfied, you'll be refunded the remaining €{REFUND_PRICE} of your
-                            subscription - no strings attached!
-                        </Text>
+                        <Text fontSize={fontSize}>{tryT('refundText', { refundPrice: REFUND_PRICE })}</Text>
                     </Stack>
                 </PauseTryItem>
             </Flex>
