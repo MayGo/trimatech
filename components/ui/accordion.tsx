@@ -1,3 +1,5 @@
+'use client';
+
 import { Accordion, HStack } from '@chakra-ui/react';
 import * as React from 'react';
 import { LuChevronDown } from 'react-icons/lu';
@@ -20,7 +22,7 @@ export const AccordionItemTrigger = React.forwardRef<HTMLButtonElement, Accordio
                     {children}
                 </HStack>
                 {indicatorPlacement === 'end' && (
-                    <Accordion.ItemIndicator rotate={{ base: '-90deg', _open: '0deg' }}>
+                    <Accordion.ItemIndicator>
                         <LuChevronDown />
                     </Accordion.ItemIndicator>
                 )}
