@@ -1,128 +1,128 @@
 {
     "page": {
-        "title": "Users",
+        "title": "Kasutajad",
         "form": {
-            "name": "Name",
-            "email": "Email"
+            "name": "Nimi",
+            "email": "E-post"
         }
     },
     "navLinks": {
-        "signIn": "Sign In",
-        "bookCall": "Book a Call",
-        "seePricing": "See pricing"
+        "signIn": "Logi sisse",
+        "bookCall": "Broneeri kõne",
+        "seePricing": "Vaata hindasid"
     },
     "footer": {
-        "location": "Headquartered in Tallinn, Estonia (GMT+2)",
-        "privacyPolicy": "Privacy Policy",
-        "termsOfService": "Terms of service"
+        "location": "Peakontor Tallinnas, Eestis (GMT+2)",
+        "privacyPolicy": "Privaatsuspoliitika",
+        "termsOfService": "Kasutustingimused"
     },
     "menuDialog": {
-        "language": "Language"
+        "language": "Keel"
     },
     "hero": {
-        "heading": "Expert React Maintenance & Development",
-        "description": "Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.",
-        "euBased": "EU-Based",
-        "mission": "Mission: Make all React apps fast, modern, and user-friendly"
+        "heading": "Eksperttasemel Reacti hooldus ja arendus",
+        "description": "Hoia oma Reacti rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
+        "euBased": "EL-põhine",
+        "mission": "Missioon: Muuta kõik Reacti rakendused kiireks, kaasaegseks ja kasutajasõbralikuks"
     },
     "benefits": {
-        "heading": "Benefits",
+        "heading": "Eelised",
         "items": {
             "maintenance": {
-                "title": "Dedicated Maintenance for Your Existing Projects",
-                "description": "No need for a full team - one senior developer focuses on ensuring your React application remains performant and up-to-date."
+                "title": "Pühendunud hooldus sinu olemasolevatele projektidele",
+                "description": "Pole vaja täismeeskonda - üks kogenud arendaja keskendub sinu Reacti rakenduse jõudluse ja ajakohasuse tagamisele."
             },
             "bugFixes": {
-                "title": "Quick Turnaround for Bug Fixes & Updates",
-                "description": "Rapid response for bug fixes and feature requests, starting within 48 hours. Keep your application running optimally!"
+                "title": "Kiire reageerimine vigade parandamiseks ja uuendusteks",
+                "description": "Kiire reageerimine vigade parandamiseks ja funktsioonide taotlustele, alustades 48 tunni jooksul. Hoia oma rakendus optimaalselt töös!"
             },
             "upgrade": {
-                "title": "Upgrade and Enhance Your Application",
-                "description": "Seamlessly add new features and upgrade libraries to leverage the latest React capabilities without disrupting your workflow."
+                "title": "Uuenda ja täiusta oma rakendust",
+                "description": "Lisa sujuvalt uusi funktsioone ja uuenda teeke, et kasutada uusimaid Reacti võimalusi ilma töövoolu häirimata."
             },
             "communication": {
-                "title": "Streamlined Ticket-Based Communication",
-                "description": "All updates and requests are tracked through our ticketing system, ensuring transparency and organization for every task."
+                "title": "Optimeeritud piletipõhine suhtlus",
+                "description": "Kõiki uuendusi ja taotlusi jälgitakse meie piletisüsteemi kaudu, tagades läbipaistvuse ja korrastatuse iga ülesande jaoks."
             }
         }
     },
     "introCallCard": {
         "ownerName": "Maigo Erit",
-        "ownerTitle": "Owner & React Expert",
-        "bookIntroCall": "Book a 15 min intro call",
-        "bookCallButton": "Book a call",
-        "preferEmail": "Prefer to email?"
+        "ownerTitle": "Omanik ja Reacti ekspert",
+        "bookIntroCall": "Broneeri 15-minutiline tutvumiskõne",
+        "bookCallButton": "Broneeri kõne",
+        "preferEmail": "Eelistad e-posti?"
     },
     "pricing": {
-        "heading": "Simple & transparent pricing",
-        "description": "One comprehensive plan for all your React maintenance needs.",
+        "heading": "Lihtne ja läbipaistev hinnastamine",
+        "description": "Üks põhjalik plaan kõigi sinu Reacti hooldusvajadustele.",
         "options": {
             "fullTime": {
-                "title": "Hiring a full time senior developer",
+                "title": "Täiskohaga kogenud arendaja palkamine",
                 "price": "10,000",
-                "subtext": "with the overhead"
+                "subtext": "koos lisakuludega"
             },
             "company": {
-                "title": "Hiring a good development company",
+                "title": "Hea arendusettevõtte palkamine",
                 "price": "16,000",
-                "subtext": "or €100 / hour"
+                "subtext": "või €100 / tund"
             }
         }
     },
     "priceItem": {
-        "title": "Monthly Club",
-        "perMonth": "/ month",
-        "subtitle": "React development & maintenance by a senior developer",
+        "title": "Kuuklubi",
+        "perMonth": "/ kuu",
+        "subtitle": "Reacti arendus ja hooldus kogenud arendaja poolt",
         "features": [
-            "One task handled at a time for complete focus",
-            "New tasks begin within ~48 hours of completion",
-            "Unlimited projects managed under one unified backlog",
-            "Direct communication with the developer working on your tasks",
-            "Flexible subscription to fit your needs - pause or cancel anytime",
-            "Full transparency, with tasks tracked in your preferred system (Jira, Trello, etc)"
+            "Üks ülesanne korraga täieliku keskendumise tagamiseks",
+            "Uued ülesanded algavad ~48 tunni jooksul pärast eelmise lõpetamist",
+            "Piiramatu arv projekte hallatakse ühe ühtse tööjärjekorra all",
+            "Otsene suhtlus arendajaga, kes töötab sinu ülesannetega",
+            "Paindlik tellimus vastavalt sinu vajadustele - peata või tühista igal ajal",
+            "Täielik läbipaistvus, ülesandeid jälgitakse sinu eelistatud süsteemis (Jira, Trello jne)"
         ],
-        "button": "Join today"
+        "button": "Liitu täna"
     },
     "pauseTry": {
         "pause": {
-            "title": "Pause anytime",
-            "text1": "When there's no work left to be done on your projects, just pause your subscription. Resuming is easy, and your plan picks up right where you left off, ensuring no lost progress or continuity gaps.",
-            "text2": "This flexibility is essential for managing your budget effectively, especially during periods of downtime.",
-            "benefits": "Benefits include:",
+            "title": "Peata igal ajal",
+            "text1": "Kui sinu projektides pole enam tööd teha, peata lihtsalt oma tellimus. Jätkamine on lihtne ja sinu plaan jätkub täpselt sealt, kus pooleli jäi, tagades, et ei lähe kaotsi edasiminek ega tekiks järjepidevuse lünki.",
+            "text2": "See paindlikkus on oluline eelarve tõhusaks haldamiseks, eriti seisakuperioodidel.",
+            "benefits": "Eelised on:",
             "noCommitment": {
-                "title": "No Commitment",
-                "description": "Easily pause whenever necessary without financial penalties."
+                "title": "Kohustuste puudumine",
+                "description": "Peata hõlpsasti, kui vaja, ilma rahaliste karistusteta."
             },
             "stayOnTrack": {
-                "title": "Stay on Track",
-                "description": "Return to ongoing work without losing progress."
+                "title": "Püsi rajal",
+                "description": "Naase käimasoleva töö juurde ilma edasiminekut kaotamata."
             },
             "focusedManagement": {
-                "title": "Focused Management",
-                "description": "Use your time and resources efficiently while still having access to quality React maintenance when you need it."
+                "title": "Fokuseeritud juhtimine",
+                "description": "Kasuta oma aega ja ressursse tõhusalt, omades siiski juurdepääsu kvaliteetsele Reacti hooldusele, kui seda vajad."
             }
         },
         "try": {
-            "title": "Try it for a week",
-            "text1": "For €{weekPrice}, experience the value of senior-level React maintenance for the first week.",
-            "text2": "In one week, you could either:",
+            "title": "Proovi nädal aega",
+            "text1": "€{weekPrice} eest koge kõrgtasemel Reacti hoolduse väärtust esimese nädala jooksul.",
+            "text2": "Ühe nädala jooksul võiksid kas:",
             "fix": {
-                "title": "Fix",
-                "description": "~8 bugs, from minor UI issues to moderate functionality fixes."
+                "title": "Parandada",
+                "description": "~8 viga, alates väikestest kasutajaliidese probleemidest kuni mõõdukate funktsionaalsuse parandusteni."
             },
             "implement": {
-                "title": "Implement",
-                "description": "~2 features, like a custom dashboard component or an interactive form."
+                "title": "Rakendada",
+                "description": "~2 funktsiooni, nagu kohandatud juhtpaneeli komponent või interaktiivne vorm."
             },
             "update": {
-                "title": "Update",
-                "description": "all libraries to the latest versions and enhance app performance for smoother functionality."
+                "title": "Uuendada",
+                "description": "kõik teegid uusimatele versioonidele ja parandada rakenduse jõudlust sujuvamaks funktsionaalsuseks."
             },
             "setUp": {
-                "title": "Set up",
-                "description": "automated testing, laying the groundwork for continuous integration and better long-term reliability."
+                "title": "Seadistada",
+                "description": "automatiseeritud testimine, luues aluse pidevaks integratsiooniks ja paremaks pikaajaliseks usaldusväärsuseks."
             },
-            "refundText": "If you're not satisfied, you'll be refunded the remaining €{refundPrice} of your subscription - no strings attached!"
+            "refundText": "Kui sa pole rahul, tagastatakse sulle ülejäänud €{refundPrice} sinu tellimusest - ilma igasuguste tingimusteta!"
         }
     },
     "testimonials": {
@@ -130,191 +130,191 @@
             {
                 "title": "Ella Martinez, Activizor",
                 "avatar": "/testimonials/activizor.jpg",
-                "content": "Staying on top of updates for our tools was always a headache for our small team. Since we started working with Trimatech, things have changed! Our workflow flows much better, and the performance improvements made a big difference for all of us."
+                "content": "Meie väikese meeskonna jaoks oli uuenduste haldamine alati peavalu. Pärast Trimatechiga koostöö alustamist on asjad muutunud! Meie töövoog on palju sujuvam ja jõudluse parandused on teinud meile kõigile suure erinevuse."
             },
             {
                 "title": "James Wilson, MedCore Systems",
                 "avatar": "/testimonials/medcore.jpg",
-                "content": "Our booking system was an ongoing issue, and hiring a dev wasn't in the budget. Partnering with Trimatech has really stabilized everything - fewer complaints from users and much less stress on our end. It's been a fantastic solution for us!"
+                "content": "Meie broneerimissüsteem oli pidev probleem ja arendaja palkamine polnud eelarves. Koostöö Trimatechiga on kõike tõeliselt stabiliseerinud - vähem kaebusi kasutajatelt ja palju vähem stressi meie jaoks. See on olnud meie jaoks suurepärane lahendus!"
             },
             {
                 "title": "Sophie Taylor, UrbanTrack",
                 "avatar": "/testimonials/urbantrack.jpg",
-                "content": "Our logistics app is super complex, but since engaging with Trimatech, issues are getting fixed much quicker. They even offer suggestions that help us improve our system. It feels great to be proactive instead of always reacting to problems!"
+                "content": "Meie logistikarakendus on äärmiselt keeruline, kuid pärast Trimatechiga koostöö alustamist lahendatakse probleeme palju kiiremini. Nad pakuvad isegi soovitusi, mis aitavad meil süsteemi parandada. On suurepärane olla proaktiivne, mitte alati probleemidele reageerida!"
             },
             {
                 "title": "Daniel Brown, RentEase Solutions",
                 "avatar": "/testimonials/rentease.png",
-                "content": "We struggled with bugs and updates taking forever. Working with Trimatech has completely turned that around. Everything gets resolved promptly; finally, we can focus on growing our business rather than dealing with glitches!"
+                "content": "Meil oli probleeme vigade ja uuendustega, mis võtsid igavesti aega. Trimatechiga koostöö on selle täielikult muutnud. Kõik lahendatakse kiiresti; lõpuks saame keskenduda oma äri kasvatamisele, mitte tõrgetega tegelemisele!"
             },
             {
                 "title": "Clara Müller, GlobalLink Commerce",
                 "avatar": "/testimonials/globallink.jpg",
-                "content": "For over a year, Trimatech has been managing our eCommerce platform, and I can't express how comforting that has been. Their expertise means that any bumps are handled swiftly, and our operations run so much smoother now!"
+                "content": "Juba üle aasta on Trimatech hallanud meie e-kaubanduse platvormi ja ma ei suuda väljendada, kui lohutav see on olnud. Nende oskusteave tähendab, et kõik takistused lahendatakse kiiresti ja meie tegevus toimib nüüd palju sujuvamalt!"
             },
             {
                 "title": "Ryan Harris, Control NQP",
                 "avatar": "/testimonials/control.jpg",
-                "content": "After we launched our React desktop app, we realized we needed help keeping it in shape. Maigo has made all the difference - updates, fixes, performance tweaks - all taken care of! I can actually focus on improving the user experience instead of worrying!"
+                "content": "Pärast Reacti töölauarakenduse käivitamist mõistsime, et vajame abi selle korras hoidmiseks. Maigo on teinud suure erinevuse - uuendused, parandused, jõudluse täiustused - kõik on hoolitsetud! Ma saan tegelikult keskenduda kasutajakogemuse parandamisele, mitte muretsemisele!"
             }
         ]
     },
     "discuss": {
-        "heading": "Let's discuss your project",
-        "description": "Schedule a quick call to discuss your React maintenance needs and see if we're a good fit."
+        "heading": "Arutame sinu projekti",
+        "description": "Planeeri kiire kõne, et arutada oma Reacti hooldusvajadusi ja näha, kas sobime hästi kokku."
     },
     "comparePricing": {
-        "heading": "How does this compare?",
+        "heading": "Kuidas see võrdlub?",
         "fullTimeEngineer": {
-            "title": "Hiring a full-time engineer",
+            "title": "Täiskohaga inseneri palkamine",
             "cost": {
-                "title": "Cost",
-                "text": "~€8,000-€10,000/month (gross, including taxes, benefits, and overhead)."
+                "title": "Kulu",
+                "text": "~€8,000-€10,000/kuus (bruto, koos maksude, hüvitiste ja lisakuludega)."
             },
             "commitment": {
-                "title": "Commitment",
-                "text": "160 hours/month, but not all those hours will be productive if the workload is small or inconsistent."
+                "title": "Kohustus",
+                "text": "160 tundi/kuus, kuid mitte kõik need tunnid pole produktiivsed, kui töömaht on väike või ebaühtlane."
             },
             "downsides": {
-                "title": "Downsides",
-                "text": "Recruitment effort, onboarding time, managing idle hours for smaller workloads, and possible challenges with developer turnover."
+                "title": "Puudused",
+                "text": "Värbamispingutus, sisseelamisaeg, jõudeaja haldamine väiksemate töökoormuste puhul ja võimalikud probleemid arendaja lahkumisega."
             },
-            "withSubscription": "With our subscription:",
+            "withSubscription": "Meie tellimusega:",
             "subscriptionCost": {
-                "title": "Cost",
-                "text": "~50% savings compared to a full-time senior React developer."
+                "title": "Kulu",
+                "text": "~50% säästu võrreldes täiskohaga kogenud Reacti arendajaga."
             },
             "flexibility": {
-                "title": "Flexibility",
-                "text": "Perfect for projects with small, steady workloads where a full-time employee isn't needed."
+                "title": "Paindlikkus",
+                "text": "Ideaalne projektidele, millel on väike, stabiilne töökoormus, kus täiskohaga töötajat pole vaja."
             },
             "efficiency": {
-                "title": "Efficiency",
-                "text": "Tasks are based on your priorities: ~8-12 significant tasks completed per month. Less wasted time - get results, not idle hours."
+                "title": "Tõhusus",
+                "text": "Ülesanded põhinevad sinu prioriteetidel: ~8-12 olulist ülesannet täidetakse kuus. Vähem raisatud aega - saad tulemusi, mitte jõudeaega."
             },
             "hassleStart": {
-                "title": "Hassle-Free Start",
-                "text": "Begin immediately with no recruitment, onboarding, or admin overhead."
+                "title": "Muretu algus",
+                "text": "Alusta kohe ilma värbamise, sisseelamiseta või administratiivse lisakoormuseta."
             },
             "onDemand": {
-                "title": "On-Demand Results",
-                "text": "Quality-backed deliverables tailored to your project priorities, without delays or inefficiencies."
+                "title": "Nõudmisel tulemused",
+                "text": "Kvaliteetsed tulemused, mis on kohandatud sinu projekti prioriteetidele, ilma viivituste või ebaefektiivsuseta."
             }
         },
         "hiringCompany": {
-            "title": "Hiring a development company",
+            "title": "Arendusettevõtte palkamine",
             "cost": {
-                "title": "Cost",
-                "text": "€100-€150/hour. For 160 hours, this is ~€16,000-€24,000/month. Even smaller workloads (e.g., 50 hours) cost €5,000-€7,500."
+                "title": "Kulu",
+                "text": "€100-€150/tund. 160 tunni puhul on see ~€16,000-€24,000/kuus. Isegi väiksemad töökoormused (nt 50 tundi) maksavad €5,000-€7,500."
             },
             "commitment": {
-                "title": "Commitment",
-                "text": "Many companies require minimum monthly contracts or long-term retainers (e.g., 3-6 months), making it difficult to pause during inconsistent workloads. After pausing, they may not have capacity when you need to resume."
+                "title": "Kohustus",
+                "text": "Paljud ettevõtted nõuavad minimaalseid kuulepinguid või pikaajalisi ettemakseid (nt 3-6 kuud), mis teeb pausi tegemise ebaühtlase töökoormuse ajal raskeks. Pärast pausi ei pruugi neil olla võimsust, kui vajad jätkamist."
             },
             "downsides": {
-                "title": "Downsides",
-                "text": "Overestimation padding, possible involvement of junior developers, and slower communication through middle management."
+                "title": "Puudused",
+                "text": "Ülehindamise polsterdamine, võimalik noorarendajate kaasamine ja aeglasem suhtlus keskastme juhtimise kaudu."
             },
-            "withSubscription": "With our subscription:",
+            "withSubscription": "Meie tellimusega:",
             "subscriptionCost": {
-                "title": "Cost",
-                "text": "~25% savings compared to 50 hours with a company, and significantly less for larger workloads."
+                "title": "Kulu",
+                "text": "~25% säästu võrreldes 50 tunniga ettevõttes ja oluliselt vähem suuremate töökoormuste puhul."
             },
             "flexibility": {
-                "title": "Flexible Commitment",
-                "text": "Pause or cancel anytime based on your workload."
+                "title": "Paindlik kohustus",
+                "text": "Peata või tühista igal ajal vastavalt oma töökoormusele."
             },
             "expertise": {
-                "title": "Direct Expertise",
-                "text": "Work is handled exclusively by a senior React developer - no juniors or inflated estimates."
+                "title": "Otsene oskusteave",
+                "text": "Tööd teeb ainult kogenud Reacti arendaja - ei mingeid noorarendajaid ega paisutatud hinnanguid."
             },
             "communication": {
-                "title": "Streamlined Communication",
-                "text": "Direct collaboration ensures faster feedback and no time wasted on unnecessary middlemen or delays."
+                "title": "Optimeeritud suhtlus",
+                "text": "Otsene koostöö tagab kiirema tagasiside ja ei raiska aega ebavajalikele vahendajatele või viivitustele."
             }
         },
         "subscriptionValue": {
-            "title": "Subscription value at a glance",
+            "title": "Tellimuse väärtus lühidalt",
             "monthlyOutput": {
-                "title": "Monthly Output",
-                "text": "~8-12 tasks per month (equivalent to 50 hours of senior-level work)."
+                "title": "Kuine väljund",
+                "text": "~8-12 ülesannet kuus (võrdub 50 tunniga kõrgtasemel tööd)."
             },
             "costSavings": {
-                "title": "Cost Savings",
-                "text": "Save ~50% compared to hiring a full-time engineer and ~25% compared to outsourcing to a company."
+                "title": "Kulude kokkuhoid",
+                "text": "Säästa ~50% võrreldes täiskohaga inseneri palkamisega ja ~25% võrreldes ettevõttele allhanke tegemisega."
             },
             "hassleStart": {
-                "title": "Hassle-Free Start",
-                "text": "Begin without recruitment, onboarding, or management overhead - just quality focused results when you need them."
+                "title": "Muretu algus",
+                "text": "Alusta ilma värbamise, sisseelamiseta või juhtimise lisakoormuseta - ainult kvaliteetsed fokuseeritud tulemused, kui neid vajad."
             },
             "flexibility": {
-                "title": "Flexibility & Simplicity",
-                "text": "No long term contracts, commitments, or penalties - pause or cancel anytime. Start immediately with no delays or onboarding required."
+                "title": "Paindlikkus ja lihtsus",
+                "text": "Ei mingeid pikaajalisi lepinguid, kohustusi ega karistusi - peata või tühista igal ajal. Alusta kohe ilma viivituste või sisseelamiseta."
             },
             "expertise": {
-                "title": "Exclusive Expertise",
-                "text": "Work is completed by a senior React developer who provides dedicated attention to your needs - no juniors, no middle management, and no compromises on quality."
+                "title": "Eksklusiivne oskusteave",
+                "text": "Tööd teeb kogenud Reacti arendaja, kes pakub pühendunud tähelepanu sinu vajadustele - ei mingeid noorarendajaid, keskastme juhtimist ega kompromisse kvaliteedi osas."
             },
             "efficiency": {
-                "title": "Efficiency Through AI and Modern Practices",
-                "text": "Using AI-powered solutions like Cursor.ai and the latest development methodologies, combined with continuous improvements in workflows, results are delivered with a speed and proficiency comparable to small software teams of just a few years ago. This ensures exceptional quality and faster project delivery."
+                "title": "Tõhusus läbi tehisintellekti ja kaasaegsete praktikate",
+                "text": "Kasutades tehisintellektil põhinevaid lahendusi nagu Cursor.ai ja uusimaid arendusmeetodeid, kombineerituna pideva töövoogude täiustamisega, saavutatakse tulemused kiirusega ja oskuslikkusega, mis on võrreldav väikeste tarkvarameeskondadega vaid mõne aasta tagusest ajast. See tagab erakordse kvaliteedi ja kiirema projekti valmimise."
             }
         }
     },
     "gridBackground": {
-        "callNow": "Call Now"
+        "callNow": "Helista kohe"
     },
     "priceForOthers": {
-        "upTo": "up to",
-        "perMonth": "/ month",
-        "goToSection": "Go to target section"
+        "upTo": "kuni",
+        "perMonth": "/ kuus",
+        "goToSection": "Mine sihtjaotiseni"
     },
     "techScroll": {
-        "heading": "Technology Stack"
+        "heading": "Tehnoloogia stack"
     },
     "faq": {
-        "heading": "Frequently Asked Questions",
-        "description": "Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.",
+        "heading": "Korduma kippuvad küsimused",
+        "description": "Planeeri kiire kõne, et arutada oma Reacti hooldusvajadusi ja näha, kas sobime hästi kokku.",
         "items": [
             {
-                "title": "What types of projects do you maintain?",
-                "text": "We specialize in maintaining and upgrading existing React applications, ensuring they remain robust and efficient."
+                "title": "Milliseid projekte te hooldate?",
+                "text": "Me spetsialiseerume olemasolevate Reacti rakenduste hooldamisele ja uuendamisele, tagades, et need jäävad tugevaks ja tõhusaks."
             },
             {
-                "title": "Do you only maintain existing projects?",
-                "text": "No, we can also help build new projects from scratch! We'll break down the development into manageable tickets and tasks, following the same efficient workflow used for maintenance. This structured approach ensures clear progress tracking and organized development, whether starting fresh or maintaining an existing codebase."
+                "title": "Kas te ainult hooldate olemasolevaid projekte?",
+                "text": "Ei, me saame aidata ka uusi projekte nullist üles ehitada! Me jagame arenduse hallatavateks piletiteks ja ülesanneteks, järgides sama tõhusat töövoogu, mida kasutatakse hoolduse jaoks. See struktureeritud lähenemine tagab selge edenemise jälgimise ja organiseeritud arenduse, olgu siis alustades nullist või hooldades olemasolevat koodibaasi."
             },
             {
-                "title": "Can I request both bug fixes and new features?",
-                "text": "Absolutely! Our service covers bug fixes, feature enhancements, and updates to libraries or frameworks."
+                "title": "Kas ma saan taotleda nii vigade parandusi kui ka uusi funktsioone?",
+                "text": "Absoluutselt! Meie teenus hõlmab vigade parandusi, funktsioonide täiustamist ja teekide või raamistike uuendamist."
             },
             {
-                "title": "How do I get started with maintenance?",
-                "text": "To get started, contact me to discuss your project and specific needs. I'll also need secure access to your codebase to begin supporting your application. Once everything is set up, we'll choose a ticketing system - whether it's your existing system (like Jira or Trello) or one I create for you - so you can start submitting tasks right away."
+                "title": "Kuidas alustada hooldusega?",
+                "text": "Alustamiseks võta minuga ühendust, et arutada oma projekti ja konkreetseid vajadusi. Vajan ka turvalist juurdepääsu sinu koodibaasile, et hakata sinu rakendust toetama. Kui kõik on seadistatud, valime piletisüsteemi - kas sinu olemasolev süsteem (nagu Jira või Trello) või üks, mille ma sulle loon - et saaksid kohe hakata ülesandeid esitama."
             },
             {
-                "title": "How fast will my requests be completed?",
-                "text": "Each task will start within 48 hours of being submitted. From there, most requests are completed in one to two days, depending on their complexity."
+                "title": "Kui kiiresti minu taotlused täidetakse?",
+                "text": "Iga ülesandega alustatakse 48 tunni jooksul pärast esitamist. Sealt edasi täidetakse enamik taotlusi ühe kuni kahe päeva jooksul, sõltuvalt nende keerukusest."
             },
             {
-                "title": "How does onboarding work?",
-                "text": "When you subscribe to a plan, I'll ensure a seamless onboarding process. If you already have a ticketing system, such as Jira, Trello, or another platform, I'm happy to adapt and work within your existing setup. If not, I'll create one for you and guide you through the process. I'll also securely access your codebase to ensure everything is ready for maintenance. The setup process is quick and focused entirely on your needs."
+                "title": "Kuidas toimub sisseelamine?",
+                "text": "Kui tellid plaani, tagan sujuva sisseelamisprotsessi. Kui sul on juba piletisüsteem, nagu Jira, Trello või mõni muu platvorm, olen hea meelega valmis kohanema ja töötama sinu olemasoleva seadistusega. Kui mitte, loon sulle ühe ja juhendan sind protsessi läbi. Samuti pääsen turvaliselt ligi sinu koodibaasile, et tagada, et kõik on hoolduseks valmis. Seadistusprotsess on kiire ja keskendub täielikult sinu vajadustele."
             },
             {
-                "title": "Who are the developers?",
-                "text": "Trimatech is a one-man agency, ran by Maigo, the founder. Trimatech does not employ other developers, or outsource work to any other entity. You'll work directly with me through the entirety of your experience."
+                "title": "Kes on arendajad?",
+                "text": "Trimatech on ühe-mehe agentuur, mida juhib Maigo, asutaja. Trimatech ei palka teisi arendajaid ega telli tööd allhankena ühelegi teisele üksusele. Töötad otse minuga kogu oma kogemuse vältel."
             },
             {
-                "title": "Is there a limit to how many requests I can make?",
-                "text": "Once subscribed, you're able to add as many requests to your queue as you'd like, and they will be delivered one by one."
+                "title": "Kas on piirang, kui palju taotlusi ma saan teha?",
+                "text": "Kui oled tellinud, saad lisada oma järjekorda nii palju taotlusi, kui soovid, ja need täidetakse ükshaaval."
             },
             {
-                "title": "How does the pause feature work?",
-                "text": "We understand you may not have enough work to fill up entire month. Perhaps you only have one or two requests at the moment. That's where pausing your subscription comes in handy. Billing cycles are based on 31 day period. Let's say you sign up and use the service for 21 days, and then decide to pause your subscription. This means that the billing cycle will be paused and you'll have 10 days of service remaining to be used anytime in the future."
+                "title": "Kuidas toimib peatamise funktsioon?",
+                "text": "Me mõistame, et sul ei pruugi olla piisavalt tööd, et täita tervet kuud. Võib-olla on sul hetkel ainult üks või kaks taotlust. Siin tuleb kasuks tellimuse peatamine. Arveldusperioodid põhinevad 31-päevasel perioodil. Ütleme, et registreerud ja kasutad teenust 21 päeva ning otsustad siis oma tellimuse peatada. See tähendab, et arveldusperiood peatatakse ja sul jääb 10 päeva teenust, mida saad kasutada tulevikus mis tahes ajal."
             },
             {
-                "title": "What if I only have a single request?",
-                "text": "That's fine. You can pause your subscription when finished and return when you have additional development needs. There's no need to let the remainder of your subscription go to waste."
+                "title": "Mis siis, kui mul on ainult üks taotlus?",
+                "text": "See on korras. Võid oma tellimuse peatada, kui oled lõpetanud, ja naasta, kui sul on täiendavaid arendusvajadusi. Pole vaja lasta oma tellimuse ülejäänud osal raisku minna."
             }
         ]
     }
