@@ -1,20 +1,19 @@
 import { Metadata } from 'next';
 import Head from 'next/head';
 
-import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
+import { PropsWithChildren, Suspense } from 'react';
 
-import { ThemeProvider } from '@/components/ui/ThemeProvider';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
 
-import { Box } from '@chakra-ui/react';
 import { Toaster } from '@/components/ui/Toaster';
+import { Box } from '@chakra-ui/react';
 
-import { Roboto } from 'next/font/google';
-import { M_PLUS_Rounded_1c } from 'next/font/google';
-import { HeaderNavbar } from '@/components/ui/Header/HeaderNavbar';
-import { Footer } from '@/components/ui/Header/Footer';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Footer } from '@/components/Header/Footer';
+import { HeaderNavbar } from '@/components/Header/HeaderNavbar';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],

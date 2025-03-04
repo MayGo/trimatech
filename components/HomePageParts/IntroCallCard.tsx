@@ -1,11 +1,11 @@
-import { Box, Flex, Heading, Text, Image, IconButton, LinkOverlay, LinkBox, Stack } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
-import NextLink from 'next/link';
-import { LuArrowRight } from 'react-icons/lu';
-import { Button } from '../button';
-import { mainRound } from '../padding.utils';
-import { shadowSharp } from '../theme.utils';
 import { EMAIL_TO, GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants';
+import { Box, Flex, Heading, IconButton, Image, LinkBox, LinkOverlay, Stack, Text } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
+import { LuArrowRight } from 'react-icons/lu';
+import { mainRound } from '../theme/padding.utils';
+import { shadowSharp } from '../theme/theme.utils';
+import { Button } from '../ui/button';
 
 export const IntroCallCard = () => {
     return (

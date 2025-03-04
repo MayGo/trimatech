@@ -1,6 +1,6 @@
 import { Box, Heading } from '@chakra-ui/react';
+import { mainHeadingSize } from '../theme/padding.utils';
 import TechScrollingLogos from './TechScrollingLogos';
-import { mainHeadingSize } from './padding.utils';
 
 export const TechScroll = () => {
     return (

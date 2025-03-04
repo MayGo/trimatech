@@ -1,7 +1,7 @@
 import { Box, Heading, IconButton, Text } from '@chakra-ui/react';
-import { mainRound } from '../padding.utils';
 import NextLink from 'next/link';
 import { MdOutlineKeyboardDoubleArrowDown } from 'react-icons/md';
+import { mainRound } from '../theme/padding.utils';
 
 export const PriceForOthers = ({
     title,

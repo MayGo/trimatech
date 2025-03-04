@@ -1,9 +1,9 @@
-import Navlinks from './Navlinks';
 import { Box, Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
+import { outerPadding } from '../theme/padding.utils';
 import { Logo } from './Logo';
-import { outerPadding } from '../padding.utils';
 import { MenuDialog } from './MenuDialog';
+import Navlinks from './Navlinks';
 
 export const HeaderNavbar: NextPage = () => {
     return (

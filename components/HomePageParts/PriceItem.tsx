@@ -1,8 +1,8 @@
-import { Box, Text, VStack, List, Flex, Heading } from '@chakra-ui/react';
-import { mainHeadingSize, mainRound } from '../padding.utils';
-import { shadowSharp } from '../theme.utils';
 import { MAIN_PRICE, PRODUCT_LINK } from '@/utils/constants';
+import { Box, Flex, Heading, List, Text, VStack } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { mainHeadingSize, mainRound } from '../theme/padding.utils';
+import { shadowSharp } from '../theme/theme.utils';
 import { PriceItemButton } from './PriceItemButton';
 
 export function PriceItem() {
