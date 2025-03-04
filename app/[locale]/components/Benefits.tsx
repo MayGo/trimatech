@@ -1,5 +1,6 @@
 import { mainHeadingSize, mainRounded } from '@/components/theme/padding.utils';
 import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import { AdaptiveInterface } from './animations/AdaptiveInterface';
 import { DeveloperCommunications } from './animations/DeveloperCommunications';
 import { WebDevelopment } from './animations/WebDevelopment';
@@ -37,34 +38,25 @@ const BenefitItem = ({
 };
 
 export const Benefits = () => {
+    const t = useTranslations('benefits');
+    const items = useTranslations('benefits.items');
+
     return (
         <Box w="full">
             <Box pb={4} pl={[4, 0]}>
-                <Heading size={mainHeadingSize}>Benefits</Heading>
+                <Heading size={mainHeadingSize}>{t('heading')}</Heading>
             </Box>
             <SimpleGrid columns={[1, 1, 2, 2, 4]} gap={4}>
-                <BenefitItem
-                    title="Dedicated Maintenance for Your Existing Projects"
-                    description="No need for a full team - one senior developer focuses on ensuring your React application remains performant and up-to-date."
-                >
+                <BenefitItem title={items('maintenance.title')} description={items('maintenance.description')}>
                     <WorkingHome />
                 </BenefitItem>
-                <BenefitItem
-                    title="Quick Turnaround for Bug Fixes & Updates"
-                    description="Rapid response for bug fixes and feature requests, starting within 48 hours. Keep your application running optimally!"
-                >
+                <BenefitItem title={items('bugFixes.title')} description={items('bugFixes.description')}>
                     <WebDevelopment />
                 </BenefitItem>
-                <BenefitItem
-                    title="Upgrade and Enhance Your Application"
-                    description="Seamlessly add new features and upgrade libraries to leverage the latest React capabilities without disrupting your workflow."
-                >
+                <BenefitItem title={items('upgrade.title')} description={items('upgrade.description')}>
                     <AdaptiveInterface />
                 </BenefitItem>
-                <BenefitItem
-                    title="Streamlined Ticket-Based Communication"
-                    description="All updates and requests are tracked through our ticketing system, ensuring transparency and organization for every task."
-                >
+                <BenefitItem title={items('communication.title')} description={items('communication.description')}>
                     <DeveloperCommunications />
                 </BenefitItem>
             </SimpleGrid>

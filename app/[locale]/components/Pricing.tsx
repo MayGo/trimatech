@@ -1,16 +1,20 @@
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '@/components/theme/padding.utils';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import { BusinessValue } from './animations/BusinessValue';
 import { PriceForOthers } from './PriceForOthers';
 import { PriceItem } from './PriceItem';
 
 export const Pricing = () => {
+    const t = useTranslations('pricing');
+    const options = useTranslations('pricing.options');
+
     return (
         <Box bg="bgColor" w="full" rounded={mainRounded} p={outerPadding} id="pricing">
             <Box textAlign="center" pb={outerPadding}>
-                <Heading size={mainHeadingSize}>Simple & transparent pricing</Heading>
+                <Heading size={mainHeadingSize}>{t('heading')}</Heading>
                 <Text fontSize={mainSubtextSize} pt={4}>
-                    One comprehensive plan for all your React maintenance needs.
+                    {t('description')}
                 </Text>
             </Box>
             <Flex flexDirection={['column', 'column', 'column', 'row']} gap={4}>
@@ -25,15 +29,15 @@ export const Pricing = () => {
                         flexDirection={['column', 'column', 'column', 'column', 'row']}
                     >
                         <PriceForOthers
-                            title="Hiring a full time senior developer"
-                            price="10,000"
-                            subtext="with the overhead"
+                            title={options('fullTime.title')}
+                            price={options('fullTime.price')}
+                            subtext={options('fullTime.subtext')}
                             href="#full-time-engineer"
                         />
                         <PriceForOthers
-                            title="Hiring a good development company"
-                            price="16,000"
-                            subtext="or €100 / hour"
+                            title={options('company.title')}
+                            price={options('company.price')}
+                            subtext={options('company.subtext')}
                             href="#development-company"
                         />
                     </Flex>
