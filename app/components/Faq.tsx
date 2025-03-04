@@ -1,5 +1,3 @@
-'use client';
-
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../../components/theme/padding.utils';
 import { CustomAccordion, CustomAccordionItem } from '../../components/ui/custom-accordion';
@@ -8,7 +6,11 @@ import { Questions } from './animations/Questions';
 const items = [
     {
         title: 'What types of projects do you maintain?',
-        text: 'We specialize in maintaining and upgrading existing React applications, ensuring they remain robust and efficient.'
+        text: `We specialize in maintaining and upgrading existing React applications, ensuring they remain robust and efficient.`
+    },
+    {
+        title: 'Do you only maintain existing projects?',
+        text: `No, we can also help build new projects from scratch! We'll break down the development into manageable tickets and tasks, following the same efficient workflow used for maintenance. This structured approach ensures clear progress tracking and organized development, whether starting fresh or maintaining an existing codebase.`
     },
     {
         title: 'Can I request both bug fixes and new features?',
@@ -65,7 +67,7 @@ export const Faq = () => {
                     <CustomAccordion variant="subtle">
                         {items.map((item, index) => (
                             <CustomAccordionItem key={index} title={item.title}>
-                                {item.text}
+                                <Text fontSize="md">{item.text}</Text>
                             </CustomAccordionItem>
                         ))}
                     </CustomAccordion>

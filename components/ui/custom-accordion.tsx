@@ -123,7 +123,7 @@ export const CustomAccordionItem: React.FC<CustomAccordionItemProps & BoxProps> 
                 onClick={onToggle}
                 {...titleProps}
             >
-                {typeof title === 'string' ? <Text>{title}</Text> : title}
+                {typeof title === 'string' ? <Text fontSize="md">{title}</Text> : title}
                 <Icon
                     as={LuChevronDown}
                     transform={isOpen ? 'rotate(0deg)' : 'rotate(-90deg)'}
