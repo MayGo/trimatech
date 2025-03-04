@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, SimpleGrid, Span, Text } from '@chakra-ui/react';
-import { mainHeadingSize, mainRounded, outerPadding } from '../theme/padding.utils';
+import { mainHeadingSize, mainRounded, outerPadding } from '../../components/theme/padding.utils';
 import { BusinessAgreement } from './animations/BusinessAgreement';
 import { CustomerAssistance } from './animations/CustomerAssistance';
 import { MoneyValueImage } from './animations/MoneyValueImage';

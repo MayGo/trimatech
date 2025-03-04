@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import { mainHeadingSize, mainRounded } from '../theme/padding.utils';
+import { mainHeadingSize, mainRounded } from '../../components/theme/padding.utils';
 import { AdaptiveInterface } from './animations/AdaptiveInterface';
 import { DeveloperCommunications } from './animations/DeveloperCommunications';
 import { WebDevelopment } from './animations/WebDevelopment';

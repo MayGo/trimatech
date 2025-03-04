@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { GiEuropeanFlag } from 'react-icons/gi';
-import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../theme/padding.utils';
+import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../../components/theme/padding.utils';
 import { AbstractBg } from './animations/AbstractBg';
 import { IntroCallCard } from './IntroCallCard';
 

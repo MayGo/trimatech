@@ -1,7 +1,7 @@
 'use client';
 import { Box, BoxProps } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
-import { Button } from '../ui/button';
+import { Button } from '../../components/ui/button';
 
 const pulse = keyframes`
   0%  { transform: scaleX(1) scaleY(1); opacity: 0.3; }

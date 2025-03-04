@@ -1,7 +1,7 @@
 import { REFUND_PRICE, WEEK_PRICE } from '@/utils/constants';
 import { Box, Flex, Heading, Span, Stack, Text } from '@chakra-ui/react';
 import { LuCircleCheck, LuCirclePause } from 'react-icons/lu';
-import { mainRound } from '../theme/padding.utils';
+import { mainRound } from '../../components/theme/padding.utils';
 
 const PauseTryItem = ({
     title,

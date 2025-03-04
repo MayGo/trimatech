@@ -1,8 +1,14 @@
 'use client';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { InlineWidget } from 'react-calendly';
-import { mainHeadingSize, mainRound, mainRounded, mainSubtextSize, outerPadding } from '../theme/padding.utils';
-import { shadowSharp } from '../theme/theme.utils';
+import {
+    mainHeadingSize,
+    mainRound,
+    mainRounded,
+    mainSubtextSize,
+    outerPadding
+} from '../../components/theme/padding.utils';
+import { shadowSharp } from '../../components/theme/theme.utils';
 import { OnlineVideoChatting } from './animations/OnlineVideoChatting';
 
 export const Discuss = () => {

@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../theme/padding.utils';
+import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../../components/theme/padding.utils';
 import { BusinessValue } from './animations/BusinessValue';
 import { PriceForOthers } from './PriceForOthers';
 import { PriceItem } from './PriceItem';

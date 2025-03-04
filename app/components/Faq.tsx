@@ -1,6 +1,11 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../theme/padding.utils';
-import { AccordionItem, AccordionItemContent, AccordionItemTrigger, AccordionRoot } from '../ui/accordion';
+import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '../../components/theme/padding.utils';
+import {
+    AccordionItem,
+    AccordionItemContent,
+    AccordionItemTrigger,
+    AccordionRoot
+} from '../../components/ui/accordion';
 import { Questions } from './animations/Questions';
 
 const items = [

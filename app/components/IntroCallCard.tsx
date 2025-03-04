@@ -3,9 +3,9 @@ import { Box, Flex, Heading, IconButton, Image, LinkBox, LinkOverlay, Stack, Tex
 import NextLink from 'next/link';
 import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import { LuArrowRight } from 'react-icons/lu';
-import { mainRound } from '../theme/padding.utils';
-import { shadowSharp } from '../theme/theme.utils';
-import { Button } from '../ui/button';
+import { mainRound } from '../../components/theme/padding.utils';
+import { shadowSharp } from '../../components/theme/theme.utils';
+import { Button } from '../../components/ui/button';
 
 export const IntroCallCard = () => {
     return (

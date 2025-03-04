@@ -2,7 +2,7 @@
 
 import { Box, Flex } from '@chakra-ui/react';
 import React, { useRef } from 'react';
-import { mainRound } from '../theme/padding.utils';
+import { mainRound } from '../../components/theme/padding.utils';
 // Import React Icons
 import { DiRedis } from 'react-icons/di';
 import { FaCube, FaGithub, FaJenkins, FaJs, FaNodeJs, FaReact } from 'react-icons/fa';
