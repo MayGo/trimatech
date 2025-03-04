@@ -1,11 +1,11 @@
+import { mainRound } from '@/components/theme/padding.utils';
+import { shadowSharp } from '@/components/theme/theme.utils';
+import { Button } from '@/components/ui/button';
 import { EMAIL_TO, GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants';
 import { Box, Flex, Heading, IconButton, Image, LinkBox, LinkOverlay, Stack, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import { LuArrowRight } from 'react-icons/lu';
-import { mainRound } from '../../components/theme/padding.utils';
-import { shadowSharp } from '../../components/theme/theme.utils';
-import { Button } from '../../components/ui/button';
 
 export const IntroCallCard = () => {
     return (

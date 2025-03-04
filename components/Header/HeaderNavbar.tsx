@@ -1,6 +1,6 @@
+import { outerPadding } from '@/theme/padding.utils';
 import { Box, Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import { outerPadding } from '../theme/padding.utils';
 import { Logo } from './Logo';
 import { MenuDialog } from './MenuDialog';
 import Navlinks from './Navlinks';

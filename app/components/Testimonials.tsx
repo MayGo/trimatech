@@ -1,5 +1,5 @@
+import { mainRound } from '@/components/theme/padding.utils';
 import { Avatar, Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { mainRound } from '../../components/theme/padding.utils';
 import { Carousel } from './Carousel';
 
 const TestimonialItem = ({
