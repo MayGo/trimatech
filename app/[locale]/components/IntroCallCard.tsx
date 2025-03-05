@@ -50,7 +50,7 @@ export const IntroCallCard = () => {
                         {t('ownerTitle')}
                     </Heading>
                 </Box>
-                <Heading fontSize="3xl" width="210px">
+                <Heading fontSize="3xl" lineHeight="1.3">
                     {t('bookIntroCall')}
                 </Heading>
                 <NextLink href="#book">

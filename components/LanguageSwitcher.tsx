@@ -2,9 +2,10 @@
 
 import { usePathname, useRouter } from '@/i18n/routing';
 import { locales } from '@/i18n/settings';
-import { Button, Flex } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
+import { Button } from './ui/button';
 
 export default function LanguageSwitcher() {
     const [isPending, startTransition] = useTransition();
@@ -14,24 +15,26 @@ export default function LanguageSwitcher() {
 
     const handleLocaleChange = (newLocale: (typeof locales)[number]) => {
         startTransition(() => {
-            // Navigate to the same page with the new locale
             router.replace(pathname, { locale: newLocale });
         });
     };
 
     return (
-        <Flex gap={2}>
-            {locales.map((l) => (
-                <Button
-                    key={l}
-                    size="sm"
-                    variant={l === locale ? 'solid' : 'ghost'}
-                    disabled={isPending || l === locale}
-                    onClick={() => handleLocaleChange(l)}
-                >
-                    {l.toUpperCase()}
-                </Button>
-            ))}
+        <Flex>
+            {locales.map((l) => {
+                const isActive = l === locale;
+                return (
+                    <Button
+                        size="sm"
+                        variant="ghost"
+                        colorPalette="blue"
+                        disabled={isPending}
+                        onClick={() => handleLocaleChange(l)}
+                    >
+                        <Text textDecoration={isActive ? 'underline' : 'none'}>{l.toUpperCase()}</Text>
+                    </Button>
+                );
+            })}
         </Flex>
     );
 }
