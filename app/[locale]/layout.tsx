@@ -1,39 +1,12 @@
-import { Metadata } from 'next';
-import Head from 'next/head';
-
-import { getURL } from '@/utils/helpers';
-import { Suspense } from 'react';
-
-import { ThemeProvider } from '@/components/theme/ThemeProvider';
-
-import { Toaster } from '@/components/ui/Toaster';
-import { Box } from '@chakra-ui/react';
-
 import { Footer } from '@/components/Header/Footer';
 import { HeaderNavbar } from '@/components/Header/HeaderNavbar';
 import { routing } from '@/i18n/routing';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { getURL } from '@/utils/helpers';
+import { Box } from '@chakra-ui/react';
+import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
-import { notFound } from 'next/navigation';
-import type { ReactNode } from 'react';
-
-const roboto = Roboto({
-    weight: ['400', '500', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-roboto'
-});
-
-const mPlusRounded = M_PLUS_Rounded_1c({
-    weight: ['300', '500', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-mplus',
-    preload: false // Add this to prevent the font loading error
-});
+import { ReactNode } from 'react';
 
 const meta = {
     title: 'Expert React Maintenance & Development',
@@ -56,6 +29,7 @@ type MetadataTranslation = {
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
     const messages = await getMessages();
     const metadata = (messages as unknown as { metadata: MetadataTranslation }).metadata;
+    const { locale } = params;
 
     return {
         title: metadata.title,
@@ -91,7 +65,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
             ],
             type: 'website',
             siteName: metadata.title,
-            locale: params.locale === 'et' ? 'et_EE' : 'en_US'
+            locale: locale === 'et' ? 'et_EE' : 'en_US'
         },
         twitter: {
             card: 'summary_large_image',
@@ -109,55 +83,35 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     };
 }
 
-type Props = {
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
+
+interface LayoutProps {
     children: ReactNode;
     params: Promise<{ locale: string }>;
-};
+}
 
-export default async function LocaleLayout({ children, params }: Props) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
     const { locale } = await params;
 
-    // Ensure that the incoming `locale` is valid
-    if (!routing.locales.includes(locale as any)) {
-        notFound();
-    }
-
-    // Enable static rendering
+    // Enable static rendering for this locale
     setRequestLocale(locale);
 
-    // Providing all messages to the client
-    // side is the easiest way to get started
+    // Get messages for this locale
     const messages = await getMessages();
+
     return (
-        <>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href={meta.url} />
-                <meta http-equiv="Content-Language" content={locale} />
-            </Head>
-            <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
-                <body>
-                    <NextIntlClientProvider messages={messages}>
-                        <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                            <Box>
-                                <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
-                                    <HeaderNavbar />
+        <NextIntlClientProvider messages={messages}>
+            <Box>
+                <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
+                    <HeaderNavbar />
 
-                                    {children}
+                    {children}
 
-                                    <Footer />
-                                </Box>
-                            </Box>
-
-                            <Suspense>
-                                <Toaster />
-                            </Suspense>
-                        </ThemeProvider>
-                    </NextIntlClientProvider>
-                    <Analytics />
-                    <SpeedInsights />
-                </body>
-            </html>
-        </>
+                    <Footer />
+                </Box>
+            </Box>
+        </NextIntlClientProvider>
     );
 }
