@@ -1,20 +1,27 @@
-// middleware.ts
 import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import { locales } from './i18n/settings';
 
-export default createMiddleware(routing);
+export default createMiddleware({
+    locales,
+    defaultLocale: 'en',
+    localeDetection: false, // Disable locale detection from Accept-Language header
+    localePrefix: 'never', // Don't use locale prefixes in URLs
+    domains: [
+        {
+            domain: 'trimatech.ee',
+            defaultLocale: 'et'
+        },
+        {
+            domain: 'trimatech.dev',
+            defaultLocale: 'en'
+        },
+        {
+            domain: 'localhost:3000',
+            defaultLocale: 'en'
+        }
+    ]
+});
 
 export const config = {
-    matcher: [
-        // Enable a redirect to a matching locale at the root
-        '/',
-
-        // Set a cookie to remember the previous locale for
-        // all requests that have a locale prefix
-        '/(et|en)/:path*',
-
-        // Enable redirects that add missing locales
-        // (e.g. `/pathnames` -> `/en/pathnames`)
-        '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'
-    ]
+    matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)']
 };

@@ -5,6 +5,7 @@ import { defaultLocale } from './settings';
 export const routing = defineRouting({
     locales: ['en', 'et'],
     defaultLocale: defaultLocale,
+    localePrefix: 'never',
     pathnames: {}
 });
 
