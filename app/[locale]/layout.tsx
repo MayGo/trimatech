@@ -45,24 +45,27 @@ const meta = {
     url: getURL()
 };
 
-export async function generateMetadata(): Promise<Metadata> {
+type MetadataTranslation = {
+    title: string;
+    description: string;
+    keywords: string[];
+    ogAlt: string;
+    twitterAlt: string;
+};
+
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+    const messages = await getMessages();
+    const metadata = (messages as unknown as { metadata: MetadataTranslation }).metadata;
+
     return {
-        title: meta.title,
-        description: meta.description,
+        title: metadata.title,
+        description: metadata.description,
         referrer: 'origin-when-cross-origin',
-        keywords: [
-            'React',
-            'Maintenance',
-            'Development',
-            'Senior Developer',
-            'Bug Fixes',
-            'Feature Updates',
-            'React Consulting',
-            'Web Development',
-            'Application Maintenance',
-            'Code Review'
+        keywords: metadata.keywords,
+        authors: [
+            { name: 'Trimatech', url: 'https://trimatech.dev/' },
+            { name: 'Maigo Erit', url: 'https://trimatech.dev/' }
         ],
-        authors: [{ name: 'Trimatech', url: 'https://trimatech.dev/' }],
         creator: 'Trimatech',
         publisher: 'Trimatech',
         robots: meta.robots,
@@ -76,30 +79,30 @@ export async function generateMetadata(): Promise<Metadata> {
         },
         openGraph: {
             url: meta.url,
-            title: meta.title,
-            description: meta.description,
+            title: metadata.title,
+            description: metadata.description,
             images: [
                 {
                     url: meta.cardImage,
                     width: 1200,
                     height: 630,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
+                    alt: metadata.ogAlt
                 }
             ],
             type: 'website',
-            siteName: meta.title,
-            locale: 'en_US'
+            siteName: metadata.title,
+            locale: params.locale === 'et' ? 'et_EE' : 'en_US'
         },
         twitter: {
             card: 'summary_large_image',
             site: '@Trimatech',
             creator: '@Trimatech',
-            title: meta.title,
-            description: meta.description,
+            title: metadata.title,
+            description: metadata.description,
             images: [
                 {
                     url: meta.cardImage,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
+                    alt: metadata.twitterAlt
                 }
             ]
         }
@@ -130,7 +133,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="canonical" href={meta.url} />
-                <meta http-equiv="Content-Language" content="en" />
+                <meta http-equiv="Content-Language" content={locale} />
             </Head>
             <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
                 <body>

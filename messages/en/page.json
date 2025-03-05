@@ -6,6 +6,24 @@
             "email": "Email"
         }
     },
+    "metadata": {
+        "title": "Expert React Maintenance & Development",
+        "description": "Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.",
+        "keywords": [
+            "React",
+            "Maintenance",
+            "Development",
+            "Senior Developer",
+            "Bug Fixes",
+            "Feature Updates",
+            "React Consulting",
+            "Web Development",
+            "Application Maintenance",
+            "Code Review"
+        ],
+        "ogAlt": "Trimatech - Expert React Maintenance & Development",
+        "twitterAlt": "Trimatech - Expert React Maintenance & Development"
+    },
     "navLinks": {
         "signIn": "Sign In",
         "bookCall": "Book a Call",

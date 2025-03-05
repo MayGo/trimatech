@@ -6,6 +6,24 @@
             "email": "E-post"
         }
     },
+    "metadata": {
+        "title": "Eksperttasemel Reacti hooldus ja arendus",
+        "description": "Hoia oma Reacti rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
+        "keywords": [
+            "React",
+            "Hooldus",
+            "Arendus",
+            "Kogenud arendaja",
+            "Vigade parandused",
+            "Funktsioonide uuendused",
+            "Reacti konsultatsioon",
+            "Veebiarendus",
+            "Rakenduse hooldus",
+            "Koodi ülevaatus"
+        ],
+        "ogAlt": "Trimatech - Eksperttasemel Reacti hooldus ja arendus",
+        "twitterAlt": "Trimatech - Eksperttasemel Reacti hooldus ja arendus"
+    },
     "navLinks": {
         "signIn": "Logi sisse",
         "bookCall": "Broneeri kõne",
