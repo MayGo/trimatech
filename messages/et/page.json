@@ -7,8 +7,8 @@
         }
     },
     "metadata": {
-        "title": "Eksperttasemel Reacti hooldus ja arendus",
-        "description": "Hoia oma Reacti rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
+        "title": "Eksperttasemel React hooldus ja arendus",
+        "description": "Hoia oma React rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
         "keywords": [
             "React",
             "Hooldus",
@@ -16,13 +16,13 @@
             "Kogenud arendaja",
             "Vigade parandused",
             "Funktsioonide uuendused",
-            "Reacti konsultatsioon",
+            "React konsultatsioon",
             "Veebiarendus",
             "Rakenduse hooldus",
             "Koodi ülevaatus"
         ],
-        "ogAlt": "Trimatech - Eksperttasemel Reacti hooldus ja arendus",
-        "twitterAlt": "Trimatech - Eksperttasemel Reacti hooldus ja arendus"
+        "ogAlt": "Trimatech - Eksperttasemel React hooldus ja arendus",
+        "twitterAlt": "Trimatech - Eksperttasemel React hooldus ja arendus"
     },
     "navLinks": {
         "signIn": "Logi sisse",
@@ -38,17 +38,17 @@
         "language": "Keel"
     },
     "hero": {
-        "heading": "Eksperttasemel Reacti hooldus ja arendus",
-        "description": "Hoia oma Reacti rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
+        "heading": "Eksperttasemel React hooldus ja arendus",
+        "description": "Hoia oma React rakendused sujuvalt töös pühendunud kõrgtasemel toega. Ei mingit kesktaseme meeskondi ega lisakulusid - ainult otsene juurdepääs eksperthooldusele, kui seda vajad.",
         "euBased": "EL-põhine",
-        "mission": "Missioon: Muuta kõik Reacti rakendused kiireks, kaasaegseks ja kasutajasõbralikuks"
+        "mission": "Missioon: Muuta kõik React rakendused kiireks, kaasaegseks ja kasutajasõbralikuks"
     },
     "benefits": {
         "heading": "Eelised",
         "items": {
             "maintenance": {
                 "title": "Pühendunud hooldus sinu olemasolevatele projektidele",
-                "description": "Pole vaja täismeeskonda - üks kogenud arendaja keskendub sinu Reacti rakenduse jõudluse ja ajakohasuse tagamisele."
+                "description": "Pole vaja täismeeskonda - üks kogenud arendaja keskendub sinu React rakenduse jõudluse ja ajakohasuse tagamisele."
             },
             "bugFixes": {
                 "title": "Kiire reageerimine vigade parandamiseks ja uuendusteks",
@@ -56,7 +56,7 @@
             },
             "upgrade": {
                 "title": "Uuenda ja täiusta oma rakendust",
-                "description": "Lisa sujuvalt uusi funktsioone ja uuenda teeke, et kasutada uusimaid Reacti võimalusi ilma töövoolu häirimata."
+                "description": "Lisa sujuvalt uusi funktsioone ja uuenda teeke, et kasutada uusimaid React võimalusi ilma töövoolu häirimata."
             },
             "communication": {
                 "title": "Optimeeritud piletipõhine suhtlus",
@@ -66,14 +66,14 @@
     },
     "introCallCard": {
         "ownerName": "Maigo Erit",
-        "ownerTitle": "Omanik ja Reacti ekspert",
+        "ownerTitle": "Omanik ja React ekspert",
         "bookIntroCall": "Broneeri 15-minutiline tutvumiskõne",
         "bookCallButton": "Broneeri kõne",
         "preferEmail": "Eelistad e-posti?"
     },
     "pricing": {
         "heading": "Lihtne ja läbipaistev hinnastamine",
-        "description": "Üks põhjalik plaan kõigi sinu Reacti hooldusvajadustele.",
+        "description": "Üks põhjalik plaan kõigi sinu React hooldusvajadustele.",
         "options": {
             "fullTime": {
                 "title": "Täiskohaga kogenud arendaja palkamine",
@@ -90,7 +90,7 @@
     "priceItem": {
         "title": "Kuuklubi",
         "perMonth": "/ kuu",
-        "subtitle": "Reacti arendus ja hooldus kogenud arendaja poolt",
+        "subtitle": "React arendus ja hooldus kogenud arendaja poolt",
         "features": [
             "Üks ülesanne korraga täieliku keskendumise tagamiseks",
             "Uued ülesanded algavad ~48 tunni jooksul pärast eelmise lõpetamist",
@@ -117,12 +117,12 @@
             },
             "focusedManagement": {
                 "title": "Fokuseeritud juhtimine",
-                "description": "Kasuta oma aega ja ressursse tõhusalt, omades siiski juurdepääsu kvaliteetsele Reacti hooldusele, kui seda vajad."
+                "description": "Kasuta oma aega ja ressursse tõhusalt, omades siiski juurdepääsu kvaliteetsele React hooldusele, kui seda vajad."
             }
         },
         "try": {
             "title": "Proovi nädal aega",
-            "text1": "€{weekPrice} eest koge kõrgtasemel Reacti hoolduse väärtust esimese nädala jooksul.",
+            "text1": "€{weekPrice} eest koge kõrgtasemel React hoolduse väärtust esimese nädala jooksul.",
             "text2": "Ühe nädala jooksul võiksid kas:",
             "fix": {
                 "title": "Parandada",
@@ -173,13 +173,13 @@
             {
                 "title": "Ryan Harris, Control NQP",
                 "avatar": "/testimonials/control.jpg",
-                "content": "Pärast Reacti töölauarakenduse käivitamist mõistsime, et vajame abi selle korras hoidmiseks. Maigo on teinud suure erinevuse - uuendused, parandused, jõudluse täiustused - kõik on hoolitsetud! Ma saan tegelikult keskenduda kasutajakogemuse parandamisele, mitte muretsemisele!"
+                "content": "Pärast React töölauarakenduse käivitamist mõistsime, et vajame abi selle korras hoidmiseks. Maigo on teinud suure erinevuse - uuendused, parandused, jõudluse täiustused - kõik on hoolitsetud! Ma saan tegelikult keskenduda kasutajakogemuse parandamisele, mitte muretsemisele!"
             }
         ]
     },
     "discuss": {
         "heading": "Arutame sinu projekti",
-        "description": "Planeeri kiire kõne, et arutada oma Reacti hooldusvajadusi ja näha, kas sobime hästi kokku."
+        "description": "Planeeri kiire kõne, et arutada oma React hooldusvajadusi ja näha, kas sobime hästi kokku."
     },
     "comparePricing": {
         "heading": "Kuidas see võrdlub?",
@@ -200,7 +200,7 @@
             "withSubscription": "Meie tellimusega:",
             "subscriptionCost": {
                 "title": "Kulu",
-                "text": "~50% säästu võrreldes täiskohaga kogenud Reacti arendajaga."
+                "text": "~50% säästu võrreldes täiskohaga kogenud React arendajaga."
             },
             "flexibility": {
                 "title": "Paindlikkus",
@@ -244,7 +244,7 @@
             },
             "expertise": {
                 "title": "Otsene oskusteave",
-                "text": "Tööd teeb ainult kogenud Reacti arendaja - ei mingeid noorarendajaid ega paisutatud hinnanguid."
+                "text": "Tööd teeb ainult kogenud React arendaja - ei mingeid noorarendajaid ega paisutatud hinnanguid."
             },
             "communication": {
                 "title": "Optimeeritud suhtlus",
@@ -271,7 +271,7 @@
             },
             "expertise": {
                 "title": "Eksklusiivne oskusteave",
-                "text": "Tööd teeb kogenud Reacti arendaja, kes pakub pühendunud tähelepanu sinu vajadustele - ei mingeid noorarendajaid, keskastme juhtimist ega kompromisse kvaliteedi osas."
+                "text": "Tööd teeb kogenud React arendaja, kes pakub pühendunud tähelepanu sinu vajadustele - ei mingeid noorarendajaid, keskastme juhtimist ega kompromisse kvaliteedi osas."
             },
             "efficiency": {
                 "title": "Tõhusus läbi tehisintellekti ja kaasaegsete praktikate",
@@ -292,11 +292,11 @@
     },
     "faq": {
         "heading": "Korduma kippuvad küsimused",
-        "description": "Planeeri kiire kõne, et arutada oma Reacti hooldusvajadusi ja näha, kas sobime hästi kokku.",
+        "description": "Planeeri kiire kõne, et arutada oma React hooldusvajadusi ja näha, kas sobime hästi kokku.",
         "items": [
             {
                 "title": "Milliseid projekte te hooldate?",
-                "text": "Me spetsialiseerume olemasolevate Reacti rakenduste hooldamisele ja uuendamisele, tagades, et need jäävad tugevaks ja tõhusaks."
+                "text": "Me spetsialiseerume olemasolevate React rakenduste hooldamisele ja uuendamisele, tagades, et need jäävad tugevaks ja tõhusaks."
             },
             {
                 "title": "Kas te ainult hooldate olemasolevaid projekte?",
