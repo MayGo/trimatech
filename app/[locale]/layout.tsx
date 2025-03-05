@@ -6,6 +6,7 @@ import { Box } from '@chakra-ui/react';
 import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 
 const meta = {
@@ -26,10 +27,10 @@ type MetadataTranslation = {
     twitterAlt: string;
 };
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const messages = await getMessages();
     const metadata = (messages as unknown as { metadata: MetadataTranslation }).metadata;
-    const { locale } = params;
+    const { locale } = await params;
 
     return {
         title: metadata.title,
@@ -87,13 +88,18 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
-interface LayoutProps {
+type Props = {
     children: ReactNode;
     params: Promise<{ locale: string }>;
-}
+};
 
-export default async function LocaleLayout({ children, params }: LayoutProps) {
+export default async function LocaleLayout({ children, params }: Props) {
     const { locale } = await params;
+
+    // Ensure that the incoming `locale` is valid
+    if (!routing.locales.includes(locale as any)) {
+        notFound();
+    }
 
     // Enable static rendering for this locale
     setRequestLocale(locale);
