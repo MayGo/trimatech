@@ -19,11 +19,15 @@ export const HeaderNavbar: NextPage = () => {
                 <Logo />
 
                 <Box display={{ base: 'none', md: 'flex' }}>
-                    <Navlinks />
+                    <Flex align="center" gap={4}>
+                        <Navlinks />
+                    </Flex>
                 </Box>
 
                 <Box display={{ base: 'flex', md: 'none' }}>
-                    <MenuDialog />
+                    <Flex align="center" gap={2}>
+                        <MenuDialog />
+                    </Flex>
                 </Box>
             </Flex>
         </Box>

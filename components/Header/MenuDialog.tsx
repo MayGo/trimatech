@@ -1,6 +1,7 @@
 'use client';
-import { Box, IconButton } from '@chakra-ui/react';
+import { IconButton, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
+import { useTranslations } from 'next-intl';
 import { IoMenu } from 'react-icons/io5';
 import Navlinks from './Navlinks';
 
@@ -16,6 +17,8 @@ import {
 } from '@/components/ui/dialog';
 
 export const MenuDialog: NextPage = () => {
+    const t = useTranslations('menuDialog');
+
     return (
         <DialogRoot size="xl">
             <DialogTrigger>
@@ -29,9 +32,9 @@ export const MenuDialog: NextPage = () => {
                     <DialogTitle></DialogTitle>
                 </DialogHeader>
                 <DialogBody>
-                    <Box w="full" justifyItems="center">
+                    <VStack w="full" gap={6} align="center">
                         <Navlinks />
-                    </Box>
+                    </VStack>
                 </DialogBody>
                 <DialogFooter />
             </DialogContent>

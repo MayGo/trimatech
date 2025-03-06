@@ -1,19 +1,18 @@
-import { Metadata } from 'next';
-import Head from 'next/head';
-
-import { getURL } from '@/utils/helpers';
-import { PropsWithChildren, Suspense } from 'react';
-
-import { ThemeProvider } from '@/components/theme/ThemeProvider';
-
-import { Toaster } from '@/components/ui/Toaster';
-import { Box } from '@chakra-ui/react';
-
 import { Footer } from '@/components/Header/Footer';
 import { HeaderNavbar } from '@/components/Header/HeaderNavbar';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
+import { Toaster } from '@/components/ui/Toaster';
+import { getURL } from '@/utils/helpers';
+import { Box } from '@chakra-ui/react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
+import Head from 'next/head';
+import type { ReactNode } from 'react';
+import { Suspense } from 'react';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -40,24 +39,28 @@ const meta = {
     url: getURL()
 };
 
+type MetadataTranslation = {
+    title: string;
+    description: string;
+    keywords: string[];
+    ogAlt: string;
+    twitterAlt: string;
+};
+
 export async function generateMetadata(): Promise<Metadata> {
+    const messages = await getMessages();
+    const metadata = (messages as unknown as { metadata: MetadataTranslation }).metadata;
+    const locale = await getLocale();
+
     return {
-        title: meta.title,
-        description: meta.description,
+        title: metadata.title,
+        description: metadata.description,
         referrer: 'origin-when-cross-origin',
-        keywords: [
-            'React',
-            'Maintenance',
-            'Development',
-            'Senior Developer',
-            'Bug Fixes',
-            'Feature Updates',
-            'React Consulting',
-            'Web Development',
-            'Application Maintenance',
-            'Code Review'
+        keywords: metadata.keywords,
+        authors: [
+            { name: 'Trimatech', url: 'https://trimatech.dev/' },
+            { name: 'Maigo Erit', url: 'https://trimatech.dev/' }
         ],
-        authors: [{ name: 'Trimatech', url: 'https://trimatech.dev/' }],
         creator: 'Trimatech',
         publisher: 'Trimatech',
         robots: meta.robots,
@@ -71,60 +74,66 @@ export async function generateMetadata(): Promise<Metadata> {
         },
         openGraph: {
             url: meta.url,
-            title: meta.title,
-            description: meta.description,
+            title: metadata.title,
+            description: metadata.description,
             images: [
                 {
                     url: meta.cardImage,
                     width: 1200,
                     height: 630,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
+                    alt: metadata.ogAlt
                 }
             ],
             type: 'website',
-            siteName: meta.title,
-            locale: 'en_US'
+            siteName: metadata.title,
+            locale: locale === 'et' ? 'et_EE' : 'en_US'
         },
         twitter: {
             card: 'summary_large_image',
             site: '@Trimatech',
             creator: '@Trimatech',
-            title: meta.title,
-            description: meta.description,
+            title: metadata.title,
+            description: metadata.description,
             images: [
                 {
                     url: meta.cardImage,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
+                    alt: metadata.twitterAlt
                 }
             ]
         }
     };
 }
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+interface Props {
+    children: ReactNode;
+}
+
+export default async function RootLayout({ children }: Props) {
+    const locale = await getLocale();
+    const messages = await getMessages();
+
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="canonical" href={meta.url} />
-                <meta http-equiv="Content-Language" content="en" />
+                <meta http-equiv="Content-Language" content={locale} />
             </Head>
-            <html suppressHydrationWarning lang="en" className={`${roboto.variable} ${mPlusRounded.variable}`}>
+            <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
                 <body>
                     <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                        <Box>
-                            <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
-                                <HeaderNavbar />
-
-                                {children}
-
-                                <Footer />
+                        <NextIntlClientProvider messages={messages}>
+                            <Box>
+                                <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
+                                    <HeaderNavbar />
+                                    {children}
+                                    <Footer />
+                                </Box>
                             </Box>
-                        </Box>
-
-                        <Suspense>
-                            <Toaster />
-                        </Suspense>
+                            <Suspense>
+                                <Toaster />
+                            </Suspense>
+                        </NextIntlClientProvider>
                     </ThemeProvider>
                     <Analytics />
                     <SpeedInsights />

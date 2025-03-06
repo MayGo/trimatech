@@ -8,10 +8,13 @@ import {
 } from '@/components/theme/padding.utils';
 import { shadowSharp } from '@/components/theme/theme.utils';
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import { InlineWidget } from 'react-calendly';
 import { OnlineVideoChatting } from './animations/OnlineVideoChatting';
 
 export const Discuss = () => {
+    const t = useTranslations('discuss');
+
     return (
         <Flex
             flexDirection={['column', 'column', 'row']}
@@ -24,9 +27,9 @@ export const Discuss = () => {
         >
             <Flex flexDirection="column" justifyContent="center" alignItems="center" h="full" gap={outerPadding}>
                 <Box flex="1">
-                    <Heading size={mainHeadingSize}>Let's discuss your project</Heading>
+                    <Heading size={mainHeadingSize}>{t('heading')}</Heading>
                     <Text fontSize={mainSubtextSize} pt={4}>
-                        Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.
+                        {t('description')}
                     </Text>
                 </Box>
                 <Box h="450px" display="flex" alignItems="center" justifyContent="center">
