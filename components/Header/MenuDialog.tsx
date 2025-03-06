@@ -1,6 +1,5 @@
 'use client';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { Box, IconButton, Text, VStack } from '@chakra-ui/react';
+import { IconButton, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { useTranslations } from 'next-intl';
 import { IoMenu } from 'react-icons/io5';
@@ -35,13 +34,6 @@ export const MenuDialog: NextPage = () => {
                 <DialogBody>
                     <VStack w="full" gap={6} align="center">
                         <Navlinks />
-
-                        <Box pt={4}>
-                            <Text fontSize="sm" mb={2} textAlign="center">
-                                {t('language')}
-                            </Text>
-                            <LanguageSwitcher />
-                        </Box>
                     </VStack>
                 </DialogBody>
                 <DialogFooter />
