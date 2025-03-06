@@ -25,6 +25,7 @@ export default function LanguageSwitcher() {
                 const isActive = l === locale;
                 return (
                     <Button
+                        key={l}
                         size="sm"
                         variant="ghost"
                         colorPalette="blue"
