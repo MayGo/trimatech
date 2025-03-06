@@ -1,8 +1,8 @@
 'use client';
 
 import { ChakraProvider } from '@chakra-ui/react';
-import { ColorModeProvider, type ColorModeProviderProps } from './color-mode';
 import { useEffect, useState } from 'react';
+import { ColorModeProvider, type ColorModeProviderProps } from './color-mode';
 import { sytemTheme } from './theme';
 
 export function ThemeProvider(props: ColorModeProviderProps) {

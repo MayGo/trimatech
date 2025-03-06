@@ -18,7 +18,7 @@ export const WEEK_PRICE = '995';
 
 export const REFUND_PRICE = '3,000';
 
-export const EMAIL_TO = 'info@trimatech.ee';
+export const EMAIL_TO = 'info@trimatech.dev';
 
 export const LINKEDIN_LINK = 'https://www.linkedin.com/in/maigo-erit/';
 export const GITHUB_LINK = 'https://github.com/MayGo';

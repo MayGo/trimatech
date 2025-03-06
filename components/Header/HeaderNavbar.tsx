@@ -1,3 +1,4 @@
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { outerPadding } from '@/components/theme/padding.utils';
 import { Box, Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
@@ -19,11 +20,17 @@ export const HeaderNavbar: NextPage = () => {
                 <Logo />
 
                 <Box display={{ base: 'none', md: 'flex' }}>
-                    <Navlinks />
+                    <Flex align="center" gap={4}>
+                        <Navlinks />
+                        <LanguageSwitcher />
+                    </Flex>
                 </Box>
 
                 <Box display={{ base: 'flex', md: 'none' }}>
-                    <MenuDialog />
+                    <Flex align="center" gap={2}>
+                        <LanguageSwitcher />
+                        <MenuDialog />
+                    </Flex>
                 </Box>
             </Flex>
         </Box>

@@ -1,17 +1,20 @@
-import { type NextRequest } from 'next/server';
+// middleware.ts
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
-export async function middleware(request: NextRequest) {}
+export default createMiddleware(routing);
 
 export const config = {
     matcher: [
-        /*
-         * Match all request paths except:
-         * - _next/static (static files)
-         * - _next/image (image optimization files)
-         * - favicon.ico (favicon file)
-         * - images - .svg, .png, .jpg, .jpeg, .gif, .webp
-         * Feel free to modify this pattern to include more paths.
-         */
+        // Enable a redirect to a matching locale at the root
+        '/',
+
+        // Set a cookie to remember the previous locale for
+        // all requests that have a locale prefix
+        '/(et|en)/:path*',
+
+        // Enable redirects that add missing locales
+        // (e.g. `/pathnames` -> `/en/pathnames`)
         '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'
     ]
 };

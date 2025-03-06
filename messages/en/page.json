@@ -1,0 +1,339 @@
+{
+    "page": {
+        "title": "Users",
+        "form": {
+            "name": "Name",
+            "email": "Email"
+        }
+    },
+    "metadata": {
+        "title": "Expert React Maintenance & Development",
+        "description": "Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.",
+        "keywords": [
+            "React",
+            "Maintenance",
+            "Development",
+            "Senior Developer",
+            "Bug Fixes",
+            "Feature Updates",
+            "React Consulting",
+            "Web Development",
+            "Application Maintenance",
+            "Code Review"
+        ],
+        "ogAlt": "Trimatech - Expert React Maintenance & Development",
+        "twitterAlt": "Trimatech - Expert React Maintenance & Development"
+    },
+    "navLinks": {
+        "signIn": "Sign In",
+        "bookCall": "Book a Call",
+        "seePricing": "See pricing"
+    },
+    "footer": {
+        "location": "Headquartered in Tallinn, Estonia (GMT+2)",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of service"
+    },
+    "menuDialog": {
+        "language": "Language"
+    },
+    "hero": {
+        "heading": "Expert React Maintenance & Development",
+        "description": "Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.",
+        "euBased": "EU-Based",
+        "mission": "Mission: Make all React apps fast, modern, and user-friendly"
+    },
+    "benefits": {
+        "heading": "Benefits",
+        "items": {
+            "maintenance": {
+                "title": "Dedicated Maintenance for Your Existing Projects",
+                "description": "No need for a full team - one senior developer focuses on ensuring your React application remains performant and up-to-date."
+            },
+            "bugFixes": {
+                "title": "Quick Turnaround for Bug Fixes & Updates",
+                "description": "Rapid response for bug fixes and feature requests, starting within 48 hours. Keep your application running optimally!"
+            },
+            "upgrade": {
+                "title": "Upgrade and Enhance Your Application",
+                "description": "Seamlessly add new features and upgrade libraries to leverage the latest React capabilities without disrupting your workflow."
+            },
+            "communication": {
+                "title": "Streamlined Ticket-Based Communication",
+                "description": "All updates and requests are tracked through our ticketing system, ensuring transparency and organization for every task."
+            }
+        }
+    },
+    "introCallCard": {
+        "ownerName": "Maigo Erit",
+        "ownerTitle": "Owner & React Expert",
+        "bookIntroCall": "Book a 15 min intro call",
+        "bookCallButton": "Book a call",
+        "preferEmail": "Prefer to email?"
+    },
+    "pricing": {
+        "heading": "Simple & transparent pricing",
+        "description": "One comprehensive plan for all your React maintenance needs.",
+        "options": {
+            "fullTime": {
+                "title": "Hiring a full time senior developer",
+                "price": "10,000",
+                "subtext": "with the overhead"
+            },
+            "company": {
+                "title": "Hiring a good development company",
+                "price": "16,000",
+                "subtext": "or €100 / hour"
+            }
+        }
+    },
+    "priceItem": {
+        "title": "Monthly Club",
+        "perMonth": "/ month",
+        "subtitle": "React development & maintenance by a senior developer",
+        "features": [
+            "One task handled at a time for complete focus",
+            "New tasks begin within ~48 hours of completion",
+            "Unlimited projects managed under one unified backlog",
+            "Direct communication with the developer working on your tasks",
+            "Flexible subscription to fit your needs - pause or cancel anytime",
+            "Full transparency, with tasks tracked in your preferred system (Jira, Trello, etc)"
+        ],
+        "button": "Join today"
+    },
+    "pauseTry": {
+        "pause": {
+            "title": "Pause anytime",
+            "text1": "When there's no work left to be done on your projects, just pause your subscription. Resuming is easy, and your plan picks up right where you left off, ensuring no lost progress or continuity gaps.",
+            "text2": "This flexibility is essential for managing your budget effectively, especially during periods of downtime.",
+            "benefits": "Benefits include:",
+            "noCommitment": {
+                "title": "No Commitment",
+                "description": "Easily pause whenever necessary without financial penalties."
+            },
+            "stayOnTrack": {
+                "title": "Stay on Track",
+                "description": "Return to ongoing work without losing progress."
+            },
+            "focusedManagement": {
+                "title": "Focused Management",
+                "description": "Use your time and resources efficiently while still having access to quality React maintenance when you need it."
+            }
+        },
+        "try": {
+            "title": "Try it for a week",
+            "text1": "For €{weekPrice}, experience the value of senior-level React maintenance for the first week.",
+            "text2": "In one week, you could either:",
+            "fix": {
+                "title": "Fix",
+                "description": "~8 bugs, from minor UI issues to moderate functionality fixes."
+            },
+            "implement": {
+                "title": "Implement",
+                "description": "~2 features, like a custom dashboard component or an interactive form."
+            },
+            "update": {
+                "title": "Update",
+                "description": "all libraries to the latest versions and enhance app performance for smoother functionality."
+            },
+            "setUp": {
+                "title": "Set up",
+                "description": "automated testing, laying the groundwork for continuous integration and better long-term reliability."
+            },
+            "refundText": "If you're not satisfied, you'll be refunded the remaining €{refundPrice} of your subscription - no strings attached!"
+        }
+    },
+    "testimonials": {
+        "items": [
+            {
+                "title": "Ella Martinez, Activizor",
+                "avatar": "/testimonials/activizor.jpg",
+                "content": "Staying on top of updates for our tools was always a headache for our small team. Since we started working with Trimatech, things have changed! Our workflow flows much better, and the performance improvements made a big difference for all of us."
+            },
+            {
+                "title": "James Wilson, MedCore Systems",
+                "avatar": "/testimonials/medcore.jpg",
+                "content": "Our booking system was an ongoing issue, and hiring a dev wasn't in the budget. Partnering with Trimatech has really stabilized everything - fewer complaints from users and much less stress on our end. It's been a fantastic solution for us!"
+            },
+            {
+                "title": "Sophie Taylor, UrbanTrack",
+                "avatar": "/testimonials/urbantrack.jpg",
+                "content": "Our logistics app is super complex, but since engaging with Trimatech, issues are getting fixed much quicker. They even offer suggestions that help us improve our system. It feels great to be proactive instead of always reacting to problems!"
+            },
+            {
+                "title": "Daniel Brown, RentEase Solutions",
+                "avatar": "/testimonials/rentease.png",
+                "content": "We struggled with bugs and updates taking forever. Working with Trimatech has completely turned that around. Everything gets resolved promptly; finally, we can focus on growing our business rather than dealing with glitches!"
+            },
+            {
+                "title": "Clara Müller, GlobalLink Commerce",
+                "avatar": "/testimonials/globallink.jpg",
+                "content": "For over a year, Trimatech has been managing our eCommerce platform, and I can't express how comforting that has been. Their expertise means that any bumps are handled swiftly, and our operations run so much smoother now!"
+            },
+            {
+                "title": "Ryan Harris, Control NQP",
+                "avatar": "/testimonials/control.jpg",
+                "content": "After we launched our React desktop app, we realized we needed help keeping it in shape. Maigo has made all the difference - updates, fixes, performance tweaks - all taken care of! I can actually focus on improving the user experience instead of worrying!"
+            }
+        ]
+    },
+    "discuss": {
+        "heading": "Let's discuss your project",
+        "description": "Schedule a quick call to discuss your React maintenance needs and see if we're a good fit."
+    },
+    "comparePricing": {
+        "heading": "How does this compare?",
+        "fullTimeEngineer": {
+            "title": "Hiring a full-time engineer",
+            "cost": {
+                "title": "Cost",
+                "text": "~€8,000-€10,000/month (gross, including taxes, benefits, and overhead)."
+            },
+            "commitment": {
+                "title": "Commitment",
+                "text": "160 hours/month, but not all those hours will be productive if the workload is small or inconsistent."
+            },
+            "downsides": {
+                "title": "Downsides",
+                "text": "Recruitment effort, onboarding time, managing idle hours for smaller workloads, and possible challenges with developer turnover."
+            },
+            "withSubscription": "With our subscription:",
+            "subscriptionCost": {
+                "title": "Cost",
+                "text": "~50% savings compared to a full-time senior React developer."
+            },
+            "flexibility": {
+                "title": "Flexibility",
+                "text": "Perfect for projects with small, steady workloads where a full-time employee isn't needed."
+            },
+            "efficiency": {
+                "title": "Efficiency",
+                "text": "Tasks are based on your priorities: ~8-12 significant tasks completed per month. Less wasted time - get results, not idle hours."
+            },
+            "hassleStart": {
+                "title": "Hassle-Free Start",
+                "text": "Begin immediately with no recruitment, onboarding, or admin overhead."
+            },
+            "onDemand": {
+                "title": "On-Demand Results",
+                "text": "Quality-backed deliverables tailored to your project priorities, without delays or inefficiencies."
+            }
+        },
+        "hiringCompany": {
+            "title": "Hiring a development company",
+            "cost": {
+                "title": "Cost",
+                "text": "€100-€150/hour. For 160 hours, this is ~€16,000-€24,000/month. Even smaller workloads (e.g., 50 hours) cost €5,000-€7,500."
+            },
+            "commitment": {
+                "title": "Commitment",
+                "text": "Many companies require minimum monthly contracts or long-term retainers (e.g., 3-6 months), making it difficult to pause during inconsistent workloads. After pausing, they may not have capacity when you need to resume."
+            },
+            "downsides": {
+                "title": "Downsides",
+                "text": "Overestimation padding, possible involvement of junior developers, and slower communication through middle management."
+            },
+            "withSubscription": "With our subscription:",
+            "subscriptionCost": {
+                "title": "Cost",
+                "text": "~25% savings compared to 50 hours with a company, and significantly less for larger workloads."
+            },
+            "flexibility": {
+                "title": "Flexible Commitment",
+                "text": "Pause or cancel anytime based on your workload."
+            },
+            "expertise": {
+                "title": "Direct Expertise",
+                "text": "Work is handled exclusively by a senior React developer - no juniors or inflated estimates."
+            },
+            "communication": {
+                "title": "Streamlined Communication",
+                "text": "Direct collaboration ensures faster feedback and no time wasted on unnecessary middlemen or delays."
+            }
+        },
+        "subscriptionValue": {
+            "title": "Subscription value at a glance",
+            "monthlyOutput": {
+                "title": "Monthly Output",
+                "text": "~8-12 tasks per month (equivalent to 50 hours of senior-level work)."
+            },
+            "costSavings": {
+                "title": "Cost Savings",
+                "text": "Save ~50% compared to hiring a full-time engineer and ~25% compared to outsourcing to a company."
+            },
+            "hassleStart": {
+                "title": "Hassle-Free Start",
+                "text": "Begin without recruitment, onboarding, or management overhead - just quality focused results when you need them."
+            },
+            "flexibility": {
+                "title": "Flexibility & Simplicity",
+                "text": "No long term contracts, commitments, or penalties - pause or cancel anytime. Start immediately with no delays or onboarding required."
+            },
+            "expertise": {
+                "title": "Exclusive Expertise",
+                "text": "Work is completed by a senior React developer who provides dedicated attention to your needs - no juniors, no middle management, and no compromises on quality."
+            },
+            "efficiency": {
+                "title": "Efficiency Through AI and Modern Practices",
+                "text": "Using AI-powered solutions like Cursor.ai and the latest development methodologies, combined with continuous improvements in workflows, results are delivered with a speed and proficiency comparable to small software teams of just a few years ago. This ensures exceptional quality and faster project delivery."
+            }
+        }
+    },
+    "gridBackground": {
+        "callNow": "Call Now"
+    },
+    "priceForOthers": {
+        "upTo": "up to",
+        "perMonth": "/ month",
+        "goToSection": "Go to target section"
+    },
+    "techScroll": {
+        "heading": "Technology Stack"
+    },
+    "faq": {
+        "heading": "Frequently Asked Questions",
+        "description": "Schedule a quick call to discuss your React maintenance needs and see if we're a good fit.",
+        "items": [
+            {
+                "title": "What types of projects do you maintain?",
+                "text": "We specialize in maintaining and upgrading existing React applications, ensuring they remain robust and efficient."
+            },
+            {
+                "title": "Do you only maintain existing projects?",
+                "text": "No, we can also help build new projects from scratch! We'll break down the development into manageable tickets and tasks, following the same efficient workflow used for maintenance. This structured approach ensures clear progress tracking and organized development, whether starting fresh or maintaining an existing codebase."
+            },
+            {
+                "title": "Can I request both bug fixes and new features?",
+                "text": "Absolutely! Our service covers bug fixes, feature enhancements, and updates to libraries or frameworks."
+            },
+            {
+                "title": "How do I get started with maintenance?",
+                "text": "To get started, contact me to discuss your project and specific needs. I'll also need secure access to your codebase to begin supporting your application. Once everything is set up, we'll choose a ticketing system - whether it's your existing system (like Jira or Trello) or one I create for you - so you can start submitting tasks right away."
+            },
+            {
+                "title": "How fast will my requests be completed?",
+                "text": "Each task will start within 48 hours of being submitted. From there, most requests are completed in one to two days, depending on their complexity."
+            },
+            {
+                "title": "How does onboarding work?",
+                "text": "When you subscribe to a plan, I'll ensure a seamless onboarding process. If you already have a ticketing system, such as Jira, Trello, or another platform, I'm happy to adapt and work within your existing setup. If not, I'll create one for you and guide you through the process. I'll also securely access your codebase to ensure everything is ready for maintenance. The setup process is quick and focused entirely on your needs."
+            },
+            {
+                "title": "Who are the developers?",
+                "text": "Trimatech is a one-man agency, ran by Maigo, the founder. Trimatech does not employ other developers, or outsource work to any other entity. You'll work directly with me through the entirety of your experience."
+            },
+            {
+                "title": "Is there a limit to how many requests I can make?",
+                "text": "Once subscribed, you're able to add as many requests to your queue as you'd like, and they will be delivered one by one."
+            },
+            {
+                "title": "How does the pause feature work?",
+                "text": "We understand you may not have enough work to fill up entire month. Perhaps you only have one or two requests at the moment. That's where pausing your subscription comes in handy. Billing cycles are based on 31 day period. Let's say you sign up and use the service for 21 days, and then decide to pause your subscription. This means that the billing cycle will be paused and you'll have 10 days of service remaining to be used anytime in the future."
+            },
+            {
+                "title": "What if I only have a single request?",
+                "text": "That's fine. You can pause your subscription when finished and return when you have additional development needs. There's no need to let the remainder of your subscription go to waste."
+            }
+        ]
+    }
+}

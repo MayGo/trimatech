@@ -1,19 +1,11 @@
-import { Metadata } from 'next';
-import Head from 'next/head';
-
-import { getURL } from '@/utils/helpers';
-import { PropsWithChildren, Suspense } from 'react';
-
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
-
 import { Toaster } from '@/components/ui/Toaster';
-import { Box } from '@chakra-ui/react';
-
-import { Footer } from '@/components/Header/Footer';
-import { HeaderNavbar } from '@/components/Header/HeaderNavbar';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
+import Head from 'next/head';
+import type { ReactNode } from 'react';
+import { Suspense } from 'react';
 
 const roboto = Roboto({
     weight: ['400', '500', '700'],
@@ -30,98 +22,24 @@ const mPlusRounded = M_PLUS_Rounded_1c({
     preload: false // Add this to prevent the font loading error
 });
 
-const meta = {
-    title: 'Expert React Maintenance & Development',
-    description:
-        'Keep your React applications running smoothly with dedicated senior level support. No mid-level teams, no overhead - just direct access to expert maintenance when you need it.',
-    cardImage: '/og.png',
-    robots: 'follow, index',
-    favicon: '/favicon.ico',
-    url: getURL()
-};
-
-export async function generateMetadata(): Promise<Metadata> {
-    return {
-        title: meta.title,
-        description: meta.description,
-        referrer: 'origin-when-cross-origin',
-        keywords: [
-            'React',
-            'Maintenance',
-            'Development',
-            'Senior Developer',
-            'Bug Fixes',
-            'Feature Updates',
-            'React Consulting',
-            'Web Development',
-            'Application Maintenance',
-            'Code Review'
-        ],
-        authors: [{ name: 'Trimatech', url: 'https://trimatech.dev/' }],
-        creator: 'Trimatech',
-        publisher: 'Trimatech',
-        robots: meta.robots,
-        icons: {
-            icon: meta.favicon,
-            apple: [{ url: '/apple-icon.png' }]
-        },
-        metadataBase: new URL(meta.url),
-        alternates: {
-            canonical: '/'
-        },
-        openGraph: {
-            url: meta.url,
-            title: meta.title,
-            description: meta.description,
-            images: [
-                {
-                    url: meta.cardImage,
-                    width: 1200,
-                    height: 630,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
-                }
-            ],
-            type: 'website',
-            siteName: meta.title,
-            locale: 'en_US'
-        },
-        twitter: {
-            card: 'summary_large_image',
-            site: '@Trimatech',
-            creator: '@Trimatech',
-            title: meta.title,
-            description: meta.description,
-            images: [
-                {
-                    url: meta.cardImage,
-                    alt: 'Trimatech - Expert React Maintenance & Development'
-                }
-            ]
-        }
-    };
+interface Props {
+    children: ReactNode;
+    params: Promise<{ locale: string }>;
 }
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children, params }: Props) {
+    const { locale } = await params;
+
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href={meta.url} />
-                <meta http-equiv="Content-Language" content="en" />
+                <meta http-equiv="Content-Language" content={locale} />
             </Head>
-            <html suppressHydrationWarning lang="en" className={`${roboto.variable} ${mPlusRounded.variable}`}>
+            <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
                 <body>
                     <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                        <Box>
-                            <Box maxW="1440px" mx="auto" px={[0, 2, 4]}>
-                                <HeaderNavbar />
-
-                                {children}
-
-                                <Footer />
-                            </Box>
-                        </Box>
-
+                        {children}
                         <Suspense>
                             <Toaster />
                         </Suspense>

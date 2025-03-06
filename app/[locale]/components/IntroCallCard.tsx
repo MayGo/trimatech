@@ -3,11 +3,14 @@ import { shadowSharp } from '@/components/theme/theme.utils';
 import { Button } from '@/components/ui/button';
 import { EMAIL_TO, GITHUB_LINK, LINKEDIN_LINK } from '@/utils/constants';
 import { Box, Flex, Heading, IconButton, Image, LinkBox, LinkOverlay, Stack, Text } from '@chakra-ui/react';
+import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
 import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import { LuArrowRight } from 'react-icons/lu';
 
 export const IntroCallCard = () => {
+    const t = useTranslations('introCallCard');
+
     return (
         <Box bg="white" borderRadius={mainRound} p={8} boxShadow={shadowSharp} position="relative" zIndex={1} w="350px">
             <Flex direction="column" gap={7}>
@@ -41,18 +44,18 @@ export const IntroCallCard = () => {
                         </NextLink>
                     </Stack>
                     <Heading size="xl" fontWeight="medium" textAlign="center" mt={3}>
-                        Maigo Erit
+                        {t('ownerName')}
                     </Heading>
                     <Heading size="md" fontWeight="light" textAlign="center">
-                        Owner & React Expert
+                        {t('ownerTitle')}
                     </Heading>
                 </Box>
-                <Heading fontSize="3xl" width="210px">
-                    Book a 15 min intro call
+                <Heading fontSize="3xl" lineHeight="1.3">
+                    {t('bookIntroCall')}
                 </Heading>
                 <NextLink href="#book">
                     <Button colorPalette="blue" size="lg" w="full">
-                        Book a call
+                        {t('bookCallButton')}
                     </Button>
                 </NextLink>
                 <LinkBox>
@@ -62,7 +65,7 @@ export const IntroCallCard = () => {
                         </Box>
                         <Flex direction="column">
                             <Text fontSize="md" fontWeight="bold">
-                                Prefer to email?
+                                {t('preferEmail')}
                             </Text>
                             <Text fontSize="md" color="gray.500">
                                 <LinkOverlay asChild>
