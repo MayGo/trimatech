@@ -153,7 +153,8 @@
             "drop-a-dude": {
                 "tagline": "A scale-reference character that follows your camera and cleans itself up when you close the plugin."
             }
-        }
+        },
+        "docs": "Docs"
     },
     "contact": {
         "eyebrow": "Contact",
@@ -166,5 +167,243 @@
         "robloxGroup": "Trimatech Games group",
         "github": "GitHub",
         "linkedin": "LinkedIn"
+    },
+    "detail": {
+        "backToGames": "All games",
+        "backToPlugins": "All plugins",
+        "playOnRoblox": "Play on Roblox",
+        "getOnStore": "Get it on the Creator Store",
+        "tryDemo": "Try the demo place",
+        "readDocs": "Read the docs",
+        "devForum": "DevForum thread",
+        "about": "About",
+        "features": "What you get",
+        "screenshots": "Screenshots",
+        "stats": {
+            "visits": "Visits",
+            "favorites": "Favorites",
+            "playing": "Playing now"
+        },
+        "meta": {
+            "status": "Status",
+            "genre": "Genre",
+            "released": "First released",
+            "version": "Version",
+            "docs": "Docs",
+            "docsHere": "On this site",
+            "docsStore": "Store listing"
+        },
+        "moreGames": "More games",
+        "morePlugins": "More plugins",
+        "docs": {
+            "eyebrow": "Documentation",
+            "title": "{name} docs",
+            "onThisPage": "On this page",
+            "backToPlugin": "Back to {name}",
+            "englishOnly": "Documentation is written in English."
+        }
+    },
+    "gameDetails": {
+        "slash-for-brainrots": {
+            "intro": "A ninja escape simulator. Slice through walls, cages and guards, stack +1 Slice with every swing, and free the brainrots locked up around each world so they earn cash for you around the clock. The Slash Training update adds booths where you slice flying fruit, chain combos, dodge bombs and climb booth leaderboards for SlashPoints.",
+            "features": [
+                "Eight worlds to escape from",
+                "Better swords mean bigger slices",
+                "Mythic, Secret and GOD brainrots to hunt",
+                "Training booths with combos, bombs and leaderboards",
+                "SlashPoints buy Blade Power upgrades",
+                "Redeemable codes, with a new one unlocked every 100 likes"
+            ]
+        },
+        "outfits-on-a-budget": {
+            "intro": "Set a Robux budget and a solver picks the best complete outfit you can afford, counting the items you already own as free. Fine-tune any slot by hand, roll a random look for inspiration, and swipe through other players' outfits. Everything you find is purchasable and wearable without leaving the game.",
+            "features": [
+                "Budget solver that knows what you already own",
+                "Edit every slot by hand or randomize the lot",
+                "Public gallery with voting, and the game learns your style",
+                "Buy and wear the outfit directly in-game"
+            ]
+        },
+        "territory-takeover": {
+            "intro": "A strategy arena for a handful of players. Draw boundary lines out from your territory to claim sections of a large circular arena, and stay away from everyone else while you do it. Powerups turn the tide when you are behind.",
+            "features": [
+                "Claim the largest share of the circle",
+                "Balance offense and defense each round",
+                "Powerups to outsmart opponents",
+                "Full controller support",
+                "Still in active development, feedback welcome"
+            ]
+        },
+        "dead-end-road": {
+            "intro": "The city fell. Hold the streets against waves of zombies with your friends, on foot or behind the wheel. Kills pay cash, and cash buys guns, upgrades, cars and car weapons that stay yours for good. Ammo, fuel, repair kits and bandages run out, so loot them off zombies, finish missions and carry a bigger backpack.",
+            "features": [
+                "Co-op zombie survival in a premade city",
+                "Drive any unlocked car straight through the horde",
+                "Permanent purchases: guns, upgrades, cars, car weapons and backpack space",
+                "Consumables run out and have to be looted or earned",
+                "Missions that pay"
+            ]
+        },
+        "city-states": {
+            "intro": "Build a realistic city at real size, then go down and live in it. Zone homes, shops and factories, lay roads and rail, run the power lines and watch people move in. Your avatar walks the same streets the traffic drives on. Each city has one mayor, and friends can join while you build to cruise around or cause mayhem.",
+            "features": [
+                "Zoning, roads, rail and power lines",
+                "Human-scale streets you can walk and drive",
+                "Zombie waves in the streets you built",
+                "Roll a gun up outside the limits and bombard any city, yours or someone else's",
+                "Shared world map with plots to claim and other cities to visit",
+                "A heavy prototype, not made for weak devices"
+            ]
+        },
+        "dunkeep": {
+            "intro": "A real-time strategy game set under the surface. Dig tunnels, construct rooms, manage your creatures and fortify the dungeon with traps and spells. Mine gold, unearth gems and find hidden treasure deeper underground, research technology and manufacture your own equipment.",
+            "features": [
+                "Design and expand an underground fortress room by room",
+                "Command Workers, Soldiers, Scientists and specialist creatures",
+                "Traps and spells against intruders",
+                "Research and manufacturing",
+                "Campaign missions and skirmish matches",
+                "Early alpha by a solo developer"
+            ]
+        }
+    },
+    "pluginDetails": {
+        "click-to-build": {
+            "intro": "A kit of building tools that all work the same way: hover, see a live preview, click to place. No dragging, sizing or rotating by hand. Undo and redo everywhere, and the result can be unioned on finish.",
+            "features": [
+                "23 shapes placed with two clicks: footprint, then height",
+                "Walls, roads and fences along lines and curves, with four corner styles and editable points",
+                "Any Part or Model as a repeating template, with Magic Merge closing the seams",
+                "Stamp extrudes off any face, Voxel stacks or carves grid cells",
+                "Punch, Katana, Laser, Door, Nudger and Resizer for cutting and adjusting",
+                "Grid and surface snapping with live measurements"
+            ]
+        },
+        "city-builder": {
+            "intro": "Author auto-layout procedural models and generate city roads, zones and buildings. The Procedural Model dock gives parts, folders and models per-axis layout constraints, like Figma auto layout in 3D. The City Builder dock draws road networks and fills blocks with generated buildings.",
+            "features": [
+                "Per-axis layout modes: fixed, pin, stretch, center and repeat",
+                "Resize the parent and the whole tree re-lays out",
+                "Templates serialize to a registry and regenerate at any size",
+                "Click-to-draw roads with curves, intersections, elevation, lane lines and crosswalks",
+                "Procedural skyscraper catalog: Art Deco, brutalist, cylindrical, tiered and more",
+                "Zone placement for procedurally filled city blocks"
+            ]
+        },
+        "perf-auditor": {
+            "intro": "Audit a place for performance problems and watch live engine stats, three views in one dockable panel. Every finding explains how to verify it with Studio's own tools.",
+            "features": [
+                "Audit the whole place or the selection and get a 0 to 100 score",
+                "Findings ranked by severity, each with a one-click Select",
+                "Undoable one-click fixes for the most common problems",
+                "Live FPS, timings, draw calls, triangles, memory and network, sampled every second",
+                "Remote traffic log during playtests with warnings for oversized and spammy packets"
+            ]
+        },
+        "super-aligner": {
+            "intro": "Align, distribute and arrange parts, models and folders along any axis. The alignment tools Studio's own Align Tool is missing, each previewed on hover and applied in one undo step.",
+            "features": [
+                "Align to Min, Center or Max along X, Y or Z",
+                "Distribute with equal gaps that respect each object's size",
+                "Arrays, mirrors and match-spacing that create copies",
+                "Arrange into grids, arcs, spirals and drawn paths",
+                "Viewport gizmos and Figma-style smart snap guides",
+                "Works on parts, whole models and folders, pivots preserved"
+            ]
+        },
+        "terrain-tools": {
+            "intro": "Shape terrain around anything you build. Select parts or a whole model, pick a tool, preview the result see-through and apply in one undo step.",
+            "features": [
+                "Convert parts to terrain, per part or merged into one landmass",
+                "Skirt terrain up to the underside of roads and platforms",
+                "Tunnel clearance above a path, flat or round",
+                "Flatten, Moat, Paint, Smooth and Cut Grass",
+                "Green and red see-through preview before anything changes"
+            ]
+        },
+        "voxelizer": {
+            "intro": "Turn any part, model or union into voxels. Pick the model, set the block size, press Generate. Good for stylized builds, low-poly conversions and destructible props.",
+            "features": [
+                "Blocks as separate parts or a generated MeshPart",
+                "True colors photographed off your own model, textures and decals included",
+                "Max colors groups look-alike shades",
+                "Real mesh silhouettes at four detail levels, with a roundness control",
+                "Solid or hollow, block sizes down to 0.05 studs, or any part as the block",
+                "Builds in place or beside the original with one undo"
+            ]
+        },
+        "icon-snap": {
+            "intro": "Batch-screenshot models into transparent PNG icons, right inside Studio. Select any number of models or folders, snap them in one run, and save the results as PNG files named after each model.",
+            "features": [
+                "Hundreds of models in one batch",
+                "Clean alpha-matted cutouts with anti-aliased edges",
+                "Shared camera framing with presets, exact auto-fit and a key light rig",
+                "Brightness, contrast, saturation and an optional outline",
+                "32 to 1024 px output",
+                "Stream to disk through a local companion, upload to Roblox, or export by hand"
+            ]
+        },
+        "quick-actions": {
+            "intro": "A home for the little Luau snippets that are not worth a whole plugin. Save a bit of code, give it a name and icon, run it on your selection with one click, or pin it to the Studio toolbar.",
+            "features": [
+                "Save and run small Luau actions from a docked panel",
+                "Pin any action to the toolbar as its own button",
+                "Star favorites and search by name",
+                "Actions sync across every place and Studio session",
+                "Ready-to-run examples: anchor, weld, snap to grid, set material, randomize colors and more",
+                "Your own code only. No loadstring, no require by asset id"
+            ]
+        },
+        "material-picker": {
+            "intro": "Pick visuals from any part and paint them onto others. Transfer colors, materials and textures between parts with simple clicks, so new models match existing ones without copying property values by hand.",
+            "features": [
+                "Pick mode samples color, material and textures from any part",
+                "Paint mode applies the picked visuals with a click",
+                "Visual preview of the selected properties",
+                "Works with any BasePart, including SurfaceAppearance and PBR textures"
+            ]
+        },
+        "npc-outfit-creator": {
+            "intro": "Build NPC outfits visually from Marketplace asset ids with a live rig preview. No HumanoidDescription editing by hand.",
+            "features": [
+                "Every clothing and accessory slot, several ids per slot",
+                "Body colors and avatar scaling within Roblox's limits",
+                "Live preview with friendly warnings for bad ids",
+                "Create a ready-anchored R15 NPC or apply to a selected one",
+                "Import any user's avatar by UserId or browse their friends",
+                "Unlimited named presets and a randomizer"
+            ]
+        },
+        "grip-a-tool": {
+            "intro": "Preview and edit tool grip CFrames directly on a character. Select any Tool in the Workspace, see how it sits in a character's hand, and fine-tune the grip until it looks right.",
+            "features": [
+                "Live grip preview with full undo and redo",
+                "Adjust the grip with Studio's own move and rotate tools",
+                "Preview during real animation playback, including any animation by asset id",
+                "Play, pause, frame stepping, loop and 0.1x to 2x speed",
+                "Find every Tool in the place",
+                "Preview on your own avatar or any character by username or id, R6 and R15"
+            ]
+        },
+        "pose-a-dude": {
+            "intro": "Create posed characters as building elements. Place characters frozen at any animation frame, turn them into statues with decorative bases, or generate frame-by-frame sequences for dynamic displays.",
+            "features": [
+                "Freeze at any frame with timeline scrubbing",
+                "Statuefy with customizable bases, materials and colors",
+                "Frame sequences that show animation progression",
+                "Live preview before dropping",
+                "Custom characters by username or id",
+                "Rotation, gravity and upright placement settings"
+            ]
+        },
+        "drop-a-dude": {
+            "intro": "A scale-reference character that follows your camera, so you stop dragging that one scale dude around your builds. Drop fixed references wherever you need them, and the plugin removes them all when it closes.",
+            "features": [
+                "Live preview that stays in view as you navigate",
+                "Drop as many fixed dudes as you need: R6, R15, Anthro or custom avatars",
+                "Automatic cleanup on close, so none end up in the published game",
+                "Reopen the plugin and they pop back into place"
+            ]
+        }
     }
 }

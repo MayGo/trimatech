@@ -1,5 +1,6 @@
 import { mainRound } from '@/components/theme/padding.utils';
-import { gameIconSrc, placeLink, type Game } from '@/data/roblox';
+import { gameIconSrc, gamePath, placeLink, type Game } from '@/data/roblox';
+import { LocaleLink as Link } from '@/components/LocaleLink';
 import type { GameStats } from '@/lib/roblox-stats';
 import { formatCompact } from '@/utils/format';
 import { Box, Flex, Heading, HStack, LinkBox, LinkOverlay, Stack, Text } from '@chakra-ui/react';
@@ -48,9 +49,7 @@ export const GameCard = ({ game, stats }: Props) => {
                     </HStack>
                     <Heading as="h3" size="xl" fontWeight="700" lineHeight="1.15">
                         <LinkOverlay asChild>
-                            <a href={placeLink(game.placeId)} target="_blank" rel="noreferrer">
-                                {game.name}
-                            </a>
+                            <Link href={gamePath(game.slug)}>{game.name}</Link>
                         </LinkOverlay>
                     </Heading>
                 </Stack>
@@ -80,6 +79,7 @@ export const GameCard = ({ game, stats }: Props) => {
                     )}
                 </HStack>
                 <HStack
+                    asChild
                     gap={1}
                     px={3.5}
                     py={1.5}
@@ -89,9 +89,12 @@ export const GameCard = ({ game, stats }: Props) => {
                     fontSize="sm"
                     fontWeight="semibold"
                     flexShrink={0}
+                    _hover={{ bg: 'blue.500' }}
                 >
-                    {t('play')}
-                    <LuArrowUpRight />
+                    <a href={placeLink(game.placeId)} target="_blank" rel="noreferrer">
+                        {t('play')}
+                        <LuArrowUpRight />
+                    </a>
                 </HStack>
             </Flex>
         </LinkBox>

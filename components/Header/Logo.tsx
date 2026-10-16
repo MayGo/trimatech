@@ -1,6 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { LocaleLink as Link } from '@/components/LocaleLink';
 
 const sizes = {
     sm: { icon: 32, font: 'lg' },

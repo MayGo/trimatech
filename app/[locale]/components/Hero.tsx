@@ -2,7 +2,7 @@ import { mainSubtextSize, outerPadding } from '@/components/theme/padding.utils'
 import { Button } from '@/components/ui/button';
 import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
+import { LocaleLink as Link } from '@/components/LocaleLink';
 import { LuGamepad2, LuPuzzle } from 'react-icons/lu';
 import { SiRoblox } from 'react-icons/si';
 import { Eyebrow } from './Eyebrow';
@@ -36,16 +36,16 @@ export const Hero = ({ totalVisits, memberCount }: Props) => {
                     </Text>
                     <HStack gap={3} flexWrap="wrap">
                         <Button asChild colorPalette="blue">
-                            <NextLink href="#games">
+                            <Link href="/#games">
                                 <LuGamepad2 />
                                 {t('seeGames')}
-                            </NextLink>
+                            </Link>
                         </Button>
                         <Button asChild variant="outline" borderColor="lineStrong" _hover={{ bg: 'surfaceRaised' }}>
-                            <NextLink href="#plugins">
+                            <Link href="/#plugins">
                                 <LuPuzzle />
                                 {t('browsePlugins')}
-                            </NextLink>
+                            </Link>
                         </Button>
                     </HStack>
                     <HeroStats totalVisits={totalVisits} memberCount={memberCount} />

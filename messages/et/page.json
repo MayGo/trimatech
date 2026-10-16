@@ -153,7 +153,8 @@
             "drop-a-dude": {
                 "tagline": "Mõõtkava-tegelane, mis käib kaameraga kaasas ja koristab end plugina sulgemisel ise ära."
             }
-        }
+        },
+        "docs": "Dokumentatsioon"
     },
     "contact": {
         "eyebrow": "Kontakt",
@@ -166,5 +167,243 @@
         "robloxGroup": "Trimatech Games grupp",
         "github": "GitHub",
         "linkedin": "LinkedIn"
+    },
+    "detail": {
+        "backToGames": "Kõik mängud",
+        "backToPlugins": "Kõik pluginad",
+        "playOnRoblox": "Mängi Robloxis",
+        "getOnStore": "Hangi Creator Store'ist",
+        "tryDemo": "Proovi demokohta",
+        "readDocs": "Loe dokumentatsiooni",
+        "devForum": "DevForumi teema",
+        "about": "Mängust",
+        "features": "Mida saad",
+        "screenshots": "Ekraanipildid",
+        "stats": {
+            "visits": "Külastusi",
+            "favorites": "Lemmikuks märkinud",
+            "playing": "Mängib praegu"
+        },
+        "meta": {
+            "status": "Staatus",
+            "genre": "Žanr",
+            "released": "Esmakordselt avaldatud",
+            "version": "Versioon",
+            "docs": "Dokumentatsioon",
+            "docsHere": "Siin lehel",
+            "docsStore": "Poe kirjeldus"
+        },
+        "moreGames": "Veel mänge",
+        "morePlugins": "Veel pluginaid",
+        "docs": {
+            "eyebrow": "Dokumentatsioon",
+            "title": "{name} dokumentatsioon",
+            "onThisPage": "Sellel lehel",
+            "backToPlugin": "Tagasi: {name}",
+            "englishOnly": "Dokumentatsioon on inglise keeles."
+        }
+    },
+    "gameDetails": {
+        "slash-for-brainrots": {
+            "intro": "Ninja põgenemissimulaator. Lõika läbi seinte, puuride ja valvurite, kogu iga löögiga +1 lõikejõudu ning vabasta igas maailmas luku taga olevad brainrotid, et nad sulle ööpäev läbi raha teeniksid. Slash Training uuendus lisab treeningkabiinid, kus lõikad lendavaid puuvilju, kombineerid lööke, väldid pomme ja ronid edetabelites SlashPointide nimel.",
+            "features": [
+                "Kaheksa maailma, kust põgeneda",
+                "Parem mõõk tähendab suuremat lõiget",
+                "Mythic, Secret ja GOD brainrotid, keda jahtida",
+                "Treeningkabiinid kombode, pommide ja edetabelitega",
+                "SlashPointide eest ostad Blade Power täiendusi",
+                "Lunastatavad koodid, iga 100 meeldimise järel uus"
+            ]
+        },
+        "outfits-on-a-budget": {
+            "intro": "Määra Robuxi eelarve ja lahendaja valib parima tervikliku riietuse, mida selle eest saab, arvestades sinu juba olemasolevad esemed tasuta hinnaga. Häälesta iga pesa käsitsi, loosi inspiratsiooniks juhuslik look ja sirvi teiste mängijate riietusi. Kõik leitu on ostetav ja kantav mängust lahkumata.",
+            "features": [
+                "Eelarvelahendaja, mis teab, mis sul juba olemas on",
+                "Muuda iga pesa käsitsi või loosi kõik korraga",
+                "Avalik galerii hääletamisega, mäng õpib sinu stiili",
+                "Osta ja kanna riietust otse mängus"
+            ]
+        },
+        "territory-takeover": {
+            "intro": "Strateegiaareen käputäiele mängijatele. Joonista oma territooriumist välja piirjooni, et haarata suurest ringareenist tükke, ja hoia samal ajal teistest eemale. Võimendid pööravad mängu, kui oled maas.",
+            "features": [
+                "Haara ringist suurim osa",
+                "Tasakaalusta igas voorus rünnakut ja kaitset",
+                "Võimendid vastaste ülekavaldamiseks",
+                "Täielik puldi tugi",
+                "Endiselt aktiivses arenduses, tagasiside on teretulnud"
+            ]
+        },
+        "dead-end-road": {
+            "intro": "Linn langes. Hoia sõpradega tänavaid zombilainete vastu, jalgsi või rooli taga. Tapmised toovad raha ning raha eest saab relvi, täiendusi, autosid ja autorelvi, mis jäävad sulle igaveseks. Laskemoon, kütus, remondikomplektid ja sidemed saavad otsa, nii et rüüsta neid zombidelt, täida missioone ja kanna suuremat seljakotti.",
+            "features": [
+                "Koostööline zombide ellujäämismäng valmis linnas",
+                "Sõida mis tahes avatud autoga otse läbi hordi",
+                "Püsivad ostud: relvad, täiendused, autod, autorelvad ja seljakoti maht",
+                "Tarvikud saavad otsa ning tuleb rüüstata või teenida",
+                "Missioonid, mis tasuvad"
+            ]
+        },
+        "city-states": {
+            "intro": "Ehita reaalses mõõtkavas realistlik linn ja mine siis alla selles elama. Tsoneeri kodud, poed ja tehased, raja teed ja raudtee, vea elektriliinid ning vaata, kuidas inimesed sisse kolivad. Sinu avatar kõnnib samadel tänavatel, kus liiklus sõidab. Igal linnal on üks linnapea ning sõbrad saavad ehitamise ajal liituda, ringi sõita või möllu teha.",
+            "features": [
+                "Tsoneerimine, teed, raudtee ja elektriliinid",
+                "Inimmõõtmes tänavad, kus saab kõndida ja sõita",
+                "Zombilained tänavatel, mille ise ehitasid",
+                "Veereta linna piiri taha suurtükk ja pommita mis tahes linna, enda või teiste oma",
+                "Jagatud maailmakaart kruntidega, mida haarata, ja teiste linnadega, mida külastada",
+                "Raske prototüüp, pole mõeldud nõrkadele seadmetele"
+            ]
+        },
+        "dunkeep": {
+            "intro": "Reaalaja strateegiamäng maa all. Kaeva tunneleid, ehita ruume, juhi oma olendeid ning kindlusta koobas lõksude ja loitsudega. Kaeva kulda, leia kalliskive ja peidetud aardeid sügavamal maa all, uuri tehnoloogiat ja tooda oma varustust.",
+            "features": [
+                "Kujunda ja laienda maa-alust kindlust ruum ruumi haaval",
+                "Juhi töölisi, sõdureid, teadlasi ja eriolendeid",
+                "Lõksud ja loitsud sissetungijate vastu",
+                "Uurimistöö ja tootmine",
+                "Kampaaniamissioonid ja lahingud",
+                "Varajane alfa ühelt arendajalt"
+            ]
+        }
+    },
+    "pluginDetails": {
+        "click-to-build": {
+            "intro": "Ehitustööriistade komplekt, kus kõik töötab ühtmoodi: liigu hiirega peale, vaata eelvaadet, kliki ja paigas. Ei mingit lohistamist, suuruse muutmist ega pööramist käsitsi. Undo ja redo kõikjal ning tulemuse saab lõpus unioniks liita.",
+            "features": [
+                "23 kujundit kahe klikiga: jalajälg, siis kõrgus",
+                "Seinad, teed ja aiad mööda jooni ja kõveraid, nelja nurgastiili ja muudetavate punktidega",
+                "Mis tahes Part või Model korduva mallina, Magic Merge sulgeb vuugid",
+                "Stamp pressib välja mis tahes tahult, Voxel ladub või lõikab ruudustiku lahtreid",
+                "Punch, Katana, Laser, Door, Nudger ja Resizer lõikamiseks ja kohendamiseks",
+                "Ruudustiku ja pinna haakumine koos mõõtudega reaalajas"
+            ]
+        },
+        "city-builder": {
+            "intro": "Loo automaatpaigutusega protseduurilisi mudeleid ning genereeri linna teid, tsoone ja hooneid. Procedural Model dokk annab osadele, kaustadele ja mudelitele teljepõhised paigutuspiirangud nagu Figma auto layout 3D-s. City Builder dokk joonistab teedevõrke ja täidab kvartalid genereeritud hoonetega.",
+            "features": [
+                "Teljepõhised paigutusrežiimid: fixed, pin, stretch, center ja repeat",
+                "Muuda vanema suurust ja kogu puu paigutub ümber",
+                "Mallid salvestuvad registrisse ja genereeruvad igas suuruses uuesti",
+                "Klikiga joonistatavad teed kõverate, ristmike, kõrguste, sõiduradade ja ülekäiguradadega",
+                "Protseduuriliste pilvelõhkujate kataloog: Art Deco, brutalism, silindriline, astmeline ja muud",
+                "Tsoonide paigutus protseduuriliselt täidetud kvartalitele"
+            ]
+        },
+        "perf-auditor": {
+            "intro": "Auditeeri kohta jõudlusprobleemide suhtes ja jälgi mootori statistikat reaalajas, kolm vaadet ühes dokitavas paneelis. Iga leid selgitab, kuidas seda Studio enda tööriistadega kontrollida.",
+            "features": [
+                "Auditeeri kogu koht või ainult valik ja saa skoor 0 kuni 100",
+                "Leiud raskusastme järgi, igaühel ühe klikiga Select",
+                "Tagasivõetavad ühe klikiga parandused levinumatele probleemidele",
+                "FPS, ajastused, draw callid, kolmnurgad, mälu ja võrk reaalajas, iga sekund",
+                "Remote-liikluse logi testmängu ajal koos hoiatustega liiga suurte ja liiga sagedaste pakettide kohta"
+            ]
+        },
+        "super-aligner": {
+            "intro": "Joonda, jaota ja sea osi, mudeleid ja kaustu mis tahes telje suhtes. Tööriistad, mis Studio enda Align Toolil puuduvad, igaüks hiirega eelvaadatav ja ühe undo-sammuga rakendatav.",
+            "features": [
+                "Joonda Min, Center või Max X, Y või Z teljel",
+                "Jaota võrdsete vahedega, arvestades iga objekti suurust",
+                "Massiivid, peegeldused ja vahede kordamine, mis loovad koopiaid",
+                "Sea ruudustikku, kaarde, spiraali ja joonistatud rajale",
+                "Vaateakna gizmod ja Figma-stiilis nutikad haakejooned",
+                "Töötab osade, tervete mudelite ja kaustadega, pivotid säilivad"
+            ]
+        },
+        "terrain-tools": {
+            "intro": "Vormi maastikku kõige ümber, mida ehitad. Vali osad või terve mudel, vali tööriist, vaata läbipaistvat eelvaadet ja rakenda ühe undo-sammuga.",
+            "features": [
+                "Muuda osad maastikuks, ükshaaval või ühe maamassiivina",
+                "Tõsta maastik teede ja platvormide alumise pinnani",
+                "Tunneli ruum raja kohale, lame või ümar lagi",
+                "Flatten, Moat, Paint, Smooth ja Cut Grass",
+                "Roheline ja punane läbipaistev eelvaade enne, kui midagi muutub"
+            ]
+        },
+        "voxelizer": {
+            "intro": "Muuda mis tahes osa, mudel või union vokseliteks. Vali mudel, määra ploki suurus, vajuta Generate. Sobib stiliseeritud ehitistele, low-poly teisendustele ja purustatavatele esemetele.",
+            "features": [
+                "Plokid eraldi osadena või genereeritud MeshPartina",
+                "Tõelised värvid pildistatakse sinu enda mudelilt, tekstuurid ja decalid kaasa arvatud",
+                "Max colors rühmitab sarnased toonid",
+                "Mesh'ide tõeline siluett neljal detailsusastmel, ümarusega",
+                "Täis või õõnes, ploki suurus kuni 0,05 studi, või mis tahes osa plokina",
+                "Ehitab kohapeal või originaali kõrvale ühe undo-ga"
+            ]
+        },
+        "icon-snap": {
+            "intro": "Pildista mudelid hulgi läbipaistvateks PNG-ikoonideks otse Studios. Vali suvaline hulk mudeleid või kaustu, pildista need ühe korraga ja salvesta tulemused PNG-failidena, mis on nimetatud mudeli järgi.",
+            "features": [
+                "Sajad mudelid ühe korraga",
+                "Puhtad läbipaistva taustaga väljalõiked siledate servadega",
+                "Jagatud kaamera kadreering eelseadete, täpse automaatsobituse ja valgustusega",
+                "Heledus, kontrast, küllastus ja valikuline kontuur",
+                "Väljund 32 kuni 1024 px",
+                "Voogedastus kettale kohaliku abiprogrammi kaudu, üleslaadimine Robloxi või käsitsi eksport"
+            ]
+        },
+        "quick-actions": {
+            "intro": "Kodu väikestele Luau jupikestele, mis ei vääri tervet pluginat. Salvesta natuke koodi, anna sellele nimi ja ikoon, käivita see ühe klikiga oma valikul või kinnita Studio tööriistaribale.",
+            "features": [
+                "Salvesta ja käivita väikseid Luau tegevusi dokitud paneelist",
+                "Kinnita mis tahes tegevus tööriistaribale oma nupuna",
+                "Märgi lemmikud tärniga ja otsi nime järgi",
+                "Tegevused sünkroonitakse kõigi kohtade ja Studio sessioonide vahel",
+                "Valmis näited: ankurda, keevita, haagi ruudustikku, sea materjal, juhuslikud värvid ja muud",
+                "Ainult sinu enda kood. Ei loadstringi ega require'i asset ID järgi"
+            ]
+        },
+        "material-picker": {
+            "intro": "Võta ühelt osalt välimus ja kanna see teistele. Kanna värve, materjale ja tekstuure osade vahel lihtsate klikkidega, nii et uued mudelid sobiksid olemasolevatega ilma omadusi käsitsi kopeerimata.",
+            "features": [
+                "Pick-režiim võtab mis tahes osalt värvi, materjali ja tekstuurid",
+                "Paint-režiim kannab võetud välimuse ühe klikiga peale",
+                "Valitud omaduste visuaalne eelvaade",
+                "Töötab iga BasePartiga, ka SurfaceAppearance'i ja PBR-tekstuuridega"
+            ]
+        },
+        "npc-outfit-creator": {
+            "intro": "Koosta NPC riietus visuaalselt Marketplace'i asset ID-dest koos reaalajas eelvaatega. HumanoidDescriptioni käsitsi muutmist pole vaja.",
+            "features": [
+                "Iga riide- ja aksessuaaripesa, mitu ID-d pesa kohta",
+                "Kehavärvid ja avatari skaleerimine Robloxi piirides",
+                "Reaalajas eelvaade sõbralike hoiatustega valede ID-de korral",
+                "Loo valmis ankurdatud R15 NPC või rakenda valitud NPC-le",
+                "Impordi mis tahes kasutaja avatar UserId järgi või sirvi tema sõpru",
+                "Piiramatult nimelisi eelseadeid ja juhuslikustaja"
+            ]
+        },
+        "grip-a-tool": {
+            "intro": "Eelvaata ja muuda tööriista haarde CFrame'i otse tegelase peal. Vali Workspace'is mis tahes Tool, vaata, kuidas see tegelase käes istub, ja häälesta haaret, kuni see õige välja näeb.",
+            "features": [
+                "Reaalajas haarde eelvaade täieliku undo ja redoga",
+                "Kohenda haaret Studio enda liigutamis- ja pööramistööriistadega",
+                "Eelvaade päris animatsiooni ajal, ka mis tahes animatsiooniga asset ID järgi",
+                "Esita, peata, kaaderhaaval, kordus ja kiirus 0,1x kuni 2x",
+                "Leia kõik Toolid kohast",
+                "Eelvaade enda avataril või mis tahes tegelasel kasutajanime või ID järgi, R6 ja R15"
+            ]
+        },
+        "pose-a-dude": {
+            "intro": "Loo poseeritud tegelasi ehituselementidena. Aseta tegelased mis tahes animatsioonikaadril tardunult, muuda need dekoratiivse alusega kujudeks või genereeri kaaderhaaval jadasid dünaamilisteks väljapanekuteks.",
+            "features": [
+                "Tardumine mis tahes kaadril ajajoone kerimisega",
+                "Statuefy kohandatavate aluste, materjalide ja värvidega",
+                "Kaadrijadad, mis näitavad animatsiooni kulgu",
+                "Reaalajas eelvaade enne asetamist",
+                "Kohandatud tegelased kasutajanime või ID järgi",
+                "Pööramise, gravitatsiooni ja püstiasendi seaded"
+            ]
+        },
+        "drop-a-dude": {
+            "intro": "Mõõtkava-tegelane, mis käib kaameraga kaasas, et sa ei peaks seda ühte mõõdutüüpi enam mööda ehitist lohistama. Aseta fikseeritud viiteid sinna, kuhu vaja, ja plugin koristab need sulgemisel kõik ära.",
+            "features": [
+                "Reaalajas eelvaade, mis püsib liikudes vaateväljas",
+                "Aseta nii palju fikseeritud tüüpe kui vaja: R6, R15, Anthro või kohandatud avatarid",
+                "Automaatne koristus sulgemisel, nii et ükski ei jõua avaldatud mängu",
+                "Ava plugin uuesti ja nad hüppavad tagasi oma kohale"
+            ]
+        }
     }
 }

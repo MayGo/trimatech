@@ -1,9 +1,11 @@
 import { mainRound } from '@/components/theme/padding.utils';
-import { placeLink, pluginIconSrc, storeAssetLink, type Plugin } from '@/data/roblox';
+import { hasPluginDoc } from '@/content/docs';
+import { placeLink, pluginDocsPath, pluginIconSrc, pluginPath, storeAssetLink, type Plugin } from '@/data/roblox';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Box, Flex, Heading, HStack, Link, LinkBox, LinkOverlay, Stack, Text } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { LuArrowUpRight, LuPlay } from 'react-icons/lu';
+import { LuArrowUpRight, LuBookOpen, LuPlay } from 'react-icons/lu';
 
 export const PluginCard = ({ plugin }: { plugin: Plugin }) => {
     const t = useTranslations('plugins');
@@ -29,9 +31,7 @@ export const PluginCard = ({ plugin }: { plugin: Plugin }) => {
                 <Stack gap={0.5} minW={0}>
                     <Heading as="h3" size="md" fontWeight="700" lineHeight="1.2">
                         <LinkOverlay asChild>
-                            <a href={storeAssetLink(plugin.assetId)} target="_blank" rel="noreferrer">
-                                {plugin.name}
-                            </a>
+                            <LocaleLink href={pluginPath(plugin.slug)}>{plugin.name}</LocaleLink>
                         </LinkOverlay>
                     </Heading>
                     <Text fontSize="xs" color="fg.subtle" fontFamily="mono">
@@ -44,11 +44,27 @@ export const PluginCard = ({ plugin }: { plugin: Plugin }) => {
                 {t(`items.${plugin.slug}.tagline`)}
             </Text>
 
-            <HStack mt="auto" pt={4} gap={4} fontSize="sm" fontWeight="semibold">
-                <HStack gap={1} color="blue.300">
-                    {t('install')}
-                    <LuArrowUpRight />
-                </HStack>
+            <HStack mt="auto" pt={4} gap={4} fontSize="sm" fontWeight="semibold" flexWrap="wrap">
+                <Link
+                    href={storeAssetLink(plugin.assetId)}
+                    target="_blank"
+                    rel="noreferrer"
+                    color="blue.300"
+                    _hover={{ color: 'blue.200', textDecoration: 'none' }}
+                >
+                    <HStack gap={1}>
+                        {t('install')}
+                        <LuArrowUpRight />
+                    </HStack>
+                </Link>
+                {hasPluginDoc(plugin.slug) && (
+                    <LocaleLink href={pluginDocsPath(plugin.slug)}>
+                        <HStack gap={1} color="fg.muted" _hover={{ color: 'fg' }}>
+                            <LuBookOpen />
+                            {t('docs')}
+                        </HStack>
+                    </LocaleLink>
+                )}
                 {plugin.demoPlaceId !== null && (
                     <Link
                         href={placeLink(plugin.demoPlaceId)}

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ROBLOX_GROUP_LINK } from '@/utils/constants';
 import { Flex } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl';
-import NextLink from 'next/link';
+import { Link } from '@/i18n/routing';
 import { SiRoblox } from 'react-icons/si';
 
 const sections = ['games', 'plugins', 'mission', 'contact'] as const;
@@ -31,9 +31,9 @@ export default function Navlinks({ stacked = false, onNavigate }: Props) {
                     _hover={{ color: 'fg', bg: 'surfaceRaised' }}
                     w={fullWidth}
                 >
-                    <NextLink href={`#${section}`} onClick={onNavigate}>
+                    <Link href={`/#${section}`} onClick={onNavigate}>
                         {t(section)}
-                    </NextLink>
+                    </Link>
                 </Button>
             ))}
             <Button asChild colorPalette="blue" size="md" ml={stacked ? 0 : 2} mt={stacked ? 2 : 0} w={fullWidth}>
