@@ -57,13 +57,28 @@ export const PluginCard = ({ plugin }: { plugin: Plugin }) => {
                         <LuArrowUpRight />
                     </HStack>
                 </Link>
-                {hasPluginDoc(plugin.slug) && (
-                    <LocaleLink href={pluginDocsPath(plugin.slug)}>
-                        <HStack gap={1} color="fg.muted" _hover={{ color: 'fg' }}>
+                {plugin.docsLink !== null ? (
+                    <Link
+                        href={plugin.docsLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        color="fg.muted"
+                        _hover={{ color: 'fg', textDecoration: 'none' }}
+                    >
+                        <HStack gap={1}>
                             <LuBookOpen />
                             {t('docs')}
                         </HStack>
-                    </LocaleLink>
+                    </Link>
+                ) : (
+                    hasPluginDoc(plugin.slug) && (
+                        <LocaleLink href={pluginDocsPath(plugin.slug)}>
+                            <HStack gap={1} color="fg.muted" _hover={{ color: 'fg' }}>
+                                <LuBookOpen />
+                                {t('docs')}
+                            </HStack>
+                        </LocaleLink>
+                    )
                 )}
                 {plugin.demoPlaceId !== null && (
                     <Link

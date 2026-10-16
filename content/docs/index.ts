@@ -1,6 +1,5 @@
 import type { PluginSlug } from '@/data/roblox';
 import { cityBuilderDoc } from './city-builder';
-import { clickToBuildDoc } from './click-to-build';
 import { iconSnapDoc } from './icon-snap';
 import { npcOutfitCreatorDoc } from './npc-outfit-creator';
 import { perfAuditorDoc } from './perf-auditor';
@@ -12,7 +11,6 @@ import { voxelizerDoc } from './voxelizer';
 
 /** Plugins without an entry here have no docs page; their detail page links to the store and DevForum instead. */
 const pluginDocs: Partial<Record<PluginSlug, PluginDoc>> = {
-    'click-to-build': clickToBuildDoc,
     'city-builder': cityBuilderDoc,
     'perf-auditor': perfAuditorDoc,
     'super-aligner': superAlignerDoc,

@@ -106,6 +106,8 @@ export type Plugin = {
     readonly demoPlaceId: number | null;
     /** DevForum thread for the plugin, when one exists. */
     readonly devForumLink: string | null;
+    /** Dedicated documentation site, when one exists. Plugins without one may have docs in content/docs. */
+    readonly docsLink: string | null;
 };
 
 export const plugins: readonly Plugin[] = [
@@ -115,7 +117,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 125786968176382,
         version: '1.18',
         demoPlaceId: 111890734008547,
-        devForumLink: 'https://devforum.roblox.com/t/click-and-build-easily-create-walls-paths-and-more/3633000'
+        devForumLink: 'https://devforum.roblox.com/t/click-and-build-easily-create-walls-paths-and-more/3633000',
+        docsLink: 'https://click-to-build.trimatech.dev/docs/intro'
     },
     {
         slug: 'city-builder',
@@ -123,7 +126,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 136382184501618,
         version: '1.0',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'perf-auditor',
@@ -131,7 +135,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 115623728130733,
         version: '0.4',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'super-aligner',
@@ -139,7 +144,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 98043920579002,
         version: '0.2',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'terrain-tools',
@@ -147,7 +153,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 121693306028761,
         version: '1.2',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'voxelizer',
@@ -155,7 +162,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 101736114589503,
         version: '1.6',
         demoPlaceId: null,
-        devForumLink: 'https://devforum.roblox.com/t/voxelizer-roblox-studio-plugin/4678335'
+        devForumLink: 'https://devforum.roblox.com/t/voxelizer-roblox-studio-plugin/4678335',
+        docsLink: null
     },
     {
         slug: 'icon-snap',
@@ -163,7 +171,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 110634454048264,
         version: '1.9',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'quick-actions',
@@ -171,7 +180,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 125216167900972,
         version: '0.4',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'material-picker',
@@ -179,7 +189,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 77493849143801,
         version: '1.7',
         demoPlaceId: null,
-        devForumLink: 'https://devforum.roblox.com/t/yoink-n-slap-visuals-roblox-studio-plugin/4336986'
+        devForumLink: 'https://devforum.roblox.com/t/yoink-n-slap-visuals-roblox-studio-plugin/4336986',
+        docsLink: null
     },
     {
         slug: 'npc-outfit-creator',
@@ -187,7 +198,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 130088527626653,
         version: '1.3',
         demoPlaceId: null,
-        devForumLink: null
+        devForumLink: null,
+        docsLink: null
     },
     {
         slug: 'grip-a-tool',
@@ -195,7 +207,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 95296834697980,
         version: '1.4',
         demoPlaceId: null,
-        devForumLink: 'https://devforum.roblox.com/t/grip-a-tool-roblox-studio-plugin/4670012'
+        devForumLink: 'https://devforum.roblox.com/t/grip-a-tool-roblox-studio-plugin/4670012',
+        docsLink: null
     },
     {
         slug: 'pose-a-dude',
@@ -203,7 +216,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 122263820400772,
         version: '1.7',
         demoPlaceId: null,
-        devForumLink: 'https://devforum.roblox.com/t/pose-a-dude-roblox-studio-plugin/4283748'
+        devForumLink: 'https://devforum.roblox.com/t/pose-a-dude-roblox-studio-plugin/4283748',
+        docsLink: null
     },
     {
         slug: 'drop-a-dude',
@@ -211,7 +225,8 @@ export const plugins: readonly Plugin[] = [
         assetId: 84149878612124,
         version: '1.3',
         demoPlaceId: null,
-        devForumLink: 'https://devforum.roblox.com/t/drop-a-dude-roblox-studio-plugin/4221589'
+        devForumLink: 'https://devforum.roblox.com/t/drop-a-dude-roblox-studio-plugin/4221589',
+        docsLink: null
     }
 ];
 

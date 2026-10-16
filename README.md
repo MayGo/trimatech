@@ -15,7 +15,7 @@ The public site for Trimatech Games: the Roblox games, the Studio plugins on the
 
 - Games and plugins are listed in `data/roblox.ts` (Roblox ids, versions, icon slugs). Taglines, intros and feature lists live in the message files.
 - Every game has a page at `/games/<slug>` and every plugin at `/plugins/<slug>`. Slugs outside `data/roblox.ts` are a 404.
-- Plugin docs live in `content/docs/<slug>.ts` as typed sections (English only) and render at `/plugins/<slug>/docs`. Add a plugin to `content/docs/index.ts` to give it a docs page and a Docs link on its card.
+- Plugin docs live in `content/docs/<slug>.ts` as typed sections (English only) and render at `/plugins/<slug>/docs`. Add a plugin to `content/docs/index.ts` to give it a docs page and a Docs link on its card. A plugin with its own docs site (Click to Build) sets `docsLink` in `data/roblox.ts` instead and links out.
 - Icons are checked in under `public/roblox/games` and `public/roblox/plugins`.
 - Visit counts, player counts and the group member count come from the public Roblox API at request time (`lib/roblox-stats.ts`) and are cached for an hour. If Roblox is unreachable the numbers are hidden and the page still renders.
 

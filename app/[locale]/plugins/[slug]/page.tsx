@@ -92,7 +92,9 @@ export default async function PluginPage({ params }: Params) {
                         <MetaChip label={t('meta.version')}>
                             {tPlugins('version', { version: plugin.version })}
                         </MetaChip>
-                        <MetaChip label={t('meta.docs')}>{doc ? t('meta.docsHere') : t('meta.docsStore')}</MetaChip>
+                        <MetaChip label={t('meta.docs')}>
+                            {plugin.docsLink !== null || doc ? t('meta.docsHere') : t('meta.docsStore')}
+                        </MetaChip>
                     </>
                 }
                 actions={
@@ -104,13 +106,19 @@ export default async function PluginPage({ params }: Params) {
                         >
                             {t('getOnStore')}
                         </ActionButton>
-                        {doc && (
-                            <ActionButton
-                                target={{ kind: 'internal', href: pluginDocsPath(slug) }}
-                                icon={<LuBookOpen />}
-                            >
+                        {plugin.docsLink !== null ? (
+                            <ActionButton target={{ kind: 'external', href: plugin.docsLink }} icon={<LuBookOpen />}>
                                 {t('readDocs')}
                             </ActionButton>
+                        ) : (
+                            doc && (
+                                <ActionButton
+                                    target={{ kind: 'internal', href: pluginDocsPath(slug) }}
+                                    icon={<LuBookOpen />}
+                                >
+                                    {t('readDocs')}
+                                </ActionButton>
+                            )
                         )}
                         {plugin.demoPlaceId !== null && (
                             <ActionButton
