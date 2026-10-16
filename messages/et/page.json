@@ -25,7 +25,7 @@
         "playOnRoblox": "Mängi Robloxis"
     },
     "footer": {
-        "location": "Tehtud Tallinnas, Eestis (GMT+2)",
+        "location": "Tehtud Tallinnas, Eestis",
         "privacyPolicy": "Privaatsuspoliitika",
         "termsOfService": "Kasutustingimused",
         "robloxGroup": "Robloxi grupp",
@@ -36,7 +36,7 @@
     },
     "hero": {
         "eyebrow": "Trimatech Games",
-        "heading": "Robloxi mängud ja Studio tööriistad, mida me ise taga igatsesime.",
+        "heading": "Robloxi mängud ja Studio tööriistad, mida me ise vajasime.",
         "description": "Ühe inimese stuudio Tallinnas. Avaldame mänge Robloxis ja jagame pluginaid, mis nende tegemise käigus sünnivad. Kõik kirjutatud TypeScripti ja Reactiga roblox-ts kaudu.",
         "seeGames": "Vaata mänge",
         "browsePlugins": "Sirvi pluginaid",
@@ -50,7 +50,7 @@
     "mission": {
         "eyebrow": "Missioon",
         "heading": "Tuua veebiarenduse tase Robloxisse ja teha mänge, kuhu tullakse tagasi.",
-        "description": "Enamik Robloxi projekte sünnib ühes Studio aknas ilma versioonihalduse ja testideta. Meie ehitame oma mänge nagu veebitoodet ning avaldame nii tööriistad kui juhendi, et teised arendajad saaksid sama teha.",
+        "description": "Enamik Robloxi projekte sünnib ühes Studio aknas ilma versioonihalduse ja testideta. Meie ehitame oma mänge nagu veebitoodet ning avaldame nii tööriistad kui ka stardikomplekti, et teised arendajad saaksid sama teha.",
         "pillars": {
             "games": {
                 "title": "Mängud ennekõike",
@@ -58,7 +58,7 @@
             },
             "tools": {
                 "title": "Üks töö, üks klikk, üks tagasivõtt",
-                "text": "Iga plugin lahendab ühe Studio tüütu ülesande. Eelvaade enne kinnitamist, rakendamine ühe undo-sammuga, midagi peidetut ega kaugkoodi pole."
+                "text": "Iga plugin lahendab ühe Studio tüütu ülesande. Eelvaade enne kinnitamist, rakendamine ühe undo-sammuga, midagi pole peidetud ja kaugkoodi ei laeta."
             },
             "engineering": {
                 "title": "Ehitatud nagu veebirakendus",
@@ -70,7 +70,7 @@
     "games": {
         "eyebrow": "Mängud",
         "heading": "Kuus mängu, üks arendaja",
-        "description": "Kõik siinsed mängud on Robloxis avalikud. Külastuste arv tuleb otse Robloxi API-st ja uueneb iga tund.",
+        "description": "Kõik siinsed mängud on Robloxis praegu mängitavad. Külastuste arv tuleb otse Robloxi API-st ja uueneb iga tund.",
         "play": "Mängi",
         "visits": "külastust",
         "playing": "mängib praegu",
@@ -86,7 +86,7 @@
             },
             "outfits-on-a-budget": {
                 "genre": "Avatari pood",
-                "tagline": "Määra Robuxi eelarve ja lahendaja valib parima tervikliku riietuse, mida selle eest saab. Hääleta teiste lookide poolt ja kanna enda oma kohe mängus."
+                "tagline": "Määra Robuxi eelarve ja lahendaja valib parima tervikliku riietuse, mida selle eest saab. Hääleta teiste riietuste poolt ja kanna enda oma kohe mängus."
             },
             "territory-takeover": {
                 "genre": "Areenistrateegia",
@@ -109,7 +109,7 @@
     "plugins": {
         "eyebrow": "Studio pluginad",
         "heading": "Kolmteist pluginat Creator Store'is",
-        "description": "Ehitustööriistad Roblox Studiole, igaüks vormitud päris tööst meie enda mängudes. Kõik on avatud Creator Store'is.",
+        "description": "Tööriistad Roblox Studiole, igaüks vormitud päris tööst meie enda mängudes. Kõik on saadaval Creator Store'is.",
         "install": "Hangi",
         "demo": "Proovi demot",
         "version": "v{version}",
@@ -159,7 +159,7 @@
     "contact": {
         "eyebrow": "Kontakt",
         "heading": "Anna märku",
-        "description": "Vearaportid, koostööideed või plugin, mida sa taga igatsed. Kõike loeb üks inimene.",
+        "description": "Vearaportid, koostööideed või plugin, mis sinu arvates võiks olemas olla. Kõike loeb üks inimene.",
         "ownerName": "Maigo Erit",
         "ownerTitle": "Asutaja, teeb kõike ise",
         "email": "E-post",
@@ -176,7 +176,7 @@
         "tryDemo": "Proovi demokohta",
         "readDocs": "Loe dokumentatsiooni",
         "devForum": "DevForumi teema",
-        "about": "Mängust",
+        "about": "Tutvustus",
         "features": "Mida saad",
         "screenshots": "Ekraanipildid",
         "stats": {
@@ -216,7 +216,7 @@
             ]
         },
         "outfits-on-a-budget": {
-            "intro": "Määra Robuxi eelarve ja lahendaja valib parima tervikliku riietuse, mida selle eest saab, arvestades sinu juba olemasolevad esemed tasuta hinnaga. Häälesta iga pesa käsitsi, loosi inspiratsiooniks juhuslik look ja sirvi teiste mängijate riietusi. Kõik leitu on ostetav ja kantav mängust lahkumata.",
+            "intro": "Määra Robuxi eelarve ja lahendaja valib parima tervikliku riietuse, mida selle eest saab, arvestades sinu juba olemasolevad esemed tasuta hinnaga. Häälesta iga pesa käsitsi, loosi inspiratsiooniks juhuslik riietus ja sirvi teiste mängijate riietusi. Kõik leitu on ostetav ja kantav mängust lahkumata.",
             "features": [
                 "Eelarvelahendaja, mis teab, mis sul juba olemas on",
                 "Muuda iga pesa käsitsi või loosi kõik korraga",
@@ -326,7 +326,7 @@
             "features": [
                 "Plokid eraldi osadena või genereeritud MeshPartina",
                 "Tõelised värvid pildistatakse sinu enda mudelilt, tekstuurid ja decalid kaasa arvatud",
-                "Max colors rühmitab sarnased toonid",
+                "Max colors seade rühmitab sarnased toonid",
                 "Mesh'ide tõeline siluett neljal detailsusastmel, ümarusega",
                 "Täis või õõnes, ploki suurus kuni 0,05 studi, või mis tahes osa plokina",
                 "Ehitab kohapeal või originaali kõrvale ühe undo-ga"
@@ -386,7 +386,7 @@
             ]
         },
         "pose-a-dude": {
-            "intro": "Loo poseeritud tegelasi ehituselementidena. Aseta tegelased mis tahes animatsioonikaadril tardunult, muuda need dekoratiivse alusega kujudeks või genereeri kaaderhaaval jadasid dünaamilisteks väljapanekuteks.",
+            "intro": "Loo poseeritud tegelasi ehituselementidena. Aseta tegelased mis tahes animatsioonikaadril tardunult, muuda need dekoratiivse alusega kujudeks või genereeri kaaderhaaval jadasid, nagu pöördraamat 3D-s.",
             "features": [
                 "Tardumine mis tahes kaadril ajajoone kerimisega",
                 "Statuefy kohandatavate aluste, materjalide ja värvidega",

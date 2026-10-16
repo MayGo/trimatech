@@ -42,7 +42,7 @@ export const perfAuditorDoc: PluginDoc = {
                 {
                     kind: 'bullets',
                     items: [
-                        'The finding lists the eight busiest cells, labelled by their minimum XYZ corner in studs.',
+                        'The finding lists the eight busiest cells, labeled by their minimum XYZ corner in studs.',
                         'Invisible parts count. Terrain, stored templates and attached instances do not.',
                         'Large parts and clusters across cell edges can be undercounted, so treat the result as a pointer, then measure on your target devices.'
                     ]

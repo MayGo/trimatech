@@ -25,7 +25,7 @@
         "playOnRoblox": "Play on Roblox"
     },
     "footer": {
-        "location": "Made in Tallinn, Estonia (GMT+2)",
+        "location": "Made in Tallinn, Estonia",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of service",
         "robloxGroup": "Roblox group",
@@ -50,7 +50,7 @@
     "mission": {
         "eyebrow": "Mission",
         "heading": "Bring web-grade engineering to Roblox, and ship games people come back to.",
-        "description": "Most Roblox projects are built in one Studio window with no version control and no tests. We build ours like a web product, and we publish the tools and the guide so other developers can do the same.",
+        "description": "Most Roblox projects are built in one Studio window with no version control and no tests. We build ours like a web product, and we publish the tools and the starter kit so other developers can do the same.",
         "pillars": {
             "games": {
                 "title": "Games first",
@@ -70,7 +70,7 @@
     "games": {
         "eyebrow": "Games",
         "heading": "Six games, one developer",
-        "description": "Everything here is live on Roblox. Visit counts come straight from the Roblox API and refresh hourly.",
+        "description": "Everything here is playable on Roblox right now. Visit counts come straight from the Roblox API and refresh hourly.",
         "play": "Play",
         "visits": "visits",
         "playing": "playing now",
@@ -109,7 +109,7 @@
     "plugins": {
         "eyebrow": "Studio plugins",
         "heading": "Thirteen plugins on the Creator Store",
-        "description": "Building tools for Roblox Studio, each one shaped by a real job inside our own games. Open any of them on the Creator Store.",
+        "description": "Tools for Roblox Studio, each one shaped by a real job inside our own games. All of them are on the Creator Store.",
         "install": "Get it",
         "demo": "Try the demo",
         "version": "v{version}",
@@ -250,9 +250,9 @@
                 "Zoning, roads, rail and power lines",
                 "Human-scale streets you can walk and drive",
                 "Zombie waves in the streets you built",
-                "Roll a gun up outside the limits and bombard any city, yours or someone else's",
+                "Roll a cannon up outside the city limits and bombard any city, yours or someone else's",
                 "Shared world map with plots to claim and other cities to visit",
-                "A heavy prototype, not made for weak devices"
+                "A heavy prototype, not for potato devices"
             ]
         },
         "dunkeep": {
@@ -326,7 +326,7 @@
             "features": [
                 "Blocks as separate parts or a generated MeshPart",
                 "True colors photographed off your own model, textures and decals included",
-                "Max colors groups look-alike shades",
+                "A Max colors setting groups look-alike shades",
                 "Real mesh silhouettes at four detail levels, with a roundness control",
                 "Solid or hollow, block sizes down to 0.05 studs, or any part as the block",
                 "Builds in place or beside the original with one undo"
@@ -386,7 +386,7 @@
             ]
         },
         "pose-a-dude": {
-            "intro": "Create posed characters as building elements. Place characters frozen at any animation frame, turn them into statues with decorative bases, or generate frame-by-frame sequences for dynamic displays.",
+            "intro": "Create posed characters as building elements. Place characters frozen at any animation frame, turn them into statues with decorative bases, or generate frame-by-frame sequences, like a flipbook in 3D.",
             "features": [
                 "Freeze at any frame with timeline scrubbing",
                 "Statuefy with customizable bases, materials and colors",

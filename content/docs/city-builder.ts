@@ -45,7 +45,7 @@ export const cityBuilderDoc: PluginDoc = {
                         "Tiled buildings recolor from a named theme: red brick, terracotta, sandstone, ochre, oxblood, moss, seafoam, powder blue, limestone, whitewash, slate and charcoal. A building's Theme attribute pins one; Random lets the Seed roll it.",
                         'The Randomize button rolls a new Seed and Theme in one undo step.',
                         'Tiled buildings join automatically when they overlap or touch. Stack one on a roof or push a smaller extension against a side and the covered parts are trimmed. Set the JoinBuildings attribute to false to keep a building separate.',
-                        "Resize with Studio's scale tool. Drag one face and the building grows on that side only; Ctrl-drag to grow from the centre. Footprints snap to whole tiles of the building's Step, normally 7.5 studs."
+                        "Resize with Studio's scale tool. Drag one face and the building grows on that side only; Ctrl-drag to grow from the center. Footprints snap to whole tiles of the building's Step, normally 7.5 studs."
                     ]
                 },
                 {
