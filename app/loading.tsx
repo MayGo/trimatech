@@ -1,29 +1,22 @@
-import { mainRounded } from '@/components/theme/padding.utils';
+import { mainRound, outerPadding } from '@/components/theme/padding.utils';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Box, SimpleGrid, VStack } from '@chakra-ui/react';
+import { Box, SimpleGrid, Stack } from '@chakra-ui/react';
 
 export default function Loading() {
     return (
-        <Box maxW="1440px" mx="auto" px={[0, 2, 4]} minH="100vh" w="full">
-            <VStack gap={[4, 6, 6, 6, 10]} w="full">
-                {/* Hero Section Skeleton */}
-                <Box w="full">
-                    <Skeleton height="70px" w="full" mb="1px" bg="bgColor" />
-                    <Skeleton height="670px" w="full" roundedBottom={mainRounded} bg="bgColor" />
-                </Box>
-
-                <Box w="full">
-                    <Box pb={5} pl={[4, 0]}>
-                        <Skeleton w="300px" rounded="full" h="60px" bg="bgColor" />
-                    </Box>
-                    <SimpleGrid columns={[1, 1, 2, 2, 4]} gap={4}>
-                        <Skeleton w="full" h="500px" rounded={mainRounded} p={6} minW="300px" bg="bgColor" />
-                        <Skeleton w="full" h="500px" rounded={mainRounded} p={6} minW="300px" bg="bgColor" />
-                        <Skeleton w="full" h="500px" rounded={mainRounded} p={6} minW="300px" bg="bgColor" />
-                        <Skeleton w="full" h="500px" rounded={mainRounded} p={6} minW="300px" bg="bgColor" />
-                    </SimpleGrid>
-                </Box>
-            </VStack>
+        <Box maxW="1440px" mx="auto" px={outerPadding} minH="100vh" w="full">
+            <Stack gap={16} pt={20}>
+                <Stack gap={6} maxW="680px">
+                    <Skeleton h="28px" w="160px" rounded="full" bg="surface" />
+                    <Skeleton h="140px" w="full" rounded="2xl" bg="surface" />
+                    <Skeleton h="60px" w="80%" rounded="2xl" bg="surface" />
+                </Stack>
+                <SimpleGrid columns={[1, 1, 2, 2, 3]} gap={5}>
+                    {[0, 1, 2, 3, 4, 5].map((index) => (
+                        <Skeleton key={index} h="260px" w="full" rounded={mainRound} bg="surface" />
+                    ))}
+                </SimpleGrid>
+            </Stack>
         </Box>
     );
 }

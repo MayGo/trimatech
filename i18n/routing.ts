@@ -6,7 +6,6 @@ export const routing = defineRouting({
     localeDetection: false,
     locales: ['en', 'et'],
     defaultLocale: defaultLocale,
-    pathnames: {},
     domains: [
         {
             domain: 'trimatech.ee',
@@ -24,7 +23,6 @@ export const routing = defineRouting({
     ]
 });
 
-export type Pathnames = keyof typeof routing.pathnames;
 export type Locale = (typeof routing.locales)[number];
 
 export const { Link, permanentRedirect, redirect, usePathname, useRouter, getPathname } = createNavigation(routing);

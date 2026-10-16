@@ -1,27 +1,27 @@
+import { sectionGap } from '@/components/theme/padding.utils';
+import { games } from '@/data/roblox';
+import { fetchGameStats, fetchGroupMemberCount, sumVisits } from '@/lib/roblox-stats';
 import { Flex } from '@chakra-ui/react';
-import { Benefits } from './components/Benefits';
-import { ComparePricing } from './components/ComparePricing';
-import { Discuss } from './components/Discuss';
-import { Faq } from './components/Faq';
+import { Contact } from './components/Contact';
+import { Games } from './components/Games';
 import { Hero } from './components/Hero';
-import { PauseTry } from './components/PauseTry';
-import { Pricing } from './components/Pricing';
-import { ScrollToAnchorOnPageLoad } from './components/ScollToAnchorOnPageLoad';
-import { TechScroll } from './components/TechScroll';
-import { Testimonials } from './components/Testimonials';
+import { Mission } from './components/Mission';
+import { Plugins } from './components/Plugins';
+import { ScrollToAnchorOnPageLoad } from './components/ScrollToAnchorOnPageLoad';
 
 export default async function HomePage() {
+    const [stats, memberCount] = await Promise.all([
+        fetchGameStats(games.map((game) => game.universeId)),
+        fetchGroupMemberCount()
+    ]);
+
     return (
-        <Flex flexDirection="column" gap={[4, 6, 6, 6, 10]}>
-            <Hero />
-            <Benefits />
-            <TechScroll />
-            <Pricing />
-            <PauseTry />
-            <ComparePricing />
-            <Faq />
-            <Testimonials />
-            <Discuss />
+        <Flex flexDirection="column" gap={sectionGap}>
+            <Hero totalVisits={sumVisits(stats)} memberCount={memberCount} />
+            <Games stats={stats} />
+            <Plugins />
+            <Mission />
+            <Contact />
             <ScrollToAnchorOnPageLoad />
         </Flex>
     );

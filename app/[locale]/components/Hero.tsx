@@ -1,44 +1,56 @@
-import { mainHeadingSize, mainRounded, mainSubtextSize, outerPadding } from '@/components/theme/padding.utils';
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { mainSubtextSize, outerPadding } from '@/components/theme/padding.utils';
+import { Button } from '@/components/ui/button';
+import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl';
-import { GiEuropeanFlag } from 'react-icons/gi';
-import { AbstractBg } from './animations/AbstractBg';
-import { IntroCallCard } from './IntroCallCard';
+import { LocaleLink as Link } from '@/components/LocaleLink';
+import { LuGamepad2, LuPuzzle } from 'react-icons/lu';
+import { SiRoblox } from 'react-icons/si';
+import { Eyebrow } from './Eyebrow';
+import { HeroMosaic } from './HeroMosaic';
+import { HeroStats } from './HeroStats';
 
-export const Hero = () => {
+type Props = {
+    totalVisits: number;
+    memberCount: number | null;
+};
+
+export const Hero = ({ totalVisits, memberCount }: Props) => {
     const t = useTranslations('hero');
 
     return (
-        <Box position="relative" bg="bgColor" w="full" roundedBottom={mainRounded} p={outerPadding} overflow="hidden">
-            <Flex
-                flexDirection={['column', 'column', 'row', 'row', 'row']}
-                justify="center"
-                align="center"
-                h="full"
-                gap={outerPadding}
-            >
-                <Flex flexDirection="column" flex="1" gap={6}>
-                    <Heading size={mainHeadingSize}>{t('heading')}</Heading>
-                    <Text fontSize={mainSubtextSize}>{t('description')}</Text>
-                    <Flex align="center">
-                        <Box bg="primary" p={1} rounded="full">
-                            <GiEuropeanFlag color="yellow" size="36px" />
-                        </Box>
-                        <Text ml={2} fontWeight="medium" fontSize="md">
-                            {t('euBased')}
-                        </Text>
-                    </Flex>
-                    <Box flex="1" />
-                    <Heading as="h2" size="xl" color="primary">
-                        {t('mission')}
+        <Box as="section" px={outerPadding} pt={[10, 12, 16, 20]} pb={[6, 8, 10]}>
+            <Flex direction={['column', 'column', 'column', 'row']} align="center" gap={[12, 12, 14, 16]}>
+                <Stack flex="1" gap={7} maxW="680px">
+                    <Eyebrow icon={<SiRoblox />}>{t('eyebrow')}</Eyebrow>
+                    <Heading
+                        as="h1"
+                        fontSize={['4xl', '5xl', '6xl', '6xl', '7xl']}
+                        fontWeight="800"
+                        lineHeight="1.02"
+                        letterSpacing="-0.03em"
+                    >
+                        {t('heading')}
                     </Heading>
-                </Flex>
-                <Box flex="1" h="full" position="relative" justifyItems="center">
-                    <Box position="absolute" top="-200px" left="-300px" opacity={0.3}>
-                        <AbstractBg />
-                    </Box>
-                    <IntroCallCard />
-                </Box>
+                    <Text fontSize={mainSubtextSize} color="fg.muted" maxW="560px">
+                        {t('description')}
+                    </Text>
+                    <HStack gap={3} flexWrap="wrap">
+                        <Button asChild colorPalette="blue">
+                            <Link href="/#games">
+                                <LuGamepad2 />
+                                {t('seeGames')}
+                            </Link>
+                        </Button>
+                        <Button asChild variant="outline" borderColor="lineStrong" _hover={{ bg: 'surfaceRaised' }}>
+                            <Link href="/#plugins">
+                                <LuPuzzle />
+                                {t('browsePlugins')}
+                            </Link>
+                        </Button>
+                    </HStack>
+                    <HeroStats totalVisits={totalVisits} memberCount={memberCount} />
+                </Stack>
+                <HeroMosaic />
             </Flex>
         </Box>
     );

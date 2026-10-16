@@ -1,8 +1,6 @@
 'use client';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { Box, IconButton, Text, VStack } from '@chakra-ui/react';
-import { NextPage } from 'next';
-import { useTranslations } from 'next-intl';
+import { IconButton } from '@chakra-ui/react';
+import { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
 import Navlinks from './Navlinks';
 
@@ -10,41 +8,30 @@ import {
     DialogBody,
     DialogCloseTrigger,
     DialogContent,
-    DialogFooter,
     DialogHeader,
     DialogRoot,
     DialogTitle,
     DialogTrigger
 } from '@/components/ui/dialog';
 
-export const MenuDialog: NextPage = () => {
-    const t = useTranslations('menuDialog');
+export const MenuDialog = () => {
+    const [open, setOpen] = useState(false);
 
     return (
-        <DialogRoot size="xl">
-            <DialogTrigger>
-                <IconButton as="a" aria-label="Options" variant="outline" colorPalette="blue" rounded="xl">
+        <DialogRoot size="xs" placement="top" open={open} onOpenChange={(event) => setOpen(event.open)}>
+            <DialogTrigger asChild>
+                <IconButton aria-label="Menu" variant="outline" rounded="full" borderColor="lineStrong">
                     <IoMenu />
                 </IconButton>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent bg="surface" borderWidth="1px" borderColor="line">
                 <DialogCloseTrigger />
                 <DialogHeader>
-                    <DialogTitle></DialogTitle>
+                    <DialogTitle />
                 </DialogHeader>
-                <DialogBody>
-                    <VStack w="full" gap={6} align="center">
-                        <Navlinks />
-
-                        <Box pt={4}>
-                            <Text fontSize="sm" mb={2} textAlign="center">
-                                {t('language')}
-                            </Text>
-                            <LanguageSwitcher />
-                        </Box>
-                    </VStack>
+                <DialogBody pb={6}>
+                    <Navlinks stacked onNavigate={() => setOpen(false)} />
                 </DialogBody>
-                <DialogFooter />
             </DialogContent>
         </DialogRoot>
     );
