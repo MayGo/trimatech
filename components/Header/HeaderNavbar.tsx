@@ -1,37 +1,34 @@
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { outerPadding } from '@/components/theme/padding.utils';
 import { Box, Flex } from '@chakra-ui/react';
-import { NextPage } from 'next';
 import { Logo } from './Logo';
 import { MenuDialog } from './MenuDialog';
 import Navlinks from './Navlinks';
 
-export const HeaderNavbar: NextPage = () => {
+export const HeaderNavbar = () => {
     return (
-        <Box as="header" borderBottom="1px solid" borderColor="white" bg="bgColor" textAlign="left" pb={[4, 4, 0]}>
-            <Flex
-                flexDirection={['row', 'row']}
-                align="center"
-                justify="space-between"
-                gap={5}
-                maxW="full"
-                px={outerPadding}
-            >
+        <Box
+            as="header"
+            position="sticky"
+            top={0}
+            zIndex={50}
+            bg="rgba(7, 10, 18, 0.72)"
+            backdropFilter="blur(14px)"
+            borderBottom="1px solid"
+            borderColor="line"
+        >
+            <Flex align="center" justify="space-between" gap={5} px={outerPadding} py={3} maxW="1440px" mx="auto">
                 <Logo />
 
-                <Box display={{ base: 'none', md: 'flex' }}>
-                    <Flex align="center" gap={4}>
-                        <Navlinks />
-                        <LanguageSwitcher />
-                    </Flex>
-                </Box>
+                <Flex display={{ base: 'none', lg: 'flex' }} align="center" gap={3}>
+                    <Navlinks />
+                    <LanguageSwitcher />
+                </Flex>
 
-                <Box display={{ base: 'flex', md: 'none' }}>
-                    <Flex align="center" gap={2}>
-                        <LanguageSwitcher />
-                        <MenuDialog />
-                    </Flex>
-                </Box>
+                <Flex display={{ base: 'flex', lg: 'none' }} align="center" gap={2}>
+                    <LanguageSwitcher />
+                    <MenuDialog />
+                </Flex>
             </Flex>
         </Box>
     );

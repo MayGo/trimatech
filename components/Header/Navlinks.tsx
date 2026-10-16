@@ -1,33 +1,47 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
-import { LOGIN_LINK } from '@/utils/constants';
-import { SimpleGrid } from '@chakra-ui/react';
+import { ROBLOX_GROUP_LINK } from '@/utils/constants';
+import { Flex } from '@chakra-ui/react';
 import { useTranslations } from 'next-intl';
 import NextLink from 'next/link';
-import { LuCalendarDays } from 'react-icons/lu';
+import { SiRoblox } from 'react-icons/si';
 
-export default function Navlinks() {
+const sections = ['games', 'plugins', 'mission', 'contact'] as const;
+
+type Props = {
+    stacked?: boolean;
+    /** Called after any link is clicked, so a containing menu can close itself. */
+    onNavigate?: () => void;
+};
+
+export default function Navlinks({ stacked = false, onNavigate }: Props) {
     const t = useTranslations('navLinks');
+    const fullWidth = stacked ? 'full' : 'auto';
 
     return (
-        <SimpleGrid columns={[1, 3]} gap="4" flex="1" maxW="500px" w="full">
-            <NextLink href={LOGIN_LINK} passHref legacyBehavior>
-                <Button as="a" variant="outline" w="full" colorPalette="blue">
-                    {t('signIn')}
+        <Flex direction={stacked ? 'column' : 'row'} align="center" gap={stacked ? 2 : 1} w={fullWidth}>
+            {sections.map((section) => (
+                <Button
+                    key={section}
+                    asChild
+                    variant="ghost"
+                    size="md"
+                    color="fg.muted"
+                    _hover={{ color: 'fg', bg: 'surfaceRaised' }}
+                    w={fullWidth}
+                >
+                    <NextLink href={`#${section}`} onClick={onNavigate}>
+                        {t(section)}
+                    </NextLink>
                 </Button>
-            </NextLink>
-
-            <NextLink href="#book" passHref legacyBehavior>
-                <Button variant="outline" w="full" colorPalette="blue">
-                    <LuCalendarDays />
-                    {t('bookCall')}
-                </Button>
-            </NextLink>
-
-            <NextLink href="#pricing" passHref legacyBehavior>
-                <Button variant="solid" w="full" colorPalette="blue">
-                    {t('seePricing')}
-                </Button>
-            </NextLink>
-        </SimpleGrid>
+            ))}
+            <Button asChild colorPalette="blue" size="md" ml={stacked ? 0 : 2} mt={stacked ? 2 : 0} w={fullWidth}>
+                <a href={ROBLOX_GROUP_LINK} target="_blank" rel="noreferrer" onClick={onNavigate}>
+                    <SiRoblox />
+                    {t('playOnRoblox')}
+                </a>
+            </Button>
+        </Flex>
     );
 }

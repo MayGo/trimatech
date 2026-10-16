@@ -1,6 +1,7 @@
-export const outerPadding = [4, 4, 6, 8, 16];
-export const mainHeadingSize: any[] = ['4xl', '4xl', '4xl', '6xl', '6xl'];
-export const mainSubtextSize: any[] = ['md', 'md', 'md', 'lg', 'lg'];
+export const outerPadding = [5, 5, 8, 10, 14];
+export const sectionGap = [16, 16, 20, 24, 28];
+export const mainHeadingSize: Array<'3xl' | '4xl' | '5xl'> = ['3xl', '4xl', '4xl', '5xl', '5xl'];
+export const mainSubtextSize: Array<'md' | 'lg' | 'xl'> = ['md', 'md', 'lg', 'lg', 'xl'];
 
-export const mainRound = 20;
-export const mainRounded = [0, mainRound];
+export const mainRound = 24;
+export const mainRounded = [16, 24];

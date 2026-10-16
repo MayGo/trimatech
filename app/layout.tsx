@@ -3,7 +3,6 @@ import { Toaster } from '@/components/ui/Toaster';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { M_PLUS_Rounded_1c, Roboto } from 'next/font/google';
-import Head from 'next/head';
 import type { ReactNode } from 'react';
 import { Suspense } from 'react';
 
@@ -15,12 +14,18 @@ const roboto = Roboto({
 });
 
 const mPlusRounded = M_PLUS_Rounded_1c({
-    weight: ['300', '500', '700'],
+    weight: ['500', '700', '800'],
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-mplus',
-    preload: false // Add this to prevent the font loading error
+    preload: false
 });
+
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: '#070A12'
+};
 
 interface Props {
     children: ReactNode;
@@ -31,23 +36,17 @@ export default async function RootLayout({ children, params }: Props) {
     const { locale } = await params;
 
     return (
-        <>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta http-equiv="Content-Language" content={locale} />
-            </Head>
-            <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable}`}>
-                <body>
-                    <ThemeProvider enableColorScheme={false} defaultTheme="light">
-                        {children}
-                        <Suspense>
-                            <Toaster />
-                        </Suspense>
-                    </ThemeProvider>
-                    <Analytics />
-                    <SpeedInsights />
-                </body>
-            </html>
-        </>
+        <html suppressHydrationWarning lang={locale} className={`${roboto.variable} ${mPlusRounded.variable} dark`}>
+            <body>
+                <ThemeProvider enableColorScheme={false} enableSystem={false} forcedTheme="dark" defaultTheme="dark">
+                    {children}
+                    <Suspense>
+                        <Toaster />
+                    </Suspense>
+                </ThemeProvider>
+                <Analytics />
+                <SpeedInsights />
+            </body>
+        </html>
     );
 }

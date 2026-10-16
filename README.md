@@ -1,15 +1,21 @@
-# Trimatech Homepage
+# Trimatech Games homepage
 
-![Trimatech Homepage](/public/og.png)
+![Trimatech Games](/public/og.png)
 
-A modern, high-performance application built with Next.js App Router and Chakra UI v3.
+The public site for Trimatech Games: the Roblox games, the Studio plugins on the Creator Store, the studio's mission and contact details. English at trimatech.dev, Estonian at trimatech.ee.
 
-## Tech Stack
+## Tech stack
 
 - **Framework**: [Next.js](https://nextjs.org/) with App Router
 - **UI**: [Chakra UI v3](https://chakra-ui.com/)
-- **Payments**: [Stripe](https://stripe.com/) for subscription management
+- **i18n**: [next-intl](https://next-intl.dev/), strings in `messages/<locale>/page.json`
 - **Deployment**: [Vercel](https://vercel.com/)
+
+## Content
+
+- Games and plugins are listed in `data/roblox.ts` (Roblox ids, versions, icon slugs). Taglines live in the message files.
+- Icons are checked in under `public/roblox/games` and `public/roblox/plugins`.
+- Visit counts, player counts and the group member count come from the public Roblox API at request time (`lib/roblox-stats.ts`) and are cached for an hour. If Roblox is unreachable the numbers are hidden and the page still renders.
 
 ## Getting Started
 
