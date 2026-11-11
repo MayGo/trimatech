@@ -142,7 +142,7 @@
                 "tagline": "Pick color, material and texture from one part and paint it onto others with a click."
             },
             "npc-outfit-creator": {
-                "tagline": "Build NPC outfits from Marketplace asset IDs with a live rig preview and saved presets. No HumanoidDescription editing."
+                "tagline": "Search the catalog, roll whole outfits or generate crowds of up to 50 NPCs, all on a live preview rig."
             },
             "grip-a-tool": {
                 "tagline": "See how a Tool sits in a character's hand, tune the grip CFrame and preview it during animation playback."
@@ -296,7 +296,9 @@
                 "Audit the whole place or the selection and get a 0 to 100 score",
                 "Findings ranked by severity, each with a one-click Select",
                 "Undoable one-click fixes for the most common problems",
-                "Live FPS, timings, draw calls, triangles, memory and network, sampled every second",
+                "63 checks, from Precise meshes and shadow-casting small parts to wait(), RenderStepped work and StreamingEnabled",
+                "Live FPS, timings, draw calls, triangles, physics, memory and network against Mobile, Mid-range or PC limits",
+                "Leak watch flags anything that keeps climbing and names what is growing",
                 "Remote traffic log during playtests with warnings for oversized and spammy packets"
             ]
         },
@@ -364,14 +366,14 @@
             ]
         },
         "npc-outfit-creator": {
-            "intro": "Build NPC outfits visually from Marketplace asset ids with a live rig preview. No HumanoidDescription editing by hand.",
+            "intro": "Dress NPCs in Studio. Search the Roblox catalog, roll a full outfit or paste asset ids, and see the result on a live preview rig. No HumanoidDescription editing by hand.",
             "features": [
-                "Every clothing and accessory slot, several ids per slot",
-                "Body colors and avatar scaling within Roblox's limits",
-                "Live preview with friendly warnings for bad ids",
-                "Create a ready-anchored R15 NPC or apply to a selected one",
-                "Import any user's avatar by UserId or browse their friends",
-                "Unlimited named presets and a randomizer"
+                "Classic and layered clothing, shoes, makeup, all eight accessory slots, body types, skin tones and scaling",
+                "Roll a complete outfit from the live catalog, lock slots and reroll single items",
+                "Crowd Generator places up to 50 NPCs in different outfits as a grid, line or scatter",
+                "104 ready-made looks, unlimited saved presets, and import from any user's avatar or their friends",
+                "Spawn an anchored R6 or R15 NPC that stays linked, so later edits show on it live",
+                "Optional NPC scripts for idle animations, glances and head turns that work without the plugin"
             ]
         },
         "grip-a-tool": {

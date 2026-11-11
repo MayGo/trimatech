@@ -124,7 +124,7 @@ export const plugins: readonly Plugin[] = [
         slug: 'city-builder',
         name: 'City Builder',
         assetId: 136382184501618,
-        version: '1.0',
+        version: '1.5',
         demoPlaceId: null,
         devForumLink: null,
         docsLink: null
@@ -135,14 +135,14 @@ export const plugins: readonly Plugin[] = [
         assetId: 115623728130733,
         version: '0.4',
         demoPlaceId: null,
-        devForumLink: null,
+        devForumLink: 'https://devforum.roblox.com/t/perf-auditor-plugin/4963211',
         docsLink: null
     },
     {
         slug: 'super-aligner',
         name: 'Super Aligner',
         assetId: 98043920579002,
-        version: '0.2',
+        version: '0.3',
         demoPlaceId: null,
         devForumLink: null,
         docsLink: null
@@ -180,7 +180,7 @@ export const plugins: readonly Plugin[] = [
         assetId: 125216167900972,
         version: '0.4',
         demoPlaceId: null,
-        devForumLink: null,
+        devForumLink: 'https://devforum.roblox.com/t/quick-actions-plugin-save-small-luau-snippets-and-run-them-with-one-click/4872058',
         docsLink: null
     },
     {
@@ -196,9 +196,9 @@ export const plugins: readonly Plugin[] = [
         slug: 'npc-outfit-creator',
         name: 'NPC Outfit Creator',
         assetId: 130088527626653,
-        version: '1.3',
+        version: '1.5',
         demoPlaceId: null,
-        devForumLink: null,
+        devForumLink: 'https://devforum.roblox.com/t/npc-outfit-creator-plugin/4960938',
         docsLink: null
     },
     {
