@@ -195,6 +195,7 @@
         },
         "moreGames": "More games",
         "morePlugins": "More plugins",
+        "builtWith": "Built with {name}",
         "docs": {
             "eyebrow": "Documentation",
             "title": "{name} docs",
@@ -280,7 +281,7 @@
             ]
         },
         "city-builder": {
-            "intro": "Author auto-layout procedural models and generate city roads, zones and buildings. The Procedural Model dock gives parts, folders and models per-axis layout constraints, like Figma auto layout in 3D. The City Builder dock draws road networks and fills blocks with generated buildings.",
+            "intro": "Author auto-layout procedural models and generate city roads, zones and buildings. The Procedural Model dock gives parts, folders and models per-axis layout constraints, like Figma auto layout in 3D. The City Builder dock draws road networks and fills blocks with generated buildings. Every city in Dead End Road is generated with it.",
             "features": [
                 "Per-axis layout modes: fixed, pin, stretch, center and repeat",
                 "Resize the parent and the whole tree re-lays out",

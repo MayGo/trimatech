@@ -1,3 +1,4 @@
+import { GameCard } from '@/app/[locale]/components/GameCard';
 import { ActionButton } from '@/app/[locale]/components/detail/ActionButton';
 import { DetailHero } from '@/app/[locale]/components/detail/DetailHero';
 import { DetailSection } from '@/app/[locale]/components/detail/DetailSection';
@@ -7,7 +8,9 @@ import { RelatedPlugins } from '@/app/[locale]/components/detail/RelatedPlugins'
 import { sectionGap } from '@/components/theme/padding.utils';
 import { getPluginDoc } from '@/content/docs';
 import {
+    findGame,
     findPlugin,
+    games,
     isPluginSlug,
     PLUGIN_SLUGS,
     placeLink,
@@ -17,8 +20,9 @@ import {
     storeAssetLink
 } from '@/data/roblox';
 import { routing } from '@/i18n/routing';
+import { fetchGameStats } from '@/lib/roblox-stats';
 import { isStringArray } from '@/utils/guards';
-import { Badge, Flex, Text } from '@chakra-ui/react';
+import { Badge, Flex, SimpleGrid, Text } from '@chakra-ui/react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -67,10 +71,13 @@ export default async function PluginPage({ params }: Params) {
 
     const plugin = findPlugin(slug);
     const doc = getPluginDoc(slug);
-    const [t, tPlugins, tDetails] = await Promise.all([
+    const usedInGames = plugin.usedInGames.map(findGame);
+    const [t, tPlugins, tDetails, stats] = await Promise.all([
         getTranslations('detail'),
         getTranslations('plugins'),
-        getTranslations(`pluginDetails.${slug}`)
+        getTranslations(`pluginDetails.${slug}`),
+        // Same request as the home and game pages, so Next serves it from one cached fetch.
+        usedInGames.length > 0 ? fetchGameStats(games.map((game) => game.universeId)) : null
     ]);
     const rawFeatures: unknown = tDetails.raw('features');
     const features = isStringArray(rawFeatures) ? rawFeatures : [];
@@ -149,6 +156,16 @@ export default async function PluginPage({ params }: Params) {
             {features.length > 0 && (
                 <DetailSection heading={t('features')}>
                     <FeatureList items={features} />
+                </DetailSection>
+            )}
+
+            {usedInGames.length > 0 && (
+                <DetailSection heading={t('builtWith', { name: plugin.name })}>
+                    <SimpleGrid columns={[1, 1, 2, 3]} gap={5}>
+                        {usedInGames.map((game) => (
+                            <GameCard key={game.slug} game={game} stats={stats?.get(game.universeId)} />
+                        ))}
+                    </SimpleGrid>
                 </DetailSection>
             )}
 
