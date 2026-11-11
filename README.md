@@ -2,7 +2,7 @@
 
 ![Trimatech Games](/public/og.png)
 
-The public site for Trimatech Games: the Roblox games, the Studio plugins on the Creator Store, the studio's mission and contact details. English at trimatech.dev, Estonian at trimatech.ee.
+The public site for Trimatech Games: the Roblox games, the Studio plugins on the Creator Store, the studio's mission and contact details. Served in English at trimatech.dev.
 
 ## Tech stack
 

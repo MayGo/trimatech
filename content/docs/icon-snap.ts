@@ -12,10 +12,14 @@ export const iconSnapDoc: PluginDoc = {
                     kind: 'steps',
                     items: [
                         'Capture: each model is cloned into an offscreen ViewportFrame and photographed twice, on black and on white. Per-pixel differencing recovers the true color and alpha, so edges are anti-aliased with no background fringe.',
-                        'Compose: the image is downscaled to the chosen resolution (32 to 1024 px) and the effects are applied: brightness, contrast, saturation, hue, an optional outline and an optional background fill.',
+                        'Compose: the image is downscaled to the chosen resolution (32 to 2048 px) and the effects are applied: brightness, contrast, saturation, hue, an optional outline and an optional background fill.',
                         'Boards: every icon becomes the texture of a quad MeshPart named after its model, grouped under an IconSnapExport model in Workspace.',
                         'Save: pick one of the three paths below in the Save panel.'
                     ]
+                },
+                {
+                    kind: 'note',
+                    text: 'Nothing upscales, so an icon can\'t be larger than the crop Studio captures. A full 2048 px square needs a 3D view about 2458 px tall on a 1x display, or 1229 px on a 2x display. A smaller window produces a smaller icon and a warning in the Output window.'
                 },
                 {
                     kind: 'note',

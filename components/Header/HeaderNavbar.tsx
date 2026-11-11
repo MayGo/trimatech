@@ -1,4 +1,3 @@
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { outerPadding } from '@/components/theme/padding.utils';
 import { Box, Flex } from '@chakra-ui/react';
 import { Logo } from './Logo';
@@ -22,11 +21,9 @@ export const HeaderNavbar = () => {
 
                 <Flex display={{ base: 'none', lg: 'flex' }} align="center" gap={3}>
                     <Navlinks />
-                    <LanguageSwitcher />
                 </Flex>
 
                 <Flex display={{ base: 'flex', lg: 'none' }} align="center" gap={2}>
-                    <LanguageSwitcher />
                     <MenuDialog />
                 </Flex>
             </Flex>
