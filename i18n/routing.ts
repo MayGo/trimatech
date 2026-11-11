@@ -1,26 +1,11 @@
 import { createNavigation } from 'next-intl/navigation';
 import { defineRouting } from 'next-intl/routing';
-import { defaultLocale } from './settings';
+import { defaultLocale, locales } from './settings';
 
 export const routing = defineRouting({
     localeDetection: false,
-    locales: ['en', 'et'],
-    defaultLocale: defaultLocale,
-    domains: [
-        {
-            domain: 'trimatech.ee',
-            defaultLocale: 'et',
-            locales: ['et']
-        },
-        {
-            domain: 'trimatech.dev',
-            defaultLocale: 'en'
-        },
-        {
-            domain: 'localhost:3000',
-            defaultLocale: 'et'
-        }
-    ]
+    locales,
+    defaultLocale
 });
 
 export type Locale = (typeof routing.locales)[number];
