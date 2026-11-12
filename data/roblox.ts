@@ -106,7 +106,7 @@ export type Plugin = {
     readonly demoPlaceId: number | null;
     /** DevForum thread for the plugin, when one exists. */
     readonly devForumLink: string | null;
-    /** Dedicated documentation site, when one exists. Plugins without one may have docs in content/docs. */
+    /** Its section on docs.trimatech.dev, when it has one. Plugins without one may have a page in content/docs. */
     readonly docsLink: string | null;
     /** Our games built with this plugin, shown on the plugin page. */
     readonly usedInGames: readonly GameSlug[];
@@ -120,7 +120,7 @@ export const plugins: readonly Plugin[] = [
         version: '1.18',
         demoPlaceId: 111890734008547,
         devForumLink: 'https://devforum.roblox.com/t/click-and-build-easily-create-walls-paths-and-more/3633000',
-        docsLink: 'https://click-to-build.trimatech.dev/docs/intro',
+        docsLink: 'https://docs.trimatech.dev/click-to-build/intro',
         usedInGames: []
     },
     {
@@ -130,7 +130,7 @@ export const plugins: readonly Plugin[] = [
         version: '1.5',
         demoPlaceId: null,
         devForumLink: null,
-        docsLink: null,
+        docsLink: 'https://docs.trimatech.dev/city-builder/',
         usedInGames: ['dead-end-road']
     },
     {
