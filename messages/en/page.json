@@ -118,7 +118,7 @@
                 "tagline": "Roads, walls, fences and more: hover for a live preview, click to place. No dragging or rotating by hand."
             },
             "city-builder": {
-                "tagline": "Auto-layout models in 3D, like Figma constraints for parts, plus generators for roads, zones and skyscrapers."
+                "tagline": "Draw roads, place buildings that fit any footprint, or generate a whole city from a real map or a seed."
             },
             "perf-auditor": {
                 "tagline": "Scan a place for performance problems, get a 0 to 100 score, select offenders in one click and fix many of them in one undo."
@@ -191,6 +191,7 @@
             "version": "Version",
             "docs": "Docs",
             "docsHere": "On this site",
+            "docsSite": "docs.trimatech.dev",
             "docsStore": "Store listing"
         },
         "moreGames": "More games",
@@ -281,14 +282,16 @@
             ]
         },
         "city-builder": {
-            "intro": "Author auto-layout procedural models and generate city roads, zones and buildings. The Procedural Model dock gives parts, folders and models per-axis layout constraints, like Figma auto layout in 3D. The City Builder dock draws road networks and fills blocks with generated buildings. Every city in Dead End Road is generated with it.",
+            "intro": "City Builder makes cities in Roblox Studio. Draw one road at a time, place one building at a time, or generate a whole city from OpenStreetMap or from a seed, then keep editing it by hand. Every edit is one undo step. Every city in Dead End Road is generated with it.",
             "features": [
-                "Per-axis layout modes: fixed, pin, stretch, center and repeat",
-                "Resize the parent and the whole tree re-lays out",
-                "Templates serialize to a registry and regenerate at any size",
-                "Click-to-draw roads with curves, intersections, elevation, lane lines and crosswalks",
-                "Procedural skyscraper catalog: Art Deco, brutalist, cylindrical, tiered and more",
-                "Zone placement for procedurally filled city blocks"
+                "Roads that bridge, tunnel and join by themselves, with crosswalks, stop lines and lane arrows at each junction",
+                "Ready-made roundabouts, highway interchanges and race track layouts",
+                "Railways with crossing panels and signals where they meet a road",
+                "Buildings that lay themselves out again when you resize them with Studio's Scale tool",
+                "Polygon buildings on any outline you draw",
+                "Building Designer for your own styles: piece sets, colors, materials and roofs",
+                "City Generator: a real place from OpenStreetMap, or a grid or organic layout from a seed",
+                "Lighting presets such as Postcard, Blue hour and Night"
             ]
         },
         "perf-auditor": {
