@@ -100,7 +100,11 @@ export default async function PluginPage({ params }: Params) {
                             {tPlugins('version', { version: plugin.version })}
                         </MetaChip>
                         <MetaChip label={t('meta.docs')}>
-                            {plugin.docsLink !== null || doc ? t('meta.docsHere') : t('meta.docsStore')}
+                            {plugin.docsLink !== null
+                                ? t('meta.docsSite')
+                                : doc
+                                  ? t('meta.docsHere')
+                                  : t('meta.docsStore')}
                         </MetaChip>
                     </>
                 }
